@@ -1,0 +1,23 @@
+{
+  "name": "baseless",
+  "version": "0.0.0",
+  "description": "A minimal approach to base UI design and templating",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhigginbotham/baseless.git"
+  },
+  "keywords": [
+    "less",
+    "ui",
+    "flat"
+  ],
+  "author": "dhigginbotham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhigginbotham/baseless/issues"
+  }
+}
