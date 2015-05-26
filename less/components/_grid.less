@@ -1,0 +1,40 @@
+/**********************************************************
+  
+  BASELESS Standard Library
+
+  based off of the dead simple grid keeps all the base grid,
+  you'll likely want to create your own grid file inside
+  of templates/ and then change your order of files inside
+  of style.less
+
+  author: @mourner (Vladimir Agafonkin)
+  url: https://github.com/mourner/dead-simple-grid/
+
+**********************************************************/
+
+.col {
+  padding: 0 1.5em;
+}
+
+.row {
+  .row {
+    margin: 0 -1.5em;
+  }
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@media {
+  .col {
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
