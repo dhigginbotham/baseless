@@ -15,21 +15,19 @@
 .col {
   padding: 0 1.5em;
 }
-
-.row {
-  .row {
-    margin: 0 -1.5em;
-  }
-  &:before, &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+.row .row {
+  margin: 0 -1.5em;
 }
 
-@media {
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+
+@media only screen {
   .col {
     float: left;
     width: 100%;

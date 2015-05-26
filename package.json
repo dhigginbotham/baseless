@@ -19,5 +19,16 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dhigginbotham/baseless/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11"
+  },
+  "dependencies": {
+    "gulp-concat": "~2.5.2",
+    "gulp-less": "~3.0.3",
+    "gulp-kss": "0.0.2",
+    "gulp-util": "~3.0.4",
+    "gulp-filesize": "0.0.6",
+    "gulp-minify-css": "~1.1.1"
   }
 }
