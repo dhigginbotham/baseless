@@ -11,13 +11,44 @@
 
 **********************************************************/
 
+.alert-bg-color-acsent(@color) {
+    background: @color;
+    border: 1px solid darken(@color, 10%);
+    color: darken(@color, 20%);
+}
+
 .@{css-prefix}alert {
+  font-weight: 700;
   .reset-spacing(5px 0, 10px);
   .border-radius();
-  &.primary {
-    background: @color-primary;
-    border: 1px solid darken(@color-primary, 20%);
+  .notice {
     color: @color-light;
-    font-weight: 700;
+  }
+  .thin {
+    font-weight: 400;
+  }
+  
+  &.primary {
+    .alert-bg-color-acsent(@color-primary);
+  }
+  
+  &.success {
+    .alert-bg-color-acsent(@color-success);
+  }
+  
+  &.warning {
+    .alert-bg-color-acsent(@color-warning);
+  }
+  
+  &.notice {
+    .alert-bg-color-acsent(@color-notice);
+  }
+  
+  &.info {
+    .alert-bg-color-acsent(@color-info);
+  }
+  
+  &.inverted {
+    .alert-bg-color-acsent(@color-inverted);
   }
 }
