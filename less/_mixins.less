@@ -10,3 +10,30 @@
   author: @dhigginbotham
 
 **********************************************************/
+
+//
+// .reset-spacing
+// i find myself doing this constantly, you may find this
+// useful as well
+// 
+
+.reset-spacing(@margin: 0, @padding: 0) {
+  margin: @margin;
+  padding: @padding;
+}
+
+//
+// .reset-list
+// i also find myself doing this constantly, sharing the
+// wealth <3
+//
+
+.reset-list(@margin, @padding) {
+  .reset-spacing(@margin, @padding);
+  list-style-type: none;
+  display: block;
+  li {
+    .reset-spacing(@margin, @padding);
+    display: block;
+  }
+}
