@@ -45,3 +45,15 @@
     display: block;
   }
 }
+
+//
+// .disable-selection
+// makes modern browsers not allow the selection
+// more info @ https://css-tricks.com/almanac/properties/u/user-select/
+//
+
+.disable-selection() {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+}

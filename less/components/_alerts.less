@@ -10,3 +10,14 @@
   author: @dhigginbotham
 
 **********************************************************/
+
+.@{css-prefix}alert {
+  .reset-spacing(5px 0, 10px);
+  .border-radius();
+  &.primary {
+    background: @color-primary;
+    border: 1px solid darken(@color-primary, 20%);
+    color: @color-light;
+    font-weight: 700;
+  }
+}

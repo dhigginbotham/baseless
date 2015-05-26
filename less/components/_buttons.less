@@ -34,7 +34,9 @@
 
   .reset-spacing(3px 0, 5px 10px);
 
-  line-height: 28px;
+  line-height: 16px;
+
+  border: 0;
   
   color: @color-inverted;
   &:visited,
@@ -44,12 +46,14 @@
   }
 
   font-family: @typo-font-base;
-  font-size: @typo-font-size;
+  font-size: 14px;
   text-decoration: none;
 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  .disable-selection();
 
   .border-radius();
 
@@ -75,6 +79,10 @@
 
   &.inverted {
     .btn-bg-color-acsent(@color-inverted);
+  }
+
+  &:disabled {
+
   }
 
 }
