@@ -27,14 +27,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  line-height: @typo-font-lineheight;
-  font-family: @typo-font-base;
-  font-size: @typo-font-size;
-  color: @typo-font-color;
-  background: @color-light;
-}
-
 //
 // selection color
 // more info @ https://css-tricks.com/almanac/selectors/s/selection/
@@ -49,6 +41,24 @@ body {
   color: @color-light;
 }
 
+//
+// focus outline for form/tabindex
+//
+
 :focus {
   outline: thin dotted lighten(@color-inverted, 50%);
+}
+
+//
+// begin the base styles, keeping this extremely
+// simple we'll keep this completely component
+// driven
+//
+
+body {
+  line-height: @typo-font-lineheight;
+  font-family: @typo-font-base;
+  font-size: @typo-font-size;
+  color: @typo-font-color;
+  background: @color-light;
 }
