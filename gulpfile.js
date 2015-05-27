@@ -26,39 +26,39 @@ gulp.task('less', function() {
 
 // this is the kss gulp task we run to generate
 // the styleguide for BASELESS
-// gulp.task('kss', function() {
-//   // clean our styleguide folder out before
-//   // we create the styleguide.
-//   gulp.src(['styleguide/**/*'], {read: false})
-//       .pipe(gclean({force: true}));
+gulp.task('kss', function() {
+  // clean our styleguide folder out before
+  // we create the styleguide.
+  gulp.src(['styleguide/**/*'], {read: false})
+      .pipe(gclean({force: true}));
 
-//   // runs through all our less files to make
-//   // our styleguide
-//   gulp.src(['less/**/*.less'])
-//       .pipe(gkss({
-//         overview: __dirname + '/less/styleguide.md'
-//       }))
-//       .pipe(gulp.dest('styleguide/'));
+  // runs through all our less files to make
+  // our styleguide
+  gulp.src(['less/**/*.less'])
+      .pipe(gkss({
+        overview: __dirname + '/less/styleguide.md'
+      }))
+      .pipe(gulp.dest('styleguide/'));
 
-//   // build our less so we get context to 
-//   // the components to style
-//   gulp.src('less/style.less')
-//       .pipe(gless())
-//       .pipe(gconcat('public/style.css'))
-//       .pipe(gulp.dest('styleguide/'));
-// });
+  // build our less so we get context to 
+  // the components to style
+  gulp.src('less/style.less')
+      .pipe(gless())
+      .pipe(gconcat('public/style.css'))
+      .pipe(gulp.dest('styleguide/'));
+});
 
-gulp.task('kss', gshell.task([
-    // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
-    'kss-node <%= source %> <%= destination %>'// --template <%= template %>'
-  ], {
-    templateData: {
-      source:       'less/style.less',
-      destination:  'styleguide/',
-      // template:     'styleguide/styleguide.md'
-    }
-  }
-));
+// gulp.task('kss', gshell.task([
+//     // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
+//     'kss-node <%= source %> <%= destination %>'// --template <%= template %>'
+//   ], {
+//     templateData: {
+//       source:       'less/style.less',
+//       destination:  'styleguide/',
+//       template:     'styleguide/styleguide.md'
+//     }
+//   }
+// ));
 
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less']);
