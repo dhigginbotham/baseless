@@ -1,35 +1,25 @@
-/**********************************************************
-  
-  BASELESS Standard Library
-  
-  Main stylesheet include, this file will wire up all your
-  other files within the the less file structure, remember
-  that you'll need to keep the provided files in their 
-  correct order otherwise things will likely break.
+// BASELESS files 
+// 
+// The order here matters, be safe!
+// 
+// Style guide: 1.
+@import                                       "./_normalize.less";
+@import                                       "./_constants.less";
+@import                                       "./_helpers.less";
+@import                                       "./_mixins.less";
+@import                                       "./_base.less";
 
-  author: @dhigginbotham
-
-**********************************************************/
-
-//
-// BASELESS files (the order here matters, be safe!)
-//
-
-@import                                       "_normalize";
-@import                                       "_constants";
-@import                                       "_helpers";
-@import                                       "_mixins";
-@import                                       "_base";
-
-//
-// BASELESS components (the order here doesnt matter)
-//
-
-@import                                       "components/_alerts";
-@import                                       "components/_buttons";
-@import                                       "components/_forms";
-@import                                       "components/_grid";
-@import                                       "components/_lists";
-@import                                       "components/_panels";
-@import                                       "components/_tables";
-@import                                       "components/_wells";
+// Components
+// 
+// Reusable components that can be used across the site.
+// Currently only has documentation for buttons.
+// 
+// Style guide: 2.
+@import                                       "./components/_buttons.less";
+@import                                       "./components/_alerts.less";
+@import                                       "./components/_forms.less";
+@import                                       "./components/_grid.less";
+@import                                       "./components/_lists.less";
+@import                                       "./components/_panels.less";
+@import                                       "./components/_tables.less";
+@import                                       "./components/_wells.less";

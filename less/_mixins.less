@@ -1,16 +1,3 @@
-/**********************************************************
-  
-  BASELESS Standard Library
-  
-  Mixins stylesheet include, keeps all the base mixins,
-  you'll likely want to create your own mixins file inside
-  of templates/ and then change your order of files inside
-  of style.less
-
-  author: @dhigginbotham
-
-**********************************************************/
-
 //
 // .border-radius
 //
@@ -56,4 +43,26 @@
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
+}
+
+//
+// .btn-bg-color-acsent
+//  allows you to make an easy button with hover states and such
+//
+
+.btn-bg-color-acsent(@color, @intensity: 10) {
+  @i1: unit(@intensity*1,~"%");
+  @i2: unit(@intensity*2,~"%");
+  background: @color;
+  box-shadow: 0 1px 0 darken(@color, @i2);
+  &:hover {
+    background: darken(@color, @i1);
+  }
+  &:active {
+    background: darken(@color, @i2);
+  }
+  color: @color-light;
+  &:visited {
+    color: @color-light;
+  }
 }
