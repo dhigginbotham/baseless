@@ -59,6 +59,16 @@ gulp.task('styleguide:kss', gshell.task([
   }
 ));
 
+gulp.task('styleguide:kss:less', gshell.task([
+    'lessc --verbose <%= input %> <%= output %>'
+  ], {
+    templateData: {
+      input: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.less'),
+      output: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.css')
+    }
+  }
+));
+
 gulp.task('styleguide:ghpages', function() {
   gulp.src('./styleguide/**/*')
       .pipe(gpages());

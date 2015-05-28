@@ -406,9 +406,9 @@ html {
   outline: thin dotted #b3b3b3;
 }
 body {
-  line-height: 1.4;
+  line-height: 20px;
   font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 100%;
+  font-size: 14px;
   color: #333333;
   background: #f1f1f1;
 }

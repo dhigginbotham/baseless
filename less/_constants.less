@@ -46,15 +46,25 @@
 @grid-column-padding:                                 10px;
 @grid-float-breakpoint:                               @breakpoint-tablet-ls;
 
+@line-height-base:                                    20px;
+
 //
 // typography constants
 //
 
+@typo-font-size-base:                                 14px;
+@typo-font-size-large:                                @typo-font-size-base * 1.25; // ~18px
+@typo-font-size-small:                                @typo-font-size-base * 0.85; // ~12px
+@typo-font-size-mini:                                 @typo-font-size-base * 0.75; // ~11px
+
 @typo-font-sans-serif:                                Helvetica, 'Helvetica Neue', Arial, sans-serif;
 @typo-font-serif:                                     Geogia, 'Times New Roman', serif;
 @typo-font-code:                                      Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+
 @typo-font-heading:                                   @typo-font-serif;
 @typo-font-base:                                      @typo-font-sans-serif;
-@typo-font-lineheight:                                1.4;
-@typo-font-size:                                      100%;
+
+@typo-font-lineheight:                                @line-height-base;
+
+@typo-font-size:                                      @typo-font-size-base;
 @typo-font-color:                                     @color-inverted;
