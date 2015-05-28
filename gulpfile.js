@@ -31,13 +31,14 @@ gulp.task('styleguide:less', function() {
 });
 
 gulp.task('styleguide:kss', gshell.task([
-    'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %>'
+    'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>"'
   ], {
     templateData: {
       source:       path.join(__dirname, 'less'),
       destination:  path.join(__dirname, 'styleguide'),
       template:     path.join(__dirname, 'less', 'templates', 'styleguide'),
-      css:          path.join(__dirname, 'dist', 'style.min.css')
+      css:          path.join(__dirname, 'dist', 'style.min.css'),
+      title:        'BASELESS Minimal UI Framework'
     }
   }
 ));
