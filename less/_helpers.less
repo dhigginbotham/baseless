@@ -3,26 +3,9 @@
 // more info @ https://css-tricks.com/snippets/css/clear-fix/
 //
 
-.cf:after, 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-// IE6
-* html .cf, 
-* html .clearfix { 
-  zoom: 1; 
-}
-
-// IE7
-*:first-child+html .cf, 
-*:first-child+html .clearfix { 
-  zoom: 1; 
+.cf, 
+.clearfix {
+  .clearfix();
 }
 
 //

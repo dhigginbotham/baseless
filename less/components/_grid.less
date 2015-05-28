@@ -1,25 +1,67 @@
-.col {
-  padding: 0 @grid-gutter-size;
-}
-.row .row {
-  margin: 0 -@grid-gutter-size;
-}
+// Grid
+// 
+// BASELESS grid system
+// 
+// Markup:
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col eightcol"><div style="border: 1px solid #ccc;" class="text-center">eightcol</div></div>
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+// </div>
+// 
+// 
+// Styleguide 1.4.
 
-.row:before, 
-.row:after {
-  content: "";
-  display: table;
-}
-.row:after {
-  clear: both;
-}
-
-@media only screen {
+.row,
+.container {
+  .grid-row();
   .col {
-    float: left;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    .grid-column(12);
+    &.twelvecol {
+      .grid-column(12);
+    }
+    &.elevencol {
+      .grid-column(11);
+    }
+    &.tencol {
+      .grid-column(10);
+    }
+    &.ninecol {
+      .grid-column(9);
+    }
+    &.eightcol {
+      .grid-column(8);
+    }
+    &.sevencol {
+      .grid-column(7);
+    }
+    &.sixcol {
+      .grid-column(6);
+    }
+    &.fivecol {
+      .grid-column(5);
+    }
+    &.fourcol {
+      .grid-column(4);
+    }
+    &.threecol {
+      .grid-column(3);
+    }
+    &.twocol {
+      .grid-column(2);
+    }
+    &.onecol {
+      .grid-column(1);
+    }
   }
 }

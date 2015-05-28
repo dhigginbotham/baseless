@@ -1,3 +1,28 @@
+// 
+// .clearfix
+// 
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//
+// .box-sizing
+//
+
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model; // Safari <= 5
+     -moz-box-sizing: @box-model; // Firefox <= 19
+          box-sizing: @box-model;
+}
+
 //
 // .border-radius
 //
@@ -43,4 +68,37 @@
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
+}
+
+//
+// .grid-row, .grid-column, .grid-column-offset
+//
+
+.grid-row() {
+  // negative margin the row out to align the content of columns
+  margin-left: -@grid-column-padding;
+  margin-right: -@grid-column-padding;
+  // then clear the floated columns
+  .clearfix();
+}
+
+.grid-column(@columns) {
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    // calculate width based on number of columns available
+    width: percentage(@columns / @grid-columns);
+  }
+  // prevent columns from collapsing when empty
+  min-height: 1px;
+  // set inner padding as gutters instead of margin
+  padding-left: @grid-column-padding;
+  padding-right: @grid-column-padding;
+  // proper box-model (padding doesn't add to width)
+  .box-sizing(border-box);
+}
+
+.grid-column-offset(@columns) {
+  @media (min-width: @grid-float-breakpoint) {
+    margin-left: percentage(@columns / @grid-columns);
+  }
 }

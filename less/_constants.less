@@ -21,7 +21,12 @@
 @color-inverted:                                      #333;
 @color-light:                                         #F1F1F1;
 
-@color-grey-darkest:                                  #999;
+//
+// grey color constants
+// these really need tweaking still
+//
+
+@color-grey-darkest:                                  #333;
 @color-grey-dark:                                     lighten(@color-grey-darkest, 20%);  
 @color-grey-light:                                    lighten(@color-grey-darkest, 50%);  
 @color-grey-lightest:                                 lighten(@color-grey-darkest, 70%);  
@@ -39,14 +44,17 @@
 // grid constants
 //
 
-@grid-gutter-size:                                    1.5em;
+@grid-columns:                                        12;
+@grid-column-padding:                                 10px;
+@grid-float-breakpoint:                               @breakpoint-tablet-ls;
 
 //
 // typography constants
 //
 
-@typo-font-sans-serif:                                Helvetica, Arial, sans-serif;
+@typo-font-sans-serif:                                Helvetica, 'Helvetica Neue', Arial, sans-serif;
 @typo-font-serif:                                     Geogia, 'Times New Roman', serif;
+@typo-font-code:                                      Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 @typo-font-heading:                                   @typo-font-serif;
 @typo-font-base:                                      @typo-font-sans-serif;
 @typo-font-lineheight:                                1.4;
