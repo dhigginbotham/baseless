@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     gshell = require('gulp-shell'),
     gclean = require('gulp-clean'),
     grename = require('gulp-rename'),
+    gshot = require('gulp-local-screenshots'),
     gpages = require('gulp-gh-pages'),
     gmincss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
@@ -53,7 +54,7 @@ gulp.task('styleguide:kss', gshell.task([
       destination:  path.join(__dirname, 'styleguide'),
       template:     path.join(__dirname, 'less', 'templates', 'styleguide'),
       css:          'public/style.css',
-      title:        'BASELESS Minimal UI Framework'
+      title:        'BASELESS'
     }
   }
 ));
@@ -61,6 +62,17 @@ gulp.task('styleguide:kss', gshell.task([
 gulp.task('styleguide:ghpages', function() {
   gulp.src('./styleguide/**/*')
       .pipe(gpages());
+});
+
+gulp.task('styleguide:screenshots', function() {
+  gulp.src('styleguide/**/*.html')
+      .pipe(gshot({
+        width: ['1280', '1024', '768', '600', '480', '320'],
+        folder: 'screenshots/',
+        path: 'styleguide/',
+        type: 'png'
+      }))
+      .on('error', gutil.log);
 });
 
 gulp.task('watch', function() {
