@@ -13,10 +13,10 @@
 //  
 // Styleguide 2.2.
 
-.alert-bg-color-acsent(@color) {
-  background: @color;
-  border: 1px solid darken(@color, 10%);
-  color: @color-light;
+.alert-bg-color-accent(@bg: #eee, @color: @color-inverted) {
+  background: @bg;
+  border: 1px solid darken(@bg, 10%);
+  color: @color;
 }
 
 .@{css-prefix}alert {
@@ -29,28 +29,30 @@
   .thin {
     font-weight: 400;
   }
+
+  .alert-bg-color-accent();
   
   &.primary {
-    .alert-bg-color-acsent(@color-primary);
+    .alert-bg-color-accent(@color-primary, @color-light);
   }
   
   &.success {
-    .alert-bg-color-acsent(@color-success);
+    .alert-bg-color-accent(@color-success, @color-light);
   }
   
   &.warning {
-    .alert-bg-color-acsent(@color-warning);
+    .alert-bg-color-accent(@color-warning, @color-light);
   }
   
   &.notice {
-    .alert-bg-color-acsent(@color-notice);
+    .alert-bg-color-accent(@color-notice, @color-light);
   }
   
   &.info {
-    .alert-bg-color-acsent(@color-info);
+    .alert-bg-color-accent(@color-info, @color-light);
   }
   
   &.inverted {
-    .alert-bg-color-acsent(@color-inverted);
+    .alert-bg-color-accent(@color-inverted, @color-light);
   }
 }

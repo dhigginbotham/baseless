@@ -1,6 +1,21 @@
+// Mixins
 // 
-// .clearfix
+// Common use mixins for internal development use
 // 
+// | Title | Description
+// |--- |--- |
+// | `.clearfix()` | clearfix mixin, works exactly as you'd expect
+// | `.box-sizing()` | browser prefix safe box-sizing
+// | `.border-radius()` | sets border radius `//.border-radius(3px, 3px, 0, 0);`
+// | `.center-block()` | sets and centers block elems
+// | `.reset-spacing()` | helpful for things with default margin/padding
+// | `.reset-list()` | helpful for lists, because they have so many opinions
+// | `.disable-selection()` | disallow user to highlight/select an elements nodes
+// | `.grid-row()` | makes a container a "row" in our grid
+// | `.grid-column()` | accepts a number 1-12 of column width
+// | `.grid-column-offset()` | accepts a number to offset the column width 
+// 
+// Styleguide 1.3
 
 .clearfix() {
   &:before,

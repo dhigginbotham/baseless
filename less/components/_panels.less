@@ -30,7 +30,7 @@
 // .inverted - inverted panel color
 // 
 // Styleguide 2.3.
-.panel-bg-color-acsent(@bg: #eee, @border: #ccc, @color: @color-inverted) {
+.panel-bg-color-accent(@bg: #eee, @border: #ccc, @color: @color-inverted) {
   
   .border-radius();
 
@@ -75,33 +75,35 @@
     .reset-spacing(0, 5px 10px);
     font-size: 75%;
   }
-
+  
+  .panel-bg-color-accent();
+  
   &.default {
-    .panel-bg-color-acsent();
+    .panel-bg-color-accent();
   }
 
   &.primary {
-    .panel-bg-color-acsent(@color-primary, darken(@color-primary, 10%));
+    .panel-bg-color-accent(@color-primary, darken(@color-primary, 10%));
   }
 
   &.success {
-    .panel-bg-color-acsent(@color-success, darken(@color-success, 10%));
+    .panel-bg-color-accent(@color-success, darken(@color-success, 10%));
   }
 
   &.warning {
-    .panel-bg-color-acsent(@color-warning, darken(@color-warning, 10%));
+    .panel-bg-color-accent(@color-warning, darken(@color-warning, 10%));
   }
 
   &.notice {
-    .panel-bg-color-acsent(@color-notice, darken(@color-notice, 10%));
+    .panel-bg-color-accent(@color-notice, darken(@color-notice, 10%));
   }
 
   &.info {
-    .panel-bg-color-acsent(@color-info, darken(@color-info, 10%));
+    .panel-bg-color-accent(@color-info, darken(@color-info, 10%));
   }
 
   &.inverted {
-    .panel-bg-color-acsent(@color-inverted, darken(@color-inverted, 10%), @color-light);
+    .panel-bg-color-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
   }
 
 }

@@ -13,28 +13,35 @@
 // .notice - notice button color
 // .info - info button color
 // .inverted - inverted button color
+// .text - text button color
+// .disabled - disabled button color
 //  
 // Styleguide 2.1.
 
-.btn-bg-color-acsent(@color, @intensity: 10) {
+.btn-bg-color-accent(@bg: @color-light, @color: @color-inverted, @intensity: 10) {
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
-  background: @color;
-  border: 1px solid darken(@color, @i1);
-  box-shadow: 0 1px 0 darken(@color, @i2),
+  background: @bg;
+  border: 1px solid darken(@bg, @i1);
+  box-shadow: 0 1px 0 darken(@bg, @i2),
               inset 0 1px 0 rgba(255,255,255,0.4);
   &:hover {
-    background: darken(@color, @i1);
-    #gradient > .vertical(@color, darken(@color, @i1));
+    background: darken(@bg, @i1);
+    #gradient > .vertical(@bg, darken(@bg, @i1));
   }
   &:active {
-    background: darken(@color, @i2);
-    box-shadow: 0 1px 0 darken(@color, @i2),
-                inset 0 1px 0 darken(@color, @i2);
+    background: darken(@bg, @i2);
+    box-shadow: 0 1px 0 darken(@bg, @i2),
+                inset 0 1px 0 darken(@bg, @i2);
   }
-  color: @color-light;
+  color: @color;
   &:visited {
-    color: @color-light;
+    color: @color;
+  }
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+    background: darken(@bg, @i2);
+    border: 1px solid darken(@bg, 30%);
   }
 }
 
@@ -71,32 +78,34 @@
 
   .border-radius();
 
+  .btn-bg-color-accent();
+
+  &.text {
+    
+  }
+
   &.primary {
-    .btn-bg-color-acsent(@color-primary);
+    .btn-bg-color-accent(@color-primary, @color-light);
   }
 
   &.success {
-    .btn-bg-color-acsent(@color-success);
+    .btn-bg-color-accent(@color-success, @color-light);
   }
   
   &.warning {
-    .btn-bg-color-acsent(@color-warning);
+    .btn-bg-color-accent(@color-warning, @color-light);
   }
   
   &.notice {
-    .btn-bg-color-acsent(@color-notice);
+    .btn-bg-color-accent(@color-notice, @color-light);
   }
   
   &.info {
-    .btn-bg-color-acsent(@color-info);
+    .btn-bg-color-accent(@color-info, @color-light);
   }
 
   &.inverted {
-    .btn-bg-color-acsent(@color-inverted);
-  }
-
-  &:disabled, &.disabled {
-
+    .btn-bg-color-accent(@color-inverted, @color-light);
   }
 
 }
