@@ -1,7 +1,22 @@
+// Alerts
+//
+// BASELESS alerts components, including modifiers for color (tbd: and size).
+// 
+// Markup: <div class="bs-alert {{modifier_class}}">Some sample alerts</div>
+// 
+// .primary - primary alert color
+// .success - success alert color
+// .warning - warning alert color
+// .notice - notice alert color
+// .info - info alert color
+// .inverted - inverted alert color
+//  
+// Styleguide 1.2.
+
 .alert-bg-color-acsent(@color) {
   background: @color;
   border: 1px solid darken(@color, 10%);
-  color: darken(@color, 20%);
+  color: @color-light;
 }
 
 .@{css-prefix}alert {
