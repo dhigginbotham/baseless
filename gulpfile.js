@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     gconcat = require('gulp-concat'),
     gshell = require('gulp-shell'),
     gclean = require('gulp-clean'),
+    gpages = require('gulp-gh-pages'),
     gminifyCss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
     gutil = require('gulp-util'),
@@ -37,14 +38,20 @@ gulp.task('styleguide:kss', gshell.task([
       source:       path.join(__dirname, 'less'),
       destination:  path.join(__dirname, 'styleguide'),
       template:     path.join(__dirname, 'less', 'templates', 'styleguide'),
-      css:          path.join(__dirname, 'dist', 'style.min.css'),
+      css:          'public/style.css',
       title:        'BASELESS Minimal UI Framework'
     }
   }
 ));
 
-gulp.task('watch', function() {
-  gulp.watch('less/**/*.less', ['less', 'styleguide:kss']);
+gulp.task('styleguide:ghpages', function() {
+  gulp.src('./styleguide/**/*')
+      .pipe(gpages());
 });
 
-gulp.task('go', ['less', 'styleguide:kss', 'watch']);
+gulp.task('watch', function() {
+  gulp.watch('less/**/*.less', ['less', 'styleguide:kss', 'styleguide:less']);
+});
+
+gulp.task('go', ['less', 'styleguide:kss', 'styleguide:less', 'watch']);
+gulp.task('gh', ['less', 'styleguide:kss', 'styleguide:less', 'styleguide:ghpages']);
