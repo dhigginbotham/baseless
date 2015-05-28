@@ -3,8 +3,9 @@ var gulp = require('gulp'),
     gconcat = require('gulp-concat'),
     gshell = require('gulp-shell'),
     gclean = require('gulp-clean'),
+    grename = require('gulp-rename'),
     gpages = require('gulp-gh-pages'),
-    gminifyCss = require('gulp-minify-css'),
+    gmincss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
     gutil = require('gulp-util'),
     path = require('path');
@@ -12,23 +13,36 @@ var gulp = require('gulp'),
 gulp.task('less', function() {
   gulp.src('less/style.less')
       .pipe(gless())
-      .pipe(gminifyCss())
+      .pipe(gmincss())
       .pipe(gconcat('style.min.css'))
       .pipe(gulp.dest('dist'))
       .pipe(gfilesize())
       .on('error', gutil.log);
 });
 
-gulp.task('styleguide:clean', function() {
-  gulp.src(['styleguide/**/*'], {read: false})
-    .pipe(gclean({force: true}));
+gulp.task('clean', function() {
+  gulp.src(['dist/**/*','styleguide/**/*'], {read: false})
+    .pipe(gclean({force: true}))
+    .on('error', gutil.log);
+});
+
+gulp.task('styleguide:readme', function() {
+  gulp.src('less/styleguide.md', {read: false})
+      .pipe(gclean({force: true}))
+      .on('error', gutil.log);
+
+  gulp.src('./README.md')
+      .pipe(grename('styleguide.md'))
+      .pipe(gulp.dest('less/'))
+      .on('error', gutil.log);
 });
 
 gulp.task('styleguide:less', function() {
   gulp.src('less/style.less')
       .pipe(gless())
       .pipe(gconcat('public/style.css'))
-      .pipe(gulp.dest('styleguide/'));
+      .pipe(gulp.dest('less/templates/styleguide/'))
+      .on('error', gutil.log);
 });
 
 gulp.task('styleguide:kss', gshell.task([
@@ -50,8 +64,8 @@ gulp.task('styleguide:ghpages', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('less/**/*.less', ['less', 'styleguide:kss', 'styleguide:less']);
+  gulp.watch('less/**/*.less', ['less', 'styleguide:less', 'styleguide:kss']);
 });
 
-gulp.task('go', ['less', 'styleguide:kss', 'styleguide:less', 'watch']);
-gulp.task('gh', ['less', 'styleguide:kss', 'styleguide:less', 'styleguide:ghpages']);
+gulp.task('go', ['less', 'styleguide:less', 'styleguide:kss', 'watch']);
+gulp.task('styleguide', ['less', 'styleguide:less', 'styleguide:readme', 'styleguide:kss']);
