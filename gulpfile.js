@@ -29,15 +29,16 @@ gulp.task('less', function() {
 gulp.task('kss', function() {
   // clean our styleguide folder out before
   // we create the styleguide.
-  gulp.src(['styleguide/**/*'], {read: false})
+  gulp.src(['styleguide/*', 'styleguide/**/*'], {read: false})
       .pipe(gclean({force: true}));
 
   // runs through all our less files to make
   // our styleguide
-  gulp.src(['less/**/*.less'])
+  gulp.src(['less/*.less', 'less/**/*.less'])
       .pipe(gkss({
         overview: __dirname + '/less/styleguide.md'
       }))
+      .on('error', gutil.log)
       .pipe(gulp.dest('styleguide/'));
 
   // build our less so we get context to 
@@ -47,18 +48,6 @@ gulp.task('kss', function() {
       .pipe(gconcat('public/style.css'))
       .pipe(gulp.dest('styleguide/'));
 });
-
-// gulp.task('kss', gshell.task([
-//     // kss-node [source folder of files to parse] [destination folder] --template [location of template files]
-//     'kss-node <%= source %> <%= destination %>'// --template <%= template %>'
-//   ], {
-//     templateData: {
-//       source:       'less/style.less',
-//       destination:  'styleguide/',
-//       template:     'styleguide/styleguide.md'
-//     }
-//   }
-// ));
 
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less']);
