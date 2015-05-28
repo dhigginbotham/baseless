@@ -18,14 +18,19 @@
 
 .btn-bg-color-acsent(@color, @intensity: 10) {
   @i1: unit(@intensity*1,~"%");
-  @i2: unit(@intensity*2,~"%");
+  @i2: unit(@intensity*1.2,~"%");
   background: @color;
-  box-shadow: 0 1px 0 darken(@color, @i2);
+  border: 1px solid darken(@color, @i1);
+  box-shadow: 0 1px 0 darken(@color, @i2),
+              inset 0 1px 0 rgba(255,255,255,0.2);
   &:hover {
     background: darken(@color, @i1);
+    #gradient > .vertical(@color, darken(@color, @i1));
   }
   &:active {
     background: darken(@color, @i2);
+    box-shadow: 0 1px 0 darken(@color, @i2),
+                inset 0 1px 0 darken(@color, @i2);
   }
   color: @color-light;
   &:visited {
