@@ -22,12 +22,12 @@
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
+  #gradient > .vertical(@bg, darken(@bg, @i1));
   border: 1px solid darken(@bg, @i1);
   box-shadow: 0 1px 0 darken(@bg, @i2),
-              inset 0 1px 0 rgba(255,255,255,0.4);
+              inset 0 1px 0 rgba(255,255,255,0.3);
   &:hover {
     background: darken(@bg, @i1);
-    #gradient > .vertical(@bg, darken(@bg, @i1));
   }
   &:active {
     background: darken(@bg, @i2);
@@ -81,7 +81,7 @@
   .btn-bg-color-accent();
 
   &.text {
-    
+
   }
 
   &.primary {
