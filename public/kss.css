@@ -135,6 +135,9 @@
 .kss-style td {
   vertical-align: top;
 }
+.kss-style code {
+  background: #ccc;
+}
 @media print {
   .kss-style a,
   .kss-style a:visited {
