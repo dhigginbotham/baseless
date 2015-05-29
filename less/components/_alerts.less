@@ -17,6 +17,7 @@
   background: @bg;
   border: 1px solid darken(@bg, 10%);
   color: @color;
+  text-shadow: 1px 1px 0 darken(@bg, 10%);
 }
 
 .@{css-prefix}alert {
@@ -49,7 +50,7 @@
   }
   
   &.info {
-    .alert-bg-color-accent(@color-info, @color-light);
+    .alert-bg-color-accent(@color-info);
   }
   
   &.inverted {

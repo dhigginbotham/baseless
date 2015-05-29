@@ -15,6 +15,7 @@
 // .notice - notice panel color
 // .info - info panel color
 // .inverted - inverted panel color
+// .panel-round - round panel
 // 
 // Styleguide 2.3.
 
@@ -24,6 +25,7 @@
     color: @color;
     background: @bg;
     border-bottom: 1px solid @border;
+    text-shadow: 1px 1px 0 darken(@bg, 10%);
   }
   .panel-list {
     .panel-list-item {
@@ -88,7 +90,7 @@
   }
 
   &.info {
-    .panel-bg-color-accent(@color-info, darken(@color-info, 10%), @color-light);
+    .panel-bg-color-accent(@color-info, darken(@color-info, 10%));
   }
 
   &.inverted {
