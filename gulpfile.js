@@ -11,6 +11,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     path = require('path');
 
+// compile and put minified less file into the
+// dist/ folder
 gulp.task('less', function() {
   gulp.src('less/style.less')
       .pipe(gless())
@@ -21,12 +23,14 @@ gulp.task('less', function() {
       .on('error', gutil.log);
 });
 
+// cleans the project
 gulp.task('clean', function() {
   gulp.src(['dist/**/*','styleguide/**/*'], {read: false})
     .pipe(gclean({force: true}))
     .on('error', gutil.log);
 });
 
+// turns our readme into the styleguide
 gulp.task('styleguide:readme', function() {
   gulp.src('less/styleguide.md', {read: false})
       .pipe(gclean({force: true}))
@@ -38,6 +42,7 @@ gulp.task('styleguide:readme', function() {
       .on('error', gutil.log);
 });
 
+// builds the specific less file for our styleguide
 gulp.task('styleguide:less', function() {
   gulp.src('less/style.less')
       .pipe(gless())
@@ -46,6 +51,7 @@ gulp.task('styleguide:less', function() {
       .on('error', gutil.log);
 });
 
+// runs the kss lib
 gulp.task('styleguide:kss', gshell.task([
     'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>"'
   ], {
@@ -59,6 +65,7 @@ gulp.task('styleguide:kss', gshell.task([
   }
 ));
 
+// build the less file from the kss build
 gulp.task('styleguide:kss:less', gshell.task([
     'lessc --verbose <%= input %> <%= output %>'
   ], {
@@ -69,11 +76,13 @@ gulp.task('styleguide:kss:less', gshell.task([
   }
 ));
 
+// does the whole ghpages process
 gulp.task('styleguide:ghpages', function() {
   gulp.src('./styleguide/**/*')
       .pipe(gpages());
 });
 
+// makes screenshots
 gulp.task('styleguide:screenshots', function() {
   gulp.src('styleguide/**/*.html')
       .pipe(gshot({
