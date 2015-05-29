@@ -1,0 +1,27 @@
+// Wells
+// 
+// Wells are a concept of a panel mashed with an alert, you
+// can easily hold things within them.
+// 
+// Markup:
+// <div class="bs-well {{modifier_class}}">
+//    <span>This is a sample well</span>
+// </div>
+// 
+// .small - a small well
+// .large - a large well
+// 
+// Styleguide 2.5.
+.@{css-prefix}well {
+  .reset-spacing(0, 15px);
+  .border-radius();
+  background: @color-grey-default;
+  border: 1px solid @color-grey-default-accent;
+  color: @color-inverted;
+  &.small {
+    .reset-spacing(0, 10px);
+  }
+  &.large {
+    .reset-spacing(0, 25px);
+  }
+}
