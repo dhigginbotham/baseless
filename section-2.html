@@ -502,8 +502,51 @@
 
 
       <div class="kss-description">
-        <p>BASELESS grid system</p>
-
+        <p>Common grid system with 12 columns, .onecol - .twelvecol. as you would expect, however this grid
+will automatically float the columns at our tablet breakpoints, allowing us to be completely
+mobile first.</p>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+   <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col fivecol"><div style="border: 1px solid #ccc;" class="text-center">fivecol</div></div>
+   <div class="col fivecol"><div style="border: 1px solid #ccc;" class="text-center">fivecol</div></div>
+   <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+</div>
+<div class="row" style="margin-bottom: 20px;">
+   <div class="col sixcol"><div style="border: 1px solid #ccc;" class="text-center">sixcol</div></div>
+   <div class="col sixcol"><div style="border: 1px solid #ccc;" class="text-center">sixcol</div></div>
+</div>
       </div>
     </div>
 
@@ -513,17 +556,6 @@
         </div>
         <div class="kss-modifier__example">
           <div class="row" style="margin-bottom: 20px;">
-   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-   <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-</div>
-<div class="row" style="margin-bottom: 20px;">
-   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-   <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-</div>
-<div class="row" style="margin-bottom: 20px;">
    <div class="col eightcol"><div style="border: 1px solid #ccc;" class="text-center">eightcol</div></div>
    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
 </div>
@@ -532,17 +564,6 @@
 
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;row&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
-   &lt;div class=&quot;col fourcol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;fourcol&lt;/div&gt;&lt;/div&gt;
-   &lt;div class=&quot;col fourcol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;fourcol&lt;/div&gt;&lt;/div&gt;
-   &lt;div class=&quot;col fourcol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;fourcol&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
-   &lt;div class=&quot;col threecol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;threecol&lt;/div&gt;&lt;/div&gt;
-   &lt;div class=&quot;col threecol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;threecol&lt;/div&gt;&lt;/div&gt;
-   &lt;div class=&quot;col threecol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;threecol&lt;/div&gt;&lt;/div&gt;
-   &lt;div class=&quot;col threecol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;threecol&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
    &lt;div class=&quot;col eightcol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;eightcol&lt;/div&gt;&lt;/div&gt;
    &lt;div class=&quot;col fourcol&quot;&gt;&lt;div style=&quot;border: 1px solid #ccc;&quot; class=&quot;text-center&quot;&gt;fourcol&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
