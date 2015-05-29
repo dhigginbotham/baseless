@@ -1,24 +1,57 @@
 // Grid
 // 
-// BASELESS grid system
+// Common grid system with 12 columns, .onecol - .twelvecol. as you would expect, however this grid
+// will automatically float the columns at our tablet breakpoints, allowing us to be completely 
+// mobile first.
+// 
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+//    <div class="col onecol"><div style="border: 1px solid #ccc;" class="text-center">onecol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col fivecol"><div style="border: 1px solid #ccc;" class="text-center">fivecol</div></div>
+//    <div class="col fivecol"><div style="border: 1px solid #ccc;" class="text-center">fivecol</div></div>
+//    <div class="col twocol"><div style="border: 1px solid #ccc;" class="text-center">twocol</div></div>
+// </div>
+// <div class="row" style="margin-bottom: 20px;">
+//    <div class="col sixcol"><div style="border: 1px solid #ccc;" class="text-center">sixcol</div></div>
+//    <div class="col sixcol"><div style="border: 1px solid #ccc;" class="text-center">sixcol</div></div>
+// </div>
 // 
 // Markup:
-// <div class="row" style="margin-bottom: 20px;">
-//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-//    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
-// </div>
-// <div class="row" style="margin-bottom: 20px;">
-//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-//    <div class="col threecol"><div style="border: 1px solid #ccc;" class="text-center">threecol</div></div>
-// </div>
 // <div class="row" style="margin-bottom: 20px;">
 //    <div class="col eightcol"><div style="border: 1px solid #ccc;" class="text-center">eightcol</div></div>
 //    <div class="col fourcol"><div style="border: 1px solid #ccc;" class="text-center">fourcol</div></div>
 // </div>
-// 
 // 
 // Styleguide 2.4.
 
