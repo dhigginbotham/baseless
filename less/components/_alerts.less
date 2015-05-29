@@ -1,6 +1,6 @@
 // Alerts
 //
-// BASELESS alerts components, including modifiers for color (tbd: and size).
+// Alerts including modifiers for color (tbd: and size)
 // 
 // Markup: <div class="bs-alert {{modifier_class}}">Some sample alerts</div>
 // 
@@ -14,7 +14,7 @@
 // Styleguide 2.2.
 
 .alert-bg-color-accent(@bg: #ccc, @color: @color-inverted) {
-  background: lighten(@bg, 10%);
+  background: @bg;
   border: 1px solid darken(@bg, 10%);
   color: @color;
 }
