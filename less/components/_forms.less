@@ -2,4 +2,31 @@
 // 
 // Styles to hold our base form styles
 // 
+// Markup:
+//  <form class="bs-form">
+//    <div class="bs-form-group">
+//      <input type="text" class="bs-form-elem" placeholder="Placeholder text.."/>
+//    </div>
+//    <div class="bs-form-group">
+//      <textarea class="bs-form-elem"></textarea>
+//    </div>
+//  </form>
+// 
 // Styleguide 2.7.
+
+.@{css-prefix}form {
+  .reset-spacing(0,0);
+}
+
+.@{css-prefix}form-group {
+  .reset-spacing(3px 0, 0);
+  .clearfix();
+}
+
+textarea.@{css-prefix}form-elem,
+input[type="text"].@{css-prefix}form-elem {
+  .reset-spacing(0, 3px 7px);
+  .border-radius();
+  border: 1px solid @color-grey-default-accent;
+  box-shadow: inset 1px 1px 0 @color-grey-default;
+}

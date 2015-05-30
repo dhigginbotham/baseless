@@ -22,10 +22,10 @@
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
-  #gradient > .vertical(@bg, darken(@bg, @i1));
-  border: 1px solid darken(@bg, @i1);
+  #gradient > .vertical(@bg, darken(@bg, 5%));
+  border: 1px solid darken(@bg, 7%);
   box-shadow: 0 1px 0 darken(@bg, @i2),
-              inset 0 1px 0 rgba(255,255,255,0.3);
+              inset 0 1px 0 rgba(255,255,255,0.2);
   text-shadow: 1px 1px 0 darken(@bg, @i2);
   &:hover {
     background: darken(@bg, @i1);
