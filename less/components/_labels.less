@@ -1,0 +1,48 @@
+// Labels
+// 
+// labels, idk what to say about them, they're helpful
+// 
+// Markup:
+// <div class="bs-label {{modifier_class}}">
+//    {{modifier_class}}
+// </div>
+// 
+// .primary - primary label color
+// .success - success label color
+// .warning - warning label color
+// .notice - notice label color
+// .info - info label color
+// .inverted - inverted label color
+//
+// Styleguide 2.9. 
+
+.label-bg-color-accent(@bg: @color-grey-default, @color: @color-inverted) {
+  background: @bg;
+  color: @color;
+}
+
+.@{css-prefix}label {
+  .reset-spacing(0, 0 5px);
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 85%;
+  .label-bg-color-accent();
+  &.primary {
+    .label-bg-color-accent(@color-primary, @color-light);
+  }
+  &.success {
+    .label-bg-color-accent(@color-success, @color-light);
+  }
+  &.warning {
+    .label-bg-color-accent(@color-warning, @color-light);
+  }
+  &.notice {
+    .label-bg-color-accent(@color-notice, @color-light);
+  }
+  &.info {
+    .label-bg-color-accent(@color-info, @color-inverted);
+  }
+  &.inverted {
+    .label-bg-color-accent(@color-inverted, @color-light);
+  }
+}

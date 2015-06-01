@@ -2,7 +2,18 @@
 //
 // Alerts including modifiers for color (tbd: and size)
 // 
-// Markup: <div class="bs-alert {{modifier_class}}">Some sample alerts</div>
+// Markup: 
+// <div class="bs-alert {{modifier_class}}">
+//    <div class="alert-title">
+//      {{modifier_class}} alert title
+//    </div>
+//    <div class="alert-subtext">
+//      {{modifier_class}} alert subtext
+//    </div>
+//    <div class="alert-notice">
+//      alert .notice
+//    </div>
+// </div>
 // 
 // .primary - primary alert color
 // .success - success alert color
@@ -16,21 +27,38 @@
 .alert-bg-color-accent(@bg: #ccc, @color: @color-inverted) {
   background: @bg;
   border: 1px solid darken(@bg, 10%);
-  color: @color;
-  text-shadow: 1px 1px 0 darken(@bg, 10%);
+  .alert-title,
+  .alert-text {
+    font-weight: 700;
+  }
+  .alert-title {
+    color: @color;
+    .reset-spacing(0, 5px 10px 5px);
+    text-shadow: 1px 1px 0 darken(@bg, 10%);
+  }
+  .alert-subtext {
+    color: darken(@bg, 30%);
+    .reset-spacing(0, 0 10px 5px);
+  }
+  .alert-notice {
+    .reset-spacing(0, 10px);
+    text-shadow: -1px -1px 0 darken(@bg, 5%);
+    background: lighten(desaturate(@bg, 30%), 10%);
+    border-top: 1px solid darken(@bg, 10%);
+    font-size: 85%;
+    color: desaturate(@color, 40%);
+  }
 }
 
 .@{css-prefix}alert {
-  font-weight: 700;
-  .reset-spacing(5px 0, 10px);
   .border-radius();
+  .reset-spacing(5px 0);
   .notice {
     color: @color-light;
   }
   .thin {
     font-weight: 400;
   }
-
   .alert-bg-color-accent(@color-info);
   
   &.primary {
