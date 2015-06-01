@@ -695,7 +695,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #dcd7a8;
-  background: #ebeae5;
+  background: #dbdbdb;
   border-top: 1px solid #d4ce96;
   font-size: 85%;
   color: #333333;
@@ -723,7 +723,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #1f639c;
-  background: #5688b1;
+  background: #63798b;
   border-top: 1px solid #1b5686;
   font-size: 85%;
   color: #f1f1f1;
@@ -751,7 +751,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #b0b602;
-  background: #d1d72d;
+  background: #aaae3d;
   border-top: 1px solid #979c02;
   font-size: 85%;
   color: #f1f1f1;
@@ -779,7 +779,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #d36c17;
-  background: #cd976a;
+  background: #b08b6d;
   border-top: 1px solid #bc6015;
   font-size: 85%;
   color: #f1f1f1;
@@ -807,7 +807,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #b40b32;
-  background: #cd3e5f;
+  background: #a84a60;
   border-top: 1px solid #9c092c;
   font-size: 85%;
   color: #f1f1f1;
@@ -835,7 +835,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #dcd7a8;
-  background: #ebeae5;
+  background: #dbdbdb;
   border-top: 1px solid #d4ce96;
   font-size: 85%;
   color: #333333;
@@ -863,7 +863,7 @@ body {
   margin: 0;
   padding: 10px;
   text-shadow: -1px -1px 0 #262626;
-  background: #4d4d4d;
+  background: #404040;
   border-top: 1px solid #1a1a1a;
   font-size: 85%;
   color: #f1f1f1;
@@ -1141,6 +1141,7 @@ input[type="text"].bs-form-elem {
   border-radius: 10px;
   display: inline-block;
   font-size: 85%;
+  font-weight: 700;
   background: #eeeeee;
   color: #333333;
 }
