@@ -46,38 +46,72 @@
 // </table>
 // 
 // .striped - striped table style
+// .mini - mini table style
+// .small - small table style
+// .large - large table style
 // 
 // Styleguide 2.8.
+
+.table-accent(@border: @color-grey-default-accent, @bg: @color-light) {
+  th,
+  td {
+    border: 1px solid @border;
+  }
+  thead {
+    tr {
+      th,
+      td {
+        background: lighten(@border, 10%);
+      }
+    }
+  }
+  &.striped {
+    tbody {
+      tr {
+        background: lighten(@border, 15%);
+        &:nth-child(odd) {
+          background: @bg;
+        }
+      }
+    }
+  }
+}
 
 .@{css-prefix}table {
   border-collapse: collapse;
   width: 100%;
   th,
   td {
-    .reset-spacing(0, 2px 5px);
-    border: 1px solid @color-grey-default-accent;
+    .reset-spacing(0, 5px);
   }
   thead {
     tr {
       th,
       td {
         text-align: left;
-        background: lighten(@color-grey-default-accent, 10%);
       }
     }
   }
-  tbody {
-    tr {
+  .table-accent();
+  &.small {
+    th,
+    td {
+      .reset-spacing(0, 5px);
+      font-size: @typo-font-size-small;
     }
   }
-  &.striped {
-    tbody {
-      tr {
-        background: lighten(@color-grey-default-accent, 15%);
-        &:nth-child(odd) {
-          background: @color-light;
-        }
-      }
+  &.mini {
+    th,
+    td {
+      .reset-spacing(0, 2px 5px);
+      font-size: @typo-font-size-mini;
+    }
+  }
+  &.large {
+    th,
+    td {
+      .reset-spacing(0, 7px 5px);
+      font-size: @typo-font-size-large;
     }
   }
 }
