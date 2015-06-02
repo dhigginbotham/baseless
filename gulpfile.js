@@ -16,7 +16,11 @@ var gulp = require('gulp'),
 // dist/ folder
 gulp.task('less', function() {
   gulp.src('less/style.less')
-      .pipe(gless())
+      .pipe(gless({
+        globalVars: {
+          'css-prefix': 'bs-'
+        }
+      }))
       .pipe(gmincss())
       .pipe(gconcat('style.min.css'))
       .pipe(gulp.dest('dist'))
@@ -46,7 +50,11 @@ gulp.task('styleguide:readme', function() {
 // builds the specific less file for our styleguide
 gulp.task('styleguide:less', function() {
   gulp.src('less/style.less')
-      .pipe(gless())
+      .pipe(gless({
+        globalVars: {
+          'css-prefix': 'bs-'
+        }
+      }))
       .pipe(gmincss())
       .pipe(gconcat('public/style.css'))
       .pipe(gulp.dest('less/templates/styleguide/'))
