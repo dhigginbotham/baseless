@@ -32,11 +32,5 @@ module.exports.options = {
     multiple: false,
     describe: 'Title of the style guide',
     default: 'KSS Style Guide'
-  },
-  'cssPrefix': {
-    string: true,
-    multiple: false,
-    describe: 'BASELESS CSS Prefix',
-    default: 'bs-'
   }
 };

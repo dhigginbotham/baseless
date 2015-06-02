@@ -10,17 +10,15 @@ var gulp = require('gulp'),
     gmincss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
     gutil = require('gulp-util'),
+    del = require('del'),
     path = require('path'),
     conf = require('./config'),
     tasks = conf.tasks;
 
-
 // CLEAN PROJECT TASK
 // if things get weird, you can fix them with this
-gulp.task(tasks.clean.name, function() {
-  gulp.src(tasks.clean.src, {read: false})
-    .pipe(gclean({force: true}))
-    .on('error', gutil.log);
+gulp.task(tasks.clean.name, function(fn) {
+  del(tasks.clean.src, fn);
 });
 
 // DIST LESS TASK
@@ -109,16 +107,18 @@ gulp.task(tasks.parker.name, function() {
 // that should be watched on, allows us to dev like
 // a boss
 gulp.task('watch', function() {
-  gulp.watch(['less/**/*.less', '!less/templates/styleguide/public/*.less'], [tasks.dist.name, tasks.less.name, tasks.kss.name]);
+  gulp.watch(['less/**/*.less', '!less/template/less/*.less'], [tasks.dist.name, tasks.less.name, tasks.kss.name]);
   gulp.watch('./README.md', [tasks.readme.name, 'styleguide']);
-  gulp.watch('less/templates/styleguide/public/*.less', [tasks.kss.less.name]);
+  gulp.watch('less/template/less/*.less', [tasks.kss.less.name]);
 });
 
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
 // prepare for distribution
-gulp.task('styleguide', [tasks.less.name, tasks.dist.name, tasks.readme.name, tasks.kss.name, tasks.screens.name, tasks.parker.name]);
+gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.readme.name, tasks.kss.name]);
 
 // DEFAULT TASK
-// ...
-gulp.task('default', [tasks.less.name, tasks.dist.name, tasks.kss.name, 'watch']);
+// ...its default, and helpful, I sometimes like to 
+// be like `gulp styleguide && gulp`, mostly out of
+// habit because its *mostly* not needed.
+gulp.task('default', [tasks.clean.name, tasks.less.name, tasks.dist.name, tasks.kss.name, 'watch']);

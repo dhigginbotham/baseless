@@ -1,3 +1,36 @@
+.cf:before,
+.clearfix:before,
+.cf:after,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.cf:after,
+.clearfix:after {
+  clear: both;
+}
+.pr,
+.pull-right {
+  float: right;
+}
+.pl,
+.pull-left {
+  float: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .kss-style {
   color: #444444;
   font-family: "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;

@@ -44,23 +44,22 @@ var tasks = {
   },
   kss: {
     name: 'styleguide:kss',
-    exec: 'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --cssPrefix "<%= cssPrefix %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>',
+    exec: 'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>"',
     opts: {
       source: path.join(__dirname, 'less'),
       destination: path.join(__dirname, 'styleguide'),
-      template: path.join(__dirname, 'less', 'templates', 'styleguide'),
+      template: path.join(__dirname, 'less', 'template'),
       css: 'public/style.css',
       title: config.title,
-      helpers: path.join(__dirname, 'less', 'templates', 'styleguide', 'helpers'),
-      placeholder: 'default',
-      cssPrefix: config.cssPrefix
+      helpers: path.join(__dirname, 'less', 'template', 'helpers'),
+      placeholder: 'default'
     },
     less: {
       name: 'styleguide:kss:less',
       exec: 'lessc --verbose <%= src %> <%= dest %>',
       opts: {
-        src: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.less'),
-        dest: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.css')
+        src: path.join(__dirname, 'less', 'template', 'less', 'style.less'),
+        dest: path.join(__dirname, 'less', 'template', 'public', 'kss.css')
       }
     }
   },
@@ -68,7 +67,7 @@ var tasks = {
     name: 'styleguide:less',
     src: config.less,
     dest: {
-      path: 'less/templates/styleguide/public',
+      path: 'less/template/public',
       file: 'style.css'
     },
     opts: {
