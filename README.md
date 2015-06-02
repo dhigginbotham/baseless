@@ -17,5 +17,6 @@ bs uses [`gulp`](https://github.com/gulpjs/gulp) under the hood to do all the co
 | `styleguide:kss` | Runs task to compiles styleguide with [kss-node](https://github.com/kss-node/kss-node)
 | `styleguide:kss:less` | Runs task to compile styleguide less
 | `styleguide:readme` | Runs task to compile and copy the readme file to the styleguides index page
+| `styleguide:parker` | Runs task to compile the [parker](https://github.com/katiefenn/parker) report for our selectors
 | `styleguide:ghpages` | Runs task to update github pages html with the latest styleguide files
 | `styleguide:screenshots` | Runs task to take screenshots of the components in various screen widths

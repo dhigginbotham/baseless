@@ -54,15 +54,14 @@
 
 @grid-columns:                                        12;
 @grid-column-padding:                                 10px;
-@grid-float-breakpoint:                               @breakpoint-tablet-ls;
-
-@line-height-base:                                    20px;
+@grid-float-breakpoint:                               @breakpoint-tablet;
 
 //
 // typography constants
 //
 
-@typo-font-size-base:                                 14px;
+@typo-font-size-base:                                 16px;
+@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.5;
 @typo-font-size-large:                                @typo-font-size-base * 1.25; // ~18px
 @typo-font-size-small:                                @typo-font-size-base * 0.85; // ~12px
 @typo-font-size-mini:                                 @typo-font-size-base * 0.75; // ~11px
@@ -74,7 +73,13 @@
 @typo-font-heading:                                   @typo-font-serif;
 @typo-font-base:                                      @typo-font-sans-serif;
 
-@typo-font-lineheight:                                @line-height-base;
+@typo-font-lineheight:                                @typo-font-size-vertical-rhythm;
 
 @typo-font-size:                                      @typo-font-size-base;
 @typo-font-color:                                     @color-inverted;
+
+//
+// box-sizing constants
+//
+
+@line-height-base:                                    @typo-font-size-vertical-rhythm;
