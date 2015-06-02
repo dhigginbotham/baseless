@@ -5,18 +5,37 @@
 // 
 // Styleguide 1.2.
 
-//
-// component prefix
-// i dont really want to do this, but i also dont want to make
+// CSS Prefix
+// 
+// I dont really want to do this, but I also dont want to make
 // any opionions that should really be enforced inside of a 
 // minimalist css framework
+// 
+// `@css-prefix`
 //
+// Styleguide 1.2.1
 
 @css-prefix:                                          bs-;
 
-//
-// color constants
+// Color Constants
 // 
+// Default colors used inside of the library
+// 
+// ```
+// @color-primary
+// @color-success
+// @color-warning
+// @color-notice
+// @color-info
+// @color-inverted
+// @color-light
+// @color-grey-darkest
+// @color-grey-dark
+// @color-grey-light
+// @color-grey-lightest
+// ```
+// 
+// Styleguide 1.2.2
 
 @color-primary:                                       #2371B1; //#1693A7; //#428bca;
 @color-success:                                       #9EBF24; //#C8CF02; //#5cb85c;
@@ -40,6 +59,28 @@
 @color-grey-default-accent:                           #ccc;  
 
 //
+// link color constants
+//
+
+@color-link:                                          @color-primary;
+@color-link-visited:                                  @color-link;
+@color-link-hover:                                    @color-link;
+@color-link-active:                                   @color-link;
+
+//
+// blockquote color constants
+//
+
+@color-blockquote:                                    @color-primary;
+
+//
+// hr color constants
+//
+
+@color-hr-top:                                        @color-light;
+@color-hr-bottom:                                     @color-inverted;
+
+//
 // breakpoint constants
 //
 
@@ -61,7 +102,7 @@
 //
 
 @typo-font-size-base:                                 16px;
-@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.5;
+@typo-font-size-vertical-rhythm:                      20px;
 @typo-font-size-large:                                @typo-font-size-base * 1.25; // ~18px
 @typo-font-size-small:                                @typo-font-size-base * 0.85; // ~12px
 @typo-font-size-mini:                                 @typo-font-size-base * 0.75; // ~11px
@@ -70,8 +111,8 @@
 @typo-font-serif:                                     Geogia, 'Times New Roman', serif;
 @typo-font-code:                                      "PT Mono", Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 
-@typo-font-heading:                                   @typo-font-serif;
 @typo-font-base:                                      @typo-font-sans-serif;
+@typo-font-heading:                                   @typo-font-base;
 
 @typo-font-lineheight:                                @typo-font-size-vertical-rhythm;
 

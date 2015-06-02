@@ -1,11 +1,13 @@
 // Buttons
 //
-// BASELESS buttons components, including modifiers for color (tbd: and size).
+// BASELESS buttons components, including modifiers for color and size.
 // 
 // Markup:
 // <a href="#" class="bs-btn {{modifier_class}}">Link Button</a>
 // <button class="bs-btn {{modifier_class}}">Button Element</button>
 // <input type="button" class="bs-btn {{modifier_class}}" value="input[type='button']"/>
+// <input type="button" class="bs-btn {{modifier_class}}" value="input[type='button']" disabled/>
+// <a href="#" class="bs-btn {{modifier_class}} disabled">Link Button</a>
 // 
 // .primary - primary button color
 // .success - success button color
@@ -15,6 +17,9 @@
 // .inverted - inverted button color
 // .text - text button color
 // .disabled - disabled button color
+// .primary.large - large button style
+// .primary.small - small button style
+// .primary.mini - mini button style
 //  
 // Styleguide 2.2.
 
@@ -66,8 +71,8 @@
     outline: none;
   }
 
-  font-family: @typo-font-base;
-  font-size: 14px;
+  font-family: @typo-font-heading;
+  font-size: @typo-font-size-base;
   font-weight: bold;
   text-decoration: none;
 
@@ -83,6 +88,18 @@
 
   &.text {
 
+  }
+
+  &.large {
+    font-size: @typo-font-size-large;
+  }
+
+  &.small {
+    font-size: @typo-font-size-small;
+  }
+
+  &.mini {
+    font-size: @typo-font-size-mini;
   }
 
   &.primary {

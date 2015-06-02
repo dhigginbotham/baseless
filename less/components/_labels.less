@@ -13,6 +13,9 @@
 // .notice - notice label color
 // .info - info label color
 // .inverted - inverted label color
+// .primary.small - small label size
+// .primary.mini - mini label size
+// .primary.large - large label size
 //
 // Styleguide 2.5. 
 
@@ -22,12 +25,21 @@
 }
 
 .@{css-prefix}label {
-  .reset-spacing(0,0 5px);
-  border-radius: 10px;
+  .reset-spacing(0,3px 5px);
+  border-radius: 15px;
   display: inline-block;
-  font-size: 85%;
   font-weight: 700;
   text-align: center;
+  font-size: @typo-font-size-base;
+  &.small {
+    font-size: @typo-font-size-small;
+  }
+  &.large {
+    font-size: @typo-font-size-large;
+  }
+  &.mini {
+    font-size: @typo-font-size-mini;
+  }
   .label-bg-color-accent();
   &.primary {
     .label-bg-color-accent(@color-primary, @color-light);

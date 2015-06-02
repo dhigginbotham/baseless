@@ -4,19 +4,25 @@
 // 
 // Markup:
 // <ul class="bs-list {{modifier_class}}">
-//    <li>Some sample thing</li>
-//    <li>Some sample thing</li>
-//    <li>Some sample thing</li>
+//    <li>Unordered list example</li>
+//    <li>Unordered list example</li>
+//    <li>Unordered list example</li>
 // </ul>
+// <ol class="bs-list {{modifier_class}}">
+//    <li>Ordered list example</li>
+//    <li>Ordered list example</li>
+//    <li>Ordered list example</li>
+// </ol>
 // 
+// .flat - flattens list style
 // .inline - inline list style
 // .nav - nav list style
-// .nav.inline - combined inline nav list style
-// .nav.inline.success - success colored nav list
-// .nav.inline.warning - warning colored nav list
-// .nav.inline.notice - notice colored nav list
-// .nav.inline.info - info colored nav list
-// .nav.inline.inverted - inverted colored nav list
+// .nav.flat.inline - combined inline nav list style
+// .nav.flat.inline.success - success colored nav list
+// .nav.flat.inline.warning - warning colored nav list
+// .nav.flat.inline.notice - notice colored nav list
+// .nav.flat.inline.info - info colored nav list
+// .nav.flat.inline.inverted - inverted colored nav list
 // 
 // Styleguide 2.6.
 
@@ -28,11 +34,13 @@
 }
 
 .@{css-prefix}list {
-  .reset-spacing(0,0);
-  list-style: none;
   .clearfix();
-  li {
+  &.flat {
     .reset-spacing(0,0);
+    list-style: none;
+    li {
+      .reset-spacing(0,0);
+    }
   }
   &.inline {
     li {

@@ -120,7 +120,9 @@
 
 
       <div class="kss-description">
-        <p>Reusable components that can be used across the site.</p>
+        <p>Reusable components that can be used across the site,
+each components modifier is chainable per component, or
+at least was designed with that intention. <code>ie: div.bs-panel.round.info</code></p>
 
       </div>
     </div>
@@ -144,7 +146,7 @@
 
 
       <div class="kss-description">
-        <p>Alerts including modifiers for color (tbd: and size)</p>
+        <p>Alerts including modifiers for color and other various attributes</p>
 
       </div>
     </div>
@@ -318,7 +320,7 @@
 
 
       <div class="kss-description">
-        <p>BASELESS buttons components, including modifiers for color (tbd: and size).</p>
+        <p>BASELESS buttons components, including modifiers for color and size.</p>
 
       </div>
     </div>
@@ -334,6 +336,8 @@
           <a href="#" class="bs-btn [modifier class]">Link Button</a>
 <button class="bs-btn [modifier class]">Button Element</button>
 <input type="button" class="bs-btn [modifier class]" value="input[type='button']"/>
+<input type="button" class="bs-btn [modifier class]" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn [modifier class] disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .primary
@@ -345,6 +349,8 @@
           <a href="#" class="bs-btn primary">Link Button</a>
 <button class="bs-btn primary">Button Element</button>
 <input type="button" class="bs-btn primary" value="input[type='button']"/>
+<input type="button" class="bs-btn primary" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn primary disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .success
@@ -356,6 +362,8 @@
           <a href="#" class="bs-btn success">Link Button</a>
 <button class="bs-btn success">Button Element</button>
 <input type="button" class="bs-btn success" value="input[type='button']"/>
+<input type="button" class="bs-btn success" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn success disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .warning
@@ -367,6 +375,8 @@
           <a href="#" class="bs-btn warning">Link Button</a>
 <button class="bs-btn warning">Button Element</button>
 <input type="button" class="bs-btn warning" value="input[type='button']"/>
+<input type="button" class="bs-btn warning" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn warning disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .notice
@@ -378,6 +388,8 @@
           <a href="#" class="bs-btn notice">Link Button</a>
 <button class="bs-btn notice">Button Element</button>
 <input type="button" class="bs-btn notice" value="input[type='button']"/>
+<input type="button" class="bs-btn notice" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn notice disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .info
@@ -389,6 +401,8 @@
           <a href="#" class="bs-btn info">Link Button</a>
 <button class="bs-btn info">Button Element</button>
 <input type="button" class="bs-btn info" value="input[type='button']"/>
+<input type="button" class="bs-btn info" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn info disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .inverted
@@ -400,6 +414,8 @@
           <a href="#" class="bs-btn inverted">Link Button</a>
 <button class="bs-btn inverted">Button Element</button>
 <input type="button" class="bs-btn inverted" value="input[type='button']"/>
+<input type="button" class="bs-btn inverted" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn inverted disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .text
@@ -411,6 +427,8 @@
           <a href="#" class="bs-btn text">Link Button</a>
 <button class="bs-btn text">Button Element</button>
 <input type="button" class="bs-btn text" value="input[type='button']"/>
+<input type="button" class="bs-btn text" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn text disabled">Link Button</a>
         </div>
         <div class="kss-modifier__name kss-style">
           .disabled
@@ -422,6 +440,47 @@
           <a href="#" class="bs-btn disabled">Link Button</a>
 <button class="bs-btn disabled">Button Element</button>
 <input type="button" class="bs-btn disabled" value="input[type='button']"/>
+<input type="button" class="bs-btn disabled" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn disabled disabled">Link Button</a>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.large
+        </div>
+        <div class="kss-modifier__description kss-style">
+          large button style
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="bs-btn primary large">Link Button</a>
+<button class="bs-btn primary large">Button Element</button>
+<input type="button" class="bs-btn primary large" value="input[type='button']"/>
+<input type="button" class="bs-btn primary large" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn primary large disabled">Link Button</a>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.small
+        </div>
+        <div class="kss-modifier__description kss-style">
+          small button style
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="bs-btn primary small">Link Button</a>
+<button class="bs-btn primary small">Button Element</button>
+<input type="button" class="bs-btn primary small" value="input[type='button']"/>
+<input type="button" class="bs-btn primary small" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn primary small disabled">Link Button</a>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.mini
+        </div>
+        <div class="kss-modifier__description kss-style">
+          mini button style
+        </div>
+        <div class="kss-modifier__example">
+          <a href="#" class="bs-btn primary mini">Link Button</a>
+<button class="bs-btn primary mini">Button Element</button>
+<input type="button" class="bs-btn primary mini" value="input[type='button']"/>
+<input type="button" class="bs-btn primary mini" value="input[type='button']" disabled/>
+<a href="#" class="bs-btn primary mini disabled">Link Button</a>
         </div>
       </div>
 
@@ -429,7 +488,9 @@
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;bs-btn [modifier class]&quot;&gt;Link Button&lt;/a&gt;
 &lt;button class=&quot;bs-btn [modifier class]&quot;&gt;Button Element&lt;/button&gt;
-&lt;input type=&quot;button&quot; class=&quot;bs-btn [modifier class]&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;</code></pre>
+&lt;input type=&quot;button&quot; class=&quot;bs-btn [modifier class]&quot; value=&quot;input[type=&#x27;button&#x27;]&quot;/&gt;
+&lt;input type=&quot;button&quot; class=&quot;bs-btn [modifier class]&quot; value=&quot;input[type=&#x27;button&#x27;]&quot; disabled/&gt;
+&lt;a href=&quot;#&quot; class=&quot;bs-btn [modifier class] disabled&quot;&gt;Link Button&lt;/a&gt;</code></pre>
       </div>
 
       </section>
@@ -686,6 +747,39 @@ mobile first.</p>
    inverted
 </div>
         </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.small
+        </div>
+        <div class="kss-modifier__description kss-style">
+          small label size
+        </div>
+        <div class="kss-modifier__example">
+          <div class="bs-label primary small">
+   primary small
+</div>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.mini
+        </div>
+        <div class="kss-modifier__description kss-style">
+          mini label size
+        </div>
+        <div class="kss-modifier__example">
+          <div class="bs-label primary mini">
+   primary mini
+</div>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .primary.large
+        </div>
+        <div class="kss-modifier__description kss-style">
+          large label size
+        </div>
+        <div class="kss-modifier__example">
+          <div class="bs-label primary large">
+   primary large
+</div>
+        </div>
       </div>
 
       <h3>Example Code:</h3>
@@ -727,10 +821,33 @@ mobile first.</p>
         </div>
         <div class="kss-modifier__example">
           <ul class="bs-list [modifier class]">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list [modifier class]">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .flat
+        </div>
+        <div class="kss-modifier__description kss-style">
+          flattens list style
+        </div>
+        <div class="kss-modifier__example">
+          <ul class="bs-list flat">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+</ul>
+<ol class="bs-list flat">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
           .inline
@@ -740,10 +857,15 @@ mobile first.</p>
         </div>
         <div class="kss-modifier__example">
           <ul class="bs-list inline">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list inline">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
           .nav
@@ -753,98 +875,138 @@ mobile first.</p>
         </div>
         <div class="kss-modifier__example">
           <ul class="bs-list nav">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline
+          .nav.flat.inline
         </div>
         <div class="kss-modifier__description kss-style">
           combined inline nav list style
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline.success
+          .nav.flat.inline.success
         </div>
         <div class="kss-modifier__description kss-style">
           success colored nav list
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline success">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline success">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline success">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline.warning
+          .nav.flat.inline.warning
         </div>
         <div class="kss-modifier__description kss-style">
           warning colored nav list
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline warning">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline warning">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline warning">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline.notice
+          .nav.flat.inline.notice
         </div>
         <div class="kss-modifier__description kss-style">
           notice colored nav list
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline notice">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline notice">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline notice">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline.info
+          .nav.flat.inline.info
         </div>
         <div class="kss-modifier__description kss-style">
           info colored nav list
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline info">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline info">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline info">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
         <div class="kss-modifier__name kss-style">
-          .nav.inline.inverted
+          .nav.flat.inline.inverted
         </div>
         <div class="kss-modifier__description kss-style">
           inverted colored nav list
         </div>
         <div class="kss-modifier__example">
-          <ul class="bs-list nav inline inverted">
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
-   <li>Some sample thing</li>
+          <ul class="bs-list nav flat inline inverted">
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
+   <li>Unordered list example</li>
 </ul>
+<ol class="bs-list nav flat inline inverted">
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+   <li>Ordered list example</li>
+</ol>
         </div>
       </div>
 
       <h3>Example Code:</h3>
       <div class="kss-markup kss-style">
         <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;bs-list [modifier class]&quot;&gt;
-   &lt;li&gt;Some sample thing&lt;/li&gt;
-   &lt;li&gt;Some sample thing&lt;/li&gt;
-   &lt;li&gt;Some sample thing&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+   &lt;li&gt;Unordered list example&lt;/li&gt;
+   &lt;li&gt;Unordered list example&lt;/li&gt;
+   &lt;li&gt;Unordered list example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class=&quot;bs-list [modifier class]&quot;&gt;
+   &lt;li&gt;Ordered list example&lt;/li&gt;
+   &lt;li&gt;Ordered list example&lt;/li&gt;
+   &lt;li&gt;Ordered list example&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
       </div>
 
       </section>
@@ -1013,6 +1175,148 @@ and use .row/.col style tables for most things ideally (i would image).</p>
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <table class="bs-table [modifier class]">
+   <thead>
+     <tr>
+       <th>Example table heading column</th>
+       <th>Example table heading column</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+   </tbody>
+   <tfoot>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+   </tfoot>
+</table>
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .striped
+        </div>
+        <div class="kss-modifier__description kss-style">
+          striped table style
+        </div>
+        <div class="kss-modifier__example">
+          <table class="bs-table striped">
+   <thead>
+     <tr>
+       <th>Example table heading column</th>
+       <th>Example table heading column</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+   </tbody>
+   <tfoot>
+     <tr>
+       <td>Example table column</td>
+       <td>Example table column</td>
+     </tr>
+   </tfoot>
+</table>
+        </div>
+      </div>
+
+      <h3>Example Code:</h3>
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;table class=&quot;bs-table [modifier class]&quot;&gt;
+   &lt;thead&gt;
+     &lt;tr&gt;
+       &lt;th&gt;Example table heading column&lt;/th&gt;
+       &lt;th&gt;Example table heading column&lt;/th&gt;
+     &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+   &lt;tfoot&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+       &lt;td&gt;Example table column&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+      </div>
 
       </section>
       <section id="kssref-2-9" class="kss-section kss-section--depth-2">

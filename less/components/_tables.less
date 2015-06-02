@@ -3,4 +3,81 @@
 // Tabular data should be presented in a nice way, we'll keep this simple
 // and use .row/.col style tables for most things ideally (i would image).
 // 
+// Markup:
+// <table class="bs-table {{modifier_class}}">
+//    <thead>
+//      <tr>
+//        <th>Example table heading column</th>
+//        <th>Example table heading column</th>
+//      </tr>
+//    </thead>
+//    <tbody>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//    </tbody>
+//    <tfoot>
+//      <tr>
+//        <td>Example table column</td>
+//        <td>Example table column</td>
+//      </tr>
+//    </tfoot>
+// </table>
+// 
+// .striped - striped table style
+// 
 // Styleguide 2.8.
+
+.@{css-prefix}table {
+  border-collapse: collapse;
+  width: 100%;
+  th,
+  td {
+    .reset-spacing(0, 2px 5px);
+    border: 1px solid @color-grey-default-accent;
+  }
+  thead {
+    tr {
+      th,
+      td {
+        text-align: left;
+        background: lighten(@color-grey-default-accent, 10%);
+      }
+    }
+  }
+  tbody {
+    tr {
+    }
+  }
+  &.striped {
+    tbody {
+      tr {
+        background: lighten(@color-grey-default-accent, 15%);
+        &:nth-child(odd) {
+          background: @color-light;
+        }
+      }
+    }
+  }
+}
