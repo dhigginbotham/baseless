@@ -5,10 +5,18 @@
 // Markup:
 //  <form class="bs-form">
 //    <div class="bs-form-group">
+//      <label>Text Form Example</label>
 //      <input type="text" class="bs-form-elem" placeholder="Placeholder text.."/>
 //    </div>
 //    <div class="bs-form-group">
+//      <label>Textarea Form Example</label>
 //      <textarea class="bs-form-elem"></textarea>
+//    </div>
+//    <div class="bs-form-group">
+//      <label>Select Form Example</label>
+//      <select class="bs-form-elem">
+//        <option value="null">Example Option</option>
+//      </select>
 //    </div>
 //  </form>
 // 
@@ -21,9 +29,20 @@
 .@{css-prefix}form-group {
   .reset-spacing(3px 0, 0);
   .clearfix();
+  label {
+    font-weight: 700;
+    display: block;
+  }
+  &.inline {
+    li {
+      display: inline-block;
+    }
+  }
+  .clearfix();
 }
 
 textarea.@{css-prefix}form-elem,
+select.@{css-prefix}form-elem,
 input[type="text"].@{css-prefix}form-elem {
   .reset-spacing(0, 3px 7px);
   .border-radius();
