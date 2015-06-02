@@ -394,14 +394,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-::-moz-selection {
-  background: #cc0c39;
-  color: #f1f1f1;
-}
-::selection {
-  background: #cc0c39;
-  color: #f1f1f1;
-}
 :focus {
   outline: thin dotted #b3b3b3;
 }
@@ -1367,9 +1359,8 @@ input[type="text"].bs-form-elem {
 .bs-well {
   margin: 0;
   padding: 15px;
-  border-radius: 3px 3px 3px 3px;
   background: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #d5d5d5;
   color: #333333;
 }
 .bs-well.small {
@@ -1379,4 +1370,12 @@ input[type="text"].bs-form-elem {
 .bs-well.large {
   margin: 0;
   padding: 25px;
+}
+.bs-well.round {
+  border-radius: 3px 3px 3px 3px;
+}
+.bs-well.info {
+  background: #e3dfba;
+  border: 1px solid #c6bd71;
+  color: #4c481f;
 }
