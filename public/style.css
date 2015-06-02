@@ -694,8 +694,8 @@ body {
 .bs-alert .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #dcd7a8;
-  background: #dbdbdb;
+  text-shadow: -1px -1px 0 #e9e8e7;
+  background: #f5f5f5;
   border-top: 1px solid #d4ce96;
   font-size: 85%;
   color: #333333;
@@ -722,8 +722,8 @@ body {
 .bs-alert.primary .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #1f639c;
-  background: #63798b;
+  text-shadow: -1px -1px 0 #5089b7;
+  background: #6295bf;
   border-top: 1px solid #1b5686;
   font-size: 85%;
   color: #f1f1f1;
@@ -750,8 +750,8 @@ body {
 .bs-alert.success .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #b0b602;
-  background: #aaae3d;
+  text-shadow: -1px -1px 0 #d7dd27;
+  background: #dbe13d;
   border-top: 1px solid #979c02;
   font-size: 85%;
   color: #f1f1f1;
@@ -778,8 +778,8 @@ body {
 .bs-alert.warning .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #d36c17;
-  background: #b08b6d;
+  text-shadow: -1px -1px 0 #deb18c;
+  background: #e3bea0;
   border-top: 1px solid #bc6015;
   font-size: 85%;
   color: #f1f1f1;
@@ -806,8 +806,8 @@ body {
 .bs-alert.notice .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #b40b32;
-  background: #a84a60;
+  text-shadow: -1px -1px 0 #c14a66;
+  background: #c75d76;
   border-top: 1px solid #9c092c;
   font-size: 85%;
   color: #f1f1f1;
@@ -834,8 +834,8 @@ body {
 .bs-alert.info .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #dcd7a8;
-  background: #dbdbdb;
+  text-shadow: -1px -1px 0 #e9e8e7;
+  background: #f5f5f5;
   border-top: 1px solid #d4ce96;
   font-size: 85%;
   color: #333333;
@@ -862,8 +862,8 @@ body {
 .bs-alert.inverted .alert-notice {
   margin: 0;
   padding: 10px;
-  text-shadow: -1px -1px 0 #262626;
-  background: #404040;
+  text-shadow: -1px -1px 0 #4d4d4d;
+  background: #595959;
   border-top: 1px solid #1a1a1a;
   font-size: 85%;
   color: #f1f1f1;
