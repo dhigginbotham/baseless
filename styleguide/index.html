@@ -47,10 +47,59 @@
 <article role="main" class="kss-main">
   <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
      <h1 id="baseless">BASELESS</h1>
-<p><a href="https://github.com/dhigginbotham/baseless">BASELESS</a> is a minimal UI framework is a good starting point for a basic or extensive website. 
-It&#39;s currently being developed on and isn&#39;t quite ready for production, but here&#39;s what it does for you:</p>
-<p>To start we&#39;re using <a href="#">normalize.css</a> to get all of our browsers behaving in a way we expect. From there we use mixins to create reusable
-and customizable components. To generate our styleguide we&#39;re using <a href="#">kss-node</a>, <a href="#">gulp</a> and <a href="#">less</a>.</p>
+<p><a href="https://github.com/dhigginbotham/baseless">BASELESS</a> (<code>&quot;bs&quot;</code> for short) is a minimal UI framework is a good starting point for any modern website. 
+The idea behind bs was to create a living styleguide for your website, with pre assembled common use components. You&#39;ll find a lot of familiarity
+between this framework and many other popular frameworks, as a huge fan of <code>@mdo</code> and of his ideas I take a lot of naming conventions found in <a href="#">twbs</a>,
+this is namely just to help anyone else on a team pickup a basic naming convention have you not one of your own.</p>
+<h2 id="tasks">Tasks</h2>
+<p>bs uses <a href="#"><code>gulp</code></a> under the hood to do all the compilation and build steps, here&#39;s a list of them currently:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>go</code></td>
+<td>Runs watching task that does all of the tasks needed for active development on file change</td>
+</tr>
+<tr>
+<td><code>clean</code></td>
+<td>Runs task to clean output directories for releases</td>
+</tr>
+<tr>
+<td><code>less</code></td>
+<td>Runs task to compile baseless less dist</td>
+</tr>
+<tr>
+<td><code>styleguide</code></td>
+<td>Runs all the tasks to create updated styleguide, moves files and compiles less</td>
+</tr>
+<tr>
+<td><code>styleguide:kss</code></td>
+<td>Runs task to compiles styleguide with <a href="#">kss-node</a></td>
+</tr>
+<tr>
+<td><code>styleguide:kss:less</code></td>
+<td>Runs task to compile styleguide less</td>
+</tr>
+<tr>
+<td><code>styleguide:readme</code></td>
+<td>Runs task to compile and copy the readme file to the styleguides index page</td>
+</tr>
+<tr>
+<td><code>styleguide:ghpages</code></td>
+<td>Runs task to update github pages html with the latest styleguide files</td>
+</tr>
+<tr>
+<td><code>styleguide:screenshots</code></td>
+<td>Runs task to take screenshots of the components in various screen widths</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-view-styleguide-http-dhigginbotham-github-io-baseless-"><a href="http://dhigginbotham.github.io/baseless">View Styleguide</a></h3>
 
   </div>
 </article>

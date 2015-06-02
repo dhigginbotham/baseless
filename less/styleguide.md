@@ -1,6 +1,25 @@
 # BASELESS
-[BASELESS](https://github.com/dhigginbotham/baseless) is a minimal UI framework is a good starting point for a basic or extensive website. 
-It's currently being developed on and isn't quite ready for production, but here's what it does for you:
+[BASELESS](https://github.com/dhigginbotham/baseless) (`"bs"` for short) is a minimal UI framework is a good starting point for any modern website. 
+The idea behind bs was to create a living styleguide for your website, with pre assembled common use components. You'll find a lot of familiarity
+between this framework and many other popular frameworks, as a huge fan of `@mdo` and of his ideas I take a lot of naming conventions found in [twbs](#),
+this is namely just to help anyone else on a team pickup a basic naming convention have you not one of your own.
 
-To start we're using [normalize.css](#) to get all of our browsers behaving in a way we expect. From there we use mixins to create reusable
-and customizable components. To generate our styleguide we're using [kss-node](#), [gulp](#) and [less](#).
+## Tasks
+bs uses [`gulp`](#) under the hood to do all the compilation and build steps, here's a list of them currently:
+
+| Task | Desc
+| --- | --- |
+| `go` | Runs watching task that does all of the tasks needed for active development on file change
+| `clean` | Runs task to clean output directories for releases
+| `less` | Runs task to compile baseless less dist
+| `styleguide` | Runs all the tasks to create updated styleguide, moves files and compiles less
+| `styleguide:kss` | Runs task to compiles styleguide with [kss-node](#)
+| `styleguide:kss:less` | Runs task to compile styleguide less
+| `styleguide:readme` | Runs task to compile and copy the readme file to the styleguides index page
+| `styleguide:ghpages` | Runs task to update github pages html with the latest styleguide files
+| `styleguide:screenshots` | Runs task to take screenshots of the components in various screen widths
+
+
+
+### [View Styleguide](http://dhigginbotham.github.io/baseless)
+
