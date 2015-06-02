@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     gmincss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
     gutil = require('gulp-util'),
-    path = require('path');
+    path = require('path'),
+    conf = require('./config');
 
 // compile and put minified less file into the
 // dist/ folder
