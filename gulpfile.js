@@ -55,14 +55,17 @@ gulp.task('styleguide:less', function() {
 
 // runs the kss lib
 gulp.task('styleguide:kss', gshell.task([
-    'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>"'
+    'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --cssPrefix "<%= cssPrefix %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>'
   ], {
     templateData: {
       source:       path.join(__dirname, 'less'),
       destination:  path.join(__dirname, 'styleguide'),
       template:     path.join(__dirname, 'less', 'templates', 'styleguide'),
       css:          'public/style.css',
-      title:        'BASELESS'
+      title:        'BASELESS',
+      helpers:      path.join(__dirname, 'less', 'templates', 'styleguide', 'helpers'),
+      placeholder:  '',
+      cssPrefix:    'bs-'
     }
   }
 ));

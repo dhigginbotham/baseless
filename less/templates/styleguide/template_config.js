@@ -19,6 +19,10 @@ try {
   KssHandlebarsGenerator = require('../kss_handlebars_generator.js');
 }
 
+KssHandlebarsGenerator;
+
+console.log(KssHandlebarsGenerator);
+
 // Tell kss-node which generator this template uses.
 module.exports.generator = KssHandlebarsGenerator;
 
@@ -30,5 +34,13 @@ module.exports.options = {
     multiple: false,
     describe: 'Title of the style guide',
     default: 'KSS Style Guide'
+  },
+  'cssPrefix': {
+    string: true,
+    multiple: false,
+    describe: 'BASELESS CSS Prefix',
+    default: 'bs-'
   }
 };
+
+console.log(module.exports);
