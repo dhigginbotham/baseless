@@ -37,18 +37,22 @@
 //        <td>Example table column</td>
 //      </tr>
 //    </tbody>
-//    <tfoot>
-//      <tr>
-//        <td>Example table column</td>
-//        <td>Example table column</td>
-//      </tr>
-//    </tfoot>
 // </table>
 // 
 // .striped - striped table style
 // .mini - mini table style
 // .small - small table style
 // .large - large table style
+// .primary - primary table style
+// .success - success table style
+// .warning - warning table style
+// .notice - notice table style
+// .info - info table style
+// .primary.striped - primary and striped table style
+// .success.striped - success and striped table style
+// .warning.striped - warning and striped table style
+// .notice.striped - notice and striped table style
+// .info.striped - info and striped table style
 // 
 // Styleguide 2.8.
 
@@ -93,6 +97,21 @@
     }
   }
   .table-accent();
+  &.primary {
+    .table-accent(@color-primary, lighten(@color-primary, 30%));
+  }
+  &.success {
+    .table-accent(@color-success, lighten(@color-success, 30%));
+  }
+  &.warning {
+    .table-accent(@color-warning, lighten(@color-warning, 30%));
+  }
+  &.notice {
+    .table-accent(@color-notice, lighten(@color-notice, 30%));
+  }
+  &.info {
+    .table-accent(@color-info, lighten(@color-info, 30%));
+  }
   &.small {
     th,
     td {
