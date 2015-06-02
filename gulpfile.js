@@ -96,9 +96,11 @@ gulp.task('styleguide:screenshots', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('less/**/*.less', ['less', 'styleguide:less', 'styleguide:kss']);
+  gulp.watch(['less/**/*.less', '!less/templates/styleguide/public/*.less'], ['less', 'styleguide:less', 'styleguide:kss']);
   gulp.watch('./README.md', ['styleguide:readme']);
+  gulp.watch('less/templates/styleguide/public/*.less', ['styleguide:kss:less']);
 });
 
 gulp.task('go', ['less', 'styleguide:less', 'styleguide:kss', 'watch']);
+
 gulp.task('styleguide', ['less', 'styleguide:less', 'styleguide:readme', 'styleguide:kss']);
