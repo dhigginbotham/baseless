@@ -19,7 +19,7 @@
 //
 // Styleguide 2.5. 
 
-.label-bg-color-accent(@bg: @color-grey-default, @color: @color-inverted) {
+.label-accent(@bg: @color-grey-default, @color: @color-inverted) {
   background: @bg;
   color: @color;
 }
@@ -40,23 +40,23 @@
   &.mini {
     font-size: @typo-font-size-mini;
   }
-  .label-bg-color-accent();
+  .label-accent();
   &.primary {
-    .label-bg-color-accent(@color-primary, @color-light);
+    .label-accent(@color-primary, @color-light);
   }
   &.success {
-    .label-bg-color-accent(@color-success, @color-light);
+    .label-accent(@color-success, @color-light);
   }
   &.warning {
-    .label-bg-color-accent(@color-warning, @color-light);
+    .label-accent(@color-warning, @color-light);
   }
   &.notice {
-    .label-bg-color-accent(@color-notice, @color-light);
+    .label-accent(@color-notice, @color-light);
   }
   &.info {
-    .label-bg-color-accent(@color-info, @color-inverted);
+    .label-accent(@color-info, @color-inverted);
   }
   &.inverted {
-    .label-bg-color-accent(@color-inverted, @color-light);
+    .label-accent(@color-inverted, @color-light);
   }
 }

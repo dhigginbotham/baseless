@@ -19,7 +19,7 @@
 // 
 // Styleguide 2.7.
 
-.panel-bg-color-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-inverted) {
+.panel-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-inverted) {
   border: 1px solid @border;
   .panel-heading {
     color: @color;
@@ -30,7 +30,7 @@
   .panel-list {
     .panel-list-item {
       border-top: 1px solid @border;
-      &:first-child {
+      &:first-child, &.first {
         border-top: none;
       }
     }
@@ -68,34 +68,34 @@
     .border-radius();
   }
 
-  .panel-bg-color-accent();
+  .panel-accent();
   
   &.default {
-    .panel-bg-color-accent();
+    .panel-accent();
   }
 
   &.primary {
-    .panel-bg-color-accent(@color-primary, darken(@color-primary, 10%), @color-light);
+    .panel-accent(@color-primary, darken(@color-primary, 10%), @color-light);
   }
 
   &.success {
-    .panel-bg-color-accent(@color-success, darken(@color-success, 10%), @color-light);
+    .panel-accent(@color-success, darken(@color-success, 10%), @color-light);
   }
 
   &.warning {
-    .panel-bg-color-accent(@color-warning, darken(@color-warning, 10%), @color-light);
+    .panel-accent(@color-warning, darken(@color-warning, 10%), @color-light);
   }
 
   &.notice {
-    .panel-bg-color-accent(@color-notice, darken(@color-notice, 10%), @color-light);
+    .panel-accent(@color-notice, darken(@color-notice, 10%), @color-light);
   }
 
   &.info {
-    .panel-bg-color-accent(@color-info, darken(@color-info, 10%));
+    .panel-accent(@color-info, darken(@color-info, 10%));
   }
 
   &.inverted {
-    .panel-bg-color-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
+    .panel-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
   }
 
 }

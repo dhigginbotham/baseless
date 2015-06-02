@@ -23,7 +23,7 @@
 //  
 // Styleguide 2.2.
 
-.btn-bg-color-accent(@bg: @color-light, @color: @color-inverted, @intensity: 10) {
+.btn-accent(@bg: @color-light, @color: @color-inverted, @intensity: 10) {
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
@@ -84,7 +84,7 @@
 
   .border-radius();
 
-  .btn-bg-color-accent();
+  .btn-accent();
 
   &.text {
 
@@ -103,27 +103,27 @@
   }
 
   &.primary {
-    .btn-bg-color-accent(@color-primary, @color-light);
+    .btn-accent(@color-primary, @color-light);
   }
 
   &.success {
-    .btn-bg-color-accent(@color-success, @color-light);
+    .btn-accent(@color-success, @color-light);
   }
   
   &.warning {
-    .btn-bg-color-accent(@color-warning, @color-light);
+    .btn-accent(@color-warning, @color-light);
   }
   
   &.notice {
-    .btn-bg-color-accent(@color-notice, @color-light);
+    .btn-accent(@color-notice, @color-light);
   }
   
   &.info {
-    .btn-bg-color-accent(@color-info);
+    .btn-accent(@color-info);
   }
 
   &.inverted {
-    .btn-bg-color-accent(@color-inverted, @color-light);
+    .btn-accent(@color-inverted, @color-light);
   }
 
 }

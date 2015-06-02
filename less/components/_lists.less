@@ -26,7 +26,7 @@
 // 
 // Styleguide 2.6.
 
-.list-bg-color-accent(@bg: @color-primary, @color: @color-light) {
+.list-accent(@bg: @color-primary, @color: @color-light) {
   li {
     background: @bg;
     color: @color;
@@ -55,24 +55,24 @@
       padding: 2px 10px;
       line-height: 21px;
     }
-    .list-bg-color-accent();
+    .list-accent();
     &.primary {
-      .list-bg-color-accent();
+      .list-accent();
     }
     &.success {
-      .list-bg-color-accent(@color-success);
+      .list-accent(@color-success);
     }
     &.warning {
-      .list-bg-color-accent(@color-warning);
+      .list-accent(@color-warning);
     }
     &.notice {
-      .list-bg-color-accent(@color-notice);
+      .list-accent(@color-notice);
     }
     &.info {
-      .list-bg-color-accent(@color-info);
+      .list-accent(@color-info);
     }
     &.inverted {
-      .list-bg-color-accent(@color-inverted);
+      .list-accent(@color-inverted);
     }
   }
 }

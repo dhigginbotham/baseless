@@ -16,7 +16,7 @@
 // 
 // Styleguide 2.9.
 
-.well-bg-color-accent(@bg: @color-grey-default, @border: darken(@bg, 10%), @color: @color-inverted) {
+.well-accent(@bg: @color-grey-default, @border: darken(@bg, 10%), @color: @color-inverted) {
   background: @bg;
   border: 1px solid @border;
   color: @color;
@@ -24,7 +24,7 @@
 
 .@{css-prefix}well {
   .reset-spacing(0, 15px);
-  .well-bg-color-accent();
+  .well-accent();
   &.small {
     .reset-spacing(0, 10px);
   }
@@ -35,6 +35,6 @@
     .border-radius();
   }
   &.info {
-    .well-bg-color-accent(@color-info, darken(@color-info, 20%), darken(@color-info, 60%));
+    .well-accent(@color-info, darken(@color-info, 20%), darken(@color-info, 60%));
   }
 }
