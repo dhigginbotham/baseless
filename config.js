@@ -71,7 +71,7 @@ var tasks = {
       file: 'style.css'
     },
     opts: {
-      globalVars: {
+      modifyVars: {
         'css-prefix': config.cssPrefix
       }
     }
