@@ -667,7 +667,7 @@ body {
   margin: 5px 0;
   padding: 0;
   background: #e3dfba;
-  border: 1px solid #d4ce96;
+  border: 1px solid #c2b968;
 }
 .bs-alert .notice {
   color: #ffffff;
@@ -701,7 +701,7 @@ body {
 }
 .bs-alert.primary {
   background: #2371b1;
-  border: 1px solid #1b5686;
+  border: 1px solid #103451;
 }
 .bs-alert.primary .alert-title,
 .bs-alert.primary .alert-text {
@@ -729,7 +729,7 @@ body {
 }
 .bs-alert.success {
   background: #9ebf24;
-  border: 1px solid #7b941c;
+  border: 1px solid #4e5e12;
 }
 .bs-alert.success .alert-title,
 .bs-alert.success .alert-text {
@@ -757,7 +757,7 @@ body {
 }
 .bs-alert.warning {
   background: #e6781e;
-  border: 1px solid #bc6015;
+  border: 1px solid #83430f;
 }
 .bs-alert.warning .alert-title,
 .bs-alert.warning .alert-text {
@@ -785,7 +785,7 @@ body {
 }
 .bs-alert.notice {
   background: #cc0c39;
-  border: 1px solid #9c092c;
+  border: 1px solid #60061b;
 }
 .bs-alert.notice .alert-title,
 .bs-alert.notice .alert-text {
@@ -813,7 +813,7 @@ body {
 }
 .bs-alert.info {
   background: #e3dfba;
-  border: 1px solid #d4ce96;
+  border: 1px solid #c2b968;
 }
 .bs-alert.info .alert-title,
 .bs-alert.info .alert-text {
@@ -841,7 +841,7 @@ body {
 }
 .bs-alert.inverted {
   background: #333333;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #000000;
 }
 .bs-alert.inverted .alert-title,
 .bs-alert.inverted .alert-text {
@@ -1165,6 +1165,53 @@ input[type="text"].bs-form-elem {
   color: #333333;
 }
 .bs-label.inverted {
+  background: #333333;
+  color: #ffffff;
+}
+.bs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bs-list li {
+  margin: 0;
+  padding: 0;
+}
+.bs-list.inline li {
+  display: inline-block;
+}
+.bs-list.nav li {
+  max-width: 100%;
+  border-radius: 15px;
+  margin: 3px 0;
+  padding: 2px 10px;
+  line-height: 21px;
+}
+.bs-list.nav li {
+  background: #2371b1;
+  color: #ffffff;
+}
+.bs-list.nav.primary li {
+  background: #2371b1;
+  color: #ffffff;
+}
+.bs-list.nav.success li {
+  background: #9ebf24;
+  color: #ffffff;
+}
+.bs-list.nav.warning li {
+  background: #e6781e;
+  color: #ffffff;
+}
+.bs-list.nav.notice li {
+  background: #cc0c39;
+  color: #ffffff;
+}
+.bs-list.nav.info li {
+  background: #e3dfba;
+  color: #ffffff;
+}
+.bs-list.nav.inverted li {
   background: #333333;
   color: #ffffff;
 }

@@ -2,4 +2,68 @@
 // 
 // Common set of useful list styles
 // 
-// Styleguide 2.8.
+// Markup:
+// <ul class="bs-list {{modifier_class}}">
+//    <li>Some sample thing</li>
+//    <li>Some sample thing</li>
+//    <li>Some sample thing</li>
+// </ul>
+// 
+// .inline - inline list style
+// .nav - nav list style
+// .nav.inline - combined inline nav list style
+// .nav.inline.success - success colored nav list
+// .nav.inline.warning - warning colored nav list
+// .nav.inline.notice - notice colored nav list
+// .nav.inline.info - info colored nav list
+// .nav.inline.inverted - inverted colored nav list
+// 
+// Styleguide 2.6.
+
+.list-bg-color-accent(@bg: @color-primary, @color: @color-light) {
+  li {
+    background: @bg;
+    color: @color;
+  }
+}
+
+.@{css-prefix}list {
+  .reset-spacing(0,0);
+  list-style: none;
+  li {
+    .reset-spacing(0,0);
+  }
+  &.inline {
+    li {
+      display: inline-block;
+    }
+  }
+  &.nav {
+    li {
+      max-width: 100%;
+      border-radius: 15px;
+      margin: 3px 0;
+      padding: 2px 10px;
+      line-height: 21px;
+    }
+    .list-bg-color-accent();
+    &.primary {
+      .list-bg-color-accent();
+    }
+    &.success {
+      .list-bg-color-accent(@color-success);
+    }
+    &.warning {
+      .list-bg-color-accent(@color-warning);
+    }
+    &.notice {
+      .list-bg-color-accent(@color-notice);
+    }
+    &.info {
+      .list-bg-color-accent(@color-info);
+    }
+    &.inverted {
+      .list-bg-color-accent(@color-inverted);
+    }
+  }
+}
