@@ -21,9 +21,7 @@
     "url": "https://github.com/dhigginbotham/baseless/issues"
   },
   "devDependencies": {
-    "gulp": "~3.8.11"
-  },
-  "dependencies": {
+    "gulp": "~3.8.11",
     "gulp-concat": "~2.5.2",
     "gulp-less": "~3.0.3",
     "gulp-util": "~3.0.4",
@@ -36,5 +34,7 @@
     "gulp-rename": "~1.2.2",
     "gulp-local-screenshots": "~2.0.3",
     "gulp-parker": "~0.1.2"
+  },
+  "dependencies": {
   }
 }

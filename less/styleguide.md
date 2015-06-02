@@ -1,5 +1,5 @@
 # [BASELESS](http://dhigginbotham.github.io/baseless)
-[BASELESS](https://github.com/dhigginbotham/baseless) (`"bs"` for short) is a tiny (`~685b`) ui framework for any modern website. The idea behind bs was to 
+[BASELESS](https://github.com/dhigginbotham/baseless) (`"bs"` for short) is a tiny (`~820b`) ui framework for any modern website. The idea behind bs was to 
 create a living styleguide for your website, with pre assembled common use components. You'll find a lot of familiarity between this framework and 
 many other popular frameworks, as a huge fan of [`@mdo`](https://twitter.com/mdo) and of his ideas I take a lot of naming  conventions found in 
 [`twbs`](https://github.com/twbs/bootstrap), this is namely just to help anyone else on a team pickup a basic naming convention, have you not one 

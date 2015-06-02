@@ -117,7 +117,8 @@ gulp.task('styleguide:parker', function() {
           'TotalUniqueColours',
           'TotalImportantKeywords',
           'TotalMediaQueries'
-      ]}));
+      ]}))
+    .on('error', gutil.log);
 });
 
 gulp.task('watch', function() {
