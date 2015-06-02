@@ -10,19 +10,30 @@
 // 
 // .small - a small well
 // .large - a large well
+// .round - a rounded well
+// .info - box colored well
 // 
 // Styleguide 2.5.
 
+.well-bg-color-accent(@bg: @color-grey-default, @border: darken(@bg, 10%), @color: @color-inverted) {
+  background: @bg;
+  border: 1px solid @border;
+  color: @color;
+}
+
 .@{css-prefix}well {
   .reset-spacing(0, 15px);
-  .border-radius();
-  background: @color-grey-default;
-  border: 1px solid @color-grey-default-accent;
-  color: @color-inverted;
+  .well-bg-color-accent();
   &.small {
     .reset-spacing(0, 10px);
   }
   &.large {
     .reset-spacing(0, 25px);
+  }
+  &.round {
+    .border-radius();
+  }
+  &.info {
+    .well-bg-color-accent(@color-info, darken(@color-info, 20%), darken(@color-info, 60%));
   }
 }
