@@ -10,10 +10,10 @@ bs uses [`gulp`](https://github.com/gulpjs/gulp) under the hood to do all the co
 
 | Task | Desc
 | --- | --- |
-| `go` | Runs watching task that does all of the tasks needed for active development on file change
-| `clean` | Runs task to clean output directories for releases
-| `less` | Runs task to compile baseless less dist
+| `default` | Runs watching task that does all of the tasks needed for active development on file change
 | `styleguide` | Runs all the tasks to create updated styleguide, moves files and compiles less
+| `styleguide:clean` | Runs task to clean output directories for releases
+| `styleguide:less` | Runs task to compile baseless less dist
 | `styleguide:kss` | Runs task to compiles styleguide with [kss-node](https://github.com/kss-node/kss-node)
 | `styleguide:kss:less` | Runs task to compile styleguide less
 | `styleguide:readme` | Runs task to compile and copy the readme file to the styleguides index page
