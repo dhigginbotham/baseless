@@ -64,7 +64,7 @@ gulp.task('styleguide:kss', gshell.task([
       css:          'public/style.css',
       title:        'BASELESS',
       helpers:      path.join(__dirname, 'less', 'templates', 'styleguide', 'helpers'),
-      placeholder:  '',
+      placeholder:  'default',
       cssPrefix:    'bs-'
     }
   }
