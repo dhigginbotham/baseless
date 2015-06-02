@@ -34,6 +34,7 @@
     "kss": "~2.1.0",
     "gulp-gh-pages": "~0.5.1",
     "gulp-rename": "~1.2.2",
-    "gulp-local-screenshots": "~2.0.3"
+    "gulp-local-screenshots": "~2.0.3",
+    "gulp-parker": "~0.1.2"
   }
 }

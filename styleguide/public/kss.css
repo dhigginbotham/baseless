@@ -1,6 +1,6 @@
 .kss-style {
   color: #444444;
-  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -34,7 +34,7 @@
 .kss-style h5,
 .kss-style h6 {
   margin: 24px 0 0 0;
-  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
   color: #111111;
   line-height: 1.15em;
 }
@@ -80,7 +80,7 @@
 .kss-style code,
 .kss-style kbd,
 .kss-style samp {
-  font-family: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+  font-family: "PT Mono", Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
   color: #2b2b2b;
   font-size: 1em;
 }

@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     gshell = require('gulp-shell'),
     gclean = require('gulp-clean'),
     grename = require('gulp-rename'),
+    gparker = require('gulp-parker'),
     gshot = require('gulp-local-screenshots'),
     gpages = require('gulp-gh-pages'),
     gmincss = require('gulp-minify-css'),
@@ -95,6 +96,30 @@ gulp.task('styleguide:screenshots', function() {
       .on('error', gutil.log);
 });
 
+gulp.task('styleguide:parker', function() {
+  gulp.src('./dist/style.min.css')
+    .pipe(gparker({
+      file: './dist/bs-stats.md',
+      title: 'BASELESS CSS Stats',
+      metrics: [
+          'TotalStylesheets',
+          'TotalStylesheetSize',
+          'TotalRules',
+          'TotalSelectors',
+          'TotalIdentifiers',
+          'TotalDeclarations',
+          'SelectorsPerRule',
+          'IdentifiersPerSelector',
+          'SpecificityPerSelector',
+          'TopSelectorSpecificity',
+          'TopSelectorSpecificitySelector',
+          'TotalIdSelectors',
+          'TotalUniqueColours',
+          'TotalImportantKeywords',
+          'TotalMediaQueries'
+      ]}));
+});
+
 gulp.task('watch', function() {
   gulp.watch(['less/**/*.less', '!less/templates/styleguide/public/*.less'], ['less', 'styleguide:less', 'styleguide:kss']);
   gulp.watch('./README.md', ['styleguide:readme']);
@@ -103,4 +128,4 @@ gulp.task('watch', function() {
 
 gulp.task('go', ['less', 'styleguide:less', 'styleguide:kss', 'watch']);
 
-gulp.task('styleguide', ['less', 'styleguide:less', 'styleguide:readme', 'styleguide:kss']);
+gulp.task('styleguide', ['less', 'styleguide:less', 'styleguide:parker', 'styleguide:readme', 'styleguide:kss']);
