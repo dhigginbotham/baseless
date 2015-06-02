@@ -24,7 +24,7 @@
 //  
 // Styleguide 2.2.
 
-.alert-bg-color-accent(@bg: #ccc, @color: @color-inverted) {
+.alert-bg-color-accent(@bg: #ccc, @color: @color-inverted, @notice: lighten(desaturate(@bg, 40%), 15%)) {
   background: @bg;
   border: 1px solid darken(@bg, 10%);
   .alert-title,
@@ -42,8 +42,8 @@
   }
   .alert-notice {
     .reset-spacing(0, 10px);
-    text-shadow: -1px -1px 0 darken(@bg, 5%);
-    background: lighten(desaturate(@bg, 50%), 5%);
+    text-shadow: -1px -1px 0 darken(@notice, 5%);
+    background: @notice;
     border-top: 1px solid darken(@bg, 10%);
     font-size: 85%;
     color: desaturate(@color, 40%);
@@ -62,15 +62,15 @@
   .alert-bg-color-accent(@color-info);
   
   &.primary {
-    .alert-bg-color-accent(@color-primary, @color-light);
+    .alert-bg-color-accent(@color-primary, @color-light, lighten(desaturate(@color-primary, 25%), 15%));
   }
   
   &.success {
-    .alert-bg-color-accent(@color-success, @color-light);
+    .alert-bg-color-accent(@color-success, @color-light, lighten(desaturate(@color-success, 25%), 15%));
   }
   
   &.warning {
-    .alert-bg-color-accent(@color-warning, @color-light);
+    .alert-bg-color-accent(@color-warning, @color-light, lighten(desaturate(@color-warning, 25%), 25%));
   }
   
   &.notice {
