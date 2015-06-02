@@ -24,8 +24,8 @@ gulp.task(tasks.dist.name, function() {
   gulp.src(tasks.dist.src)
     .pipe(gless(tasks.less.opts))
     .pipe(gmincss())
-    .pipe(gconcat(tasks.less.dest.file))
-    .pipe(gulp.dest(tasks.less.dest.path))
+    .pipe(gconcat(tasks.dist.dest.file))
+    .pipe(gulp.dest(tasks.dist.dest.path))
     .pipe(gfilesize())
     .on('error', gutil.log);
 });
@@ -79,5 +79,8 @@ gulp.task('watch', function() {
   gulp.watch('less/templates/styleguide/public/*.less', [tasks.kss.less.name]);
 });
 
+gulp.task('default', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
+
 gulp.task('go', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
-gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.parker.name, tasks.readme.name, tasks.kss.name, tasks.screens.name]);
+
+gulp.task('styleguide', [tasks.less.name, tasks.readme.name, tasks.kss.name, tasks.screens.name, tasks.parker.name, tasks.dist.name]);

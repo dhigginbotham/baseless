@@ -41,7 +41,7 @@ var tasks = {
   ghpages: {
     name: 'styleguide:ghpages',
     src: config.globs.sg
-  }
+  },
   kss: {
     name: 'styleguide:kss',
     exec: 'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --cssPrefix "<%= cssPrefix %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>',
