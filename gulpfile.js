@@ -46,6 +46,7 @@ gulp.task('styleguide:readme', function() {
 gulp.task('styleguide:less', function() {
   gulp.src('less/style.less')
       .pipe(gless())
+      .pipe(gmincss())
       .pipe(gconcat('public/style.css'))
       .pipe(gulp.dest('less/templates/styleguide/'))
       .on('error', gutil.log);
@@ -96,6 +97,7 @@ gulp.task('styleguide:screenshots', function() {
 
 gulp.task('watch', function() {
   gulp.watch('less/**/*.less', ['less', 'styleguide:less', 'styleguide:kss']);
+  gulp.watch('./README.md', ['styleguide:readme']);
 });
 
 gulp.task('go', ['less', 'styleguide:less', 'styleguide:kss', 'watch']);
