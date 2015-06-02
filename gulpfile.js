@@ -79,8 +79,6 @@ gulp.task('watch', function() {
   gulp.watch('less/templates/styleguide/public/*.less', [tasks.kss.less.name]);
 });
 
+gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.readme.name, tasks.kss.name, tasks.screens.name, tasks.parker.name]);
+
 gulp.task('default', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
-
-gulp.task('go', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
-
-gulp.task('styleguide', [tasks.less.name, tasks.readme.name, tasks.kss.name, tasks.screens.name, tasks.parker.name, tasks.dist.name]);
