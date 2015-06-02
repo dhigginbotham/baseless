@@ -9,10 +9,11 @@ var path = require('path');
 var config = {
   cssPrefix: 'bs-',
   title: 'BASELESS',
+  less: 'less/style.less',
   globs: {
     dist: './dist/**/*',
     sg: './styleguide/**/*',
-    screens: 'screenshots/**/*'
+    screens: './screenshots/**/*'
   }
 };
 
@@ -20,6 +21,14 @@ var tasks = {
   clean: {
     name: 'styleguide:clean',
     src: [config.globs.dist, config.globs.sg, config.globs.screens]
+  },
+  dist: {
+    name: 'styleguide:dist',
+    src: config.less,
+    dest: {
+      path: 'dist/',
+      file: 'style.min.css'
+    }
   },
   readme: {
     name: 'styleguide:readme',
@@ -29,6 +38,10 @@ var tasks = {
       file: 'styleguide.md'
     }
   },
+  ghpages: {
+    name: 'styleguide:ghpages',
+    src: config.globs.sg
+  }
   kss: {
     name: 'styleguide:kss',
     exec: 'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --cssPrefix "<%= cssPrefix %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>',
@@ -53,16 +66,10 @@ var tasks = {
   },
   less: {
     name: 'styleguide:less',
-    src: 'less/style.less',
+    src: config.less,
     dest: {
-      sg: {
-        path: 'less/templates/styleguide/public',
-        file: 'style.css'
-      },
-      dist: {
-        path: 'dist/',
-        file: 'style.min.css'
-      }
+      path: 'less/templates/styleguide/public',
+      file: 'style.css'
     },
     opts: {
       globalVars: {
@@ -83,25 +90,28 @@ var tasks = {
   parker: {
     name: 'styleguide:parker',
     src: './dist/style.min.css',
-    output: './dist/.' + config.cssPrefix + 'stats.md',
-    metrics: [
-      'TotalStylesheets',
-      'TotalStylesheetSize',
-      'TotalRules',
-      'TotalSelectors',
-      'TotalIdentifiers',
-      'TotalDeclarations',
-      'SelectorsPerRule',
-      'IdentifiersPerSelector',
-      'SpecificityPerSelector',
-      'TopSelectorSpecificity',
-      'TopSelectorSpecificitySelector',
-      'TotalIdSelectors',
-      'TotalUniqueColours',
-      'TotalImportantKeywords',
-      'TotalMediaQueries'
-    ]
+    opts: {
+      file: './dist/' + config.cssPrefix + 'stats.md',
+      metrics: [
+        'TotalStylesheets',
+        'TotalStylesheetSize',
+        'TotalRules',
+        'TotalSelectors',
+        'TotalIdentifiers',
+        'TotalDeclarations',
+        'SelectorsPerRule',
+        'IdentifiersPerSelector',
+        'SpecificityPerSelector',
+        'TopSelectorSpecificity',
+        'TopSelectorSpecificitySelector',
+        'TotalIdSelectors',
+        'TotalUniqueColours',
+        'TotalImportantKeywords',
+        'TotalMediaQueries'
+      ]
+    }
   }
 };
 
-module.exports = tasks;
+module.exports = config;
+module.exports.tasks = tasks;

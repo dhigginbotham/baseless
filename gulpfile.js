@@ -11,134 +11,73 @@ var gulp = require('gulp'),
     gfilesize = require('gulp-filesize'),
     gutil = require('gulp-util'),
     path = require('path'),
-    conf = require('./config');
+    conf = require('./config'),
+    tasks = conf.tasks;
 
-// compile and put minified less file into the
-// dist/ folder
-gulp.task('less', function() {
-  gulp.src('less/style.less')
-      .pipe(gless({
-        globalVars: {
-          'css-prefix': 'bs-'
-        }
-      }))
-      .pipe(gmincss())
-      .pipe(gconcat('style.min.css'))
-      .pipe(gulp.dest('dist'))
-      .pipe(gfilesize())
-      .on('error', gutil.log);
-});
-
-// cleans the project
-gulp.task('clean', function() {
-  gulp.src(['dist/**/*','styleguide/**/*'], {read: false})
+gulp.task(tasks.clean.name, function() {
+  gulp.src(tasks.clean.src, {read: false})
     .pipe(gclean({force: true}))
     .on('error', gutil.log);
 });
 
-// turns our readme into the styleguide
-gulp.task('styleguide:readme', function() {
-  gulp.src('less/styleguide.md', {read: false})
-      .pipe(gclean({force: true}))
-      .on('error', gutil.log);
-
-  gulp.src('./README.md')
-      .pipe(grename('styleguide.md'))
-      .pipe(gulp.dest('less/'))
-      .on('error', gutil.log);
+gulp.task(tasks.dist.name, function() {
+  gulp.src(tasks.dist.src)
+    .pipe(gless(tasks.less.opts))
+    .pipe(gmincss())
+    .pipe(gconcat(tasks.less.dest.file))
+    .pipe(gulp.dest(tasks.less.dest.path))
+    .pipe(gfilesize())
+    .on('error', gutil.log);
 });
 
-// builds the specific less file for our styleguide
-gulp.task('styleguide:less', function() {
-  gulp.src('less/style.less')
-      .pipe(gless({
-        globalVars: {
-          'css-prefix': 'bs-'
-        }
-      }))
-      .pipe(gmincss())
-      .pipe(gconcat('public/style.css'))
-      .pipe(gulp.dest('less/templates/styleguide/'))
-      .on('error', gutil.log);
+gulp.task(tasks.readme.name, function() {
+  gulp.src(tasks.readme.src)
+    .pipe(grename(tasks.readme.dest.file))
+    .pipe(gulp.dest(tasks.readme.dest.path))
+    .on('error', gutil.log);
 });
 
-// runs the kss lib
-gulp.task('styleguide:kss', gshell.task([
-    'kss-node <%= source %> <%= destination %> --template <%= template %> --css <%= css %> --title "<%= title %>" --cssPrefix "<%= cssPrefix %>" --helpers "<%= helpers %>" --placeholder "<%= placeholder %>'
-  ], {
-    templateData: {
-      source:       path.join(__dirname, 'less'),
-      destination:  path.join(__dirname, 'styleguide'),
-      template:     path.join(__dirname, 'less', 'templates', 'styleguide'),
-      css:          'public/style.css',
-      title:        'BASELESS',
-      helpers:      path.join(__dirname, 'less', 'templates', 'styleguide', 'helpers'),
-      placeholder:  'default',
-      cssPrefix:    'bs-'
-    }
-  }
+gulp.task(tasks.kss.name, 
+  gshell.task([tasks.kss.exec], 
+  {templateData: tasks.kss.opts}
 ));
 
-// build the less file from the kss build
-gulp.task('styleguide:kss:less', gshell.task([
-    'lessc --verbose <%= input %> <%= output %>'
-  ], {
-    templateData: {
-      input: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.less'),
-      output: path.join(__dirname, 'less', 'templates', 'styleguide', 'public', 'kss.css')
-    }
-  }
+gulp.task(tasks.kss.less.name,
+  gshell.task([tasks.kss.less.exec],
+  {templateData: tasks.kss.less.opts}
 ));
 
-// does the whole ghpages process
-gulp.task('styleguide:ghpages', function() {
-  gulp.src('./styleguide/**/*')
-      .pipe(gpages());
+gulp.task(tasks.less.name, function() {
+  gulp.src(tasks.less.src)
+    .pipe(gless(tasks.less.opts))
+    .pipe(gmincss())
+    .pipe(gconcat(tasks.less.dest.file))
+    .pipe(gulp.dest(tasks.less.dest.path))
+    .on('error', gutil.log);
 });
 
-// makes screenshots
-gulp.task('styleguide:screenshots', function() {
-  gulp.src('styleguide/**/*.html')
-      .pipe(gshot({
-        width: ['1280', '1024', '768', '600', '480', '320'],
-        folder: 'screenshots/',
-        path: 'styleguide/',
-        type: 'png'
-      }))
-      .on('error', gutil.log);
+gulp.task(tasks.screens.name, function() {
+  gulp.src(tasks.screens.src)
+    .pipe(gshot(tasks.screens.opts))
+    .on('error', gutil.log);
 });
 
-gulp.task('styleguide:parker', function() {
-  gulp.src('./dist/style.min.css')
-    .pipe(gparker({
-      file: './dist/bs-stats.md',
-      title: 'BASELESS CSS Stats',
-      metrics: [
-          'TotalStylesheets',
-          'TotalStylesheetSize',
-          'TotalRules',
-          'TotalSelectors',
-          'TotalIdentifiers',
-          'TotalDeclarations',
-          'SelectorsPerRule',
-          'IdentifiersPerSelector',
-          'SpecificityPerSelector',
-          'TopSelectorSpecificity',
-          'TopSelectorSpecificitySelector',
-          'TotalIdSelectors',
-          'TotalUniqueColours',
-          'TotalImportantKeywords',
-          'TotalMediaQueries'
-      ]}))
+gulp.task(tasks.ghpages.name, function() {
+  gulp.src(tasks.ghpages.src)
+    .pipe(gpages());
+});
+
+gulp.task(tasks.parker.name, function() {
+  gulp.src(tasks.parker.src)
+    .pipe(gparker(tasks.parker.opts))
     .on('error', gutil.log);
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['less/**/*.less', '!less/templates/styleguide/public/*.less'], ['less', 'styleguide:less', 'styleguide:kss']);
-  gulp.watch('./README.md', ['styleguide:readme']);
-  gulp.watch('less/templates/styleguide/public/*.less', ['styleguide:kss:less']);
+  gulp.watch(['less/**/*.less', '!less/templates/styleguide/public/*.less'], [tasks.dist.name, tasks.less.name, tasks.kss.name]);
+  gulp.watch('./README.md', [tasks.readme.name, 'styleguide']);
+  gulp.watch('less/templates/styleguide/public/*.less', [tasks.kss.less.name]);
 });
 
-gulp.task('go', ['less', 'styleguide:less', 'styleguide:kss', 'watch']);
-
-gulp.task('styleguide', ['less', 'styleguide:less', 'styleguide:parker', 'styleguide:readme', 'styleguide:kss']);
+gulp.task('go', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
+gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.parker.name, tasks.readme.name, tasks.kss.name, tasks.screens.name]);

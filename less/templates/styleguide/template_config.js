@@ -21,8 +21,6 @@ try {
 
 KssHandlebarsGenerator;
 
-console.log(KssHandlebarsGenerator);
-
 // Tell kss-node which generator this template uses.
 module.exports.generator = KssHandlebarsGenerator;
 
@@ -42,5 +40,3 @@ module.exports.options = {
     default: 'bs-'
   }
 };
-
-console.log(module.exports);
