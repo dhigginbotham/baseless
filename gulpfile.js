@@ -26,12 +26,21 @@ gulp.task(tasks.clean.name, function(fn) {
 // of baseless
 gulp.task(tasks.dist.name, function(done) {
   gulp.src(tasks.dist.src)
-    .pipe(gsourcemaps.init())
+    // .pipe(gsourcemaps.init())
       .pipe(gless(tasks.less.opts))
       .pipe(gmincss())
       .pipe(gconcat(tasks.dist.dest.file))
-    .pipe(gsourcemaps.write('.'))
+    // .pipe(gsourcemaps.write('.'))
     .pipe(gulp.dest(tasks.dist.dest.path))
+    .on('error', gutil.log);
+  return done();
+});
+
+// DIST SOURCEMAPS TASK
+gulp.task(tasks.maps.name, function(done) {
+  gulp.src(tasks.maps.src)
+    .pipe(gsourcemaps.init())
+    .pipe(gsourcemaps.write(tasks.maps.dest.path))
     .on('error', gutil.log);
   return done();
 });
@@ -81,7 +90,7 @@ gulp.task(tasks.less.name, function(done) {
   gulp.src(tasks.less.src)
     .pipe(gsourcemaps.init())
       .pipe(gless(tasks.less.opts))
-      .pipe(gmincss())
+      // .pipe(gmincss())
       .pipe(gconcat(tasks.less.dest.file))
     .pipe(gsourcemaps.write('.'))
     .pipe(gulp.dest(tasks.less.dest.path))

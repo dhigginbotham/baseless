@@ -22,6 +22,13 @@ var tasks = {
     name: 'styleguide:clean',
     src: [config.globs.dist, config.globs.sg, config.globs.screens]
   },
+  maps: {
+    name: 'styleguide:sourcemaps',
+    src: ['less/**/*.less', '!less/template/**/*'],
+    dest: {
+      path: 'dist/'
+    }
+  },
   dist: {
     name: 'styleguide:dist',
     src: config.less,
