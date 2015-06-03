@@ -548,6 +548,50 @@ table {
 td {
   vertical-align: top;
 }
+@media print {
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
 .bs-btn {
   cursor: pointer;
   margin: 3px 0;
@@ -779,33 +823,33 @@ td {
   box-shadow: 0 1px 0 #920929;
 }
 .bs-btn.info {
-  background: #e3dfba;
-  background-color: #dcd7a8;
-  background-image: -moz-linear-gradient(top, #e3dfba, #dcd7a8);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e3dfba), to(#dcd7a8));
-  background-image: -webkit-linear-gradient(top, #e3dfba, #dcd7a8);
-  background-image: -o-linear-gradient(top, #e3dfba, #dcd7a8);
-  background-image: linear-gradient(to bottom, #e3dfba, #dcd7a8);
+  background: #eeecdd;
+  background-color: #e6e3cc;
+  background-image: -moz-linear-gradient(top, #eeecdd, #e6e3cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeecdd), to(#e6e3cc));
+  background-image: -webkit-linear-gradient(top, #eeecdd, #e6e3cc);
+  background-image: -o-linear-gradient(top, #eeecdd, #e6e3cc);
+  background-image: linear-gradient(to bottom, #eeecdd, #e6e3cc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe3dfba', endColorstr='#ffdcd7a8', GradientType=0);
-  border: 1px solid #d9d3a1;
-  box-shadow: 0 1px 0 #d1cb8e, inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  text-shadow: 1px 1px 0 #d1cb8e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeecdd', endColorstr='#ffe6e3cc', GradientType=0);
+  border: 1px solid #e2e0c5;
+  box-shadow: 0 1px 0 #dad6b4, inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 0 #dad6b4;
   color: #333333;
 }
 .bs-btn.info:hover {
-  background-color: #d9d3a1;
-  background-image: -moz-linear-gradient(top, #e3dfba, #d9d3a1);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e3dfba), to(#d9d3a1));
-  background-image: -webkit-linear-gradient(top, #e3dfba, #d9d3a1);
-  background-image: -o-linear-gradient(top, #e3dfba, #d9d3a1);
-  background-image: linear-gradient(to bottom, #e3dfba, #d9d3a1);
+  background-color: #e2e0c5;
+  background-image: -moz-linear-gradient(top, #eeecdd, #e2e0c5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeecdd), to(#e2e0c5));
+  background-image: -webkit-linear-gradient(top, #eeecdd, #e2e0c5);
+  background-image: -o-linear-gradient(top, #eeecdd, #e2e0c5);
+  background-image: linear-gradient(to bottom, #eeecdd, #e2e0c5);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe3dfba', endColorstr='#ffd9d3a1', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeecdd', endColorstr='#ffe2e0c5', GradientType=0);
 }
 .bs-btn.info:active {
-  background: #d1cb8e;
-  box-shadow: 0 1px 0 #d1cb8e, inset 0 1px 0 #d1cb8e;
+  background: #dad6b4;
+  box-shadow: 0 1px 0 #dad6b4, inset 0 1px 0 #dad6b4;
 }
 .bs-btn.info:visited {
   color: #333333;
@@ -813,9 +857,9 @@ td {
 .bs-btn.info:disabled,
 .bs-btn.info.disabled {
   cursor: not-allowed;
-  background: #d1cb8e;
-  border: 1px solid #d4ce96;
-  box-shadow: 0 1px 0 #d1cb8e;
+  background: #dad6b4;
+  border: 1px solid #dddaba;
+  box-shadow: 0 1px 0 #dad6b4;
 }
 .bs-btn.inverted {
   background: #333333;
@@ -878,7 +922,6 @@ td {
 .bs-alert .alert-notice {
   margin: 0;
   padding: 10px;
-  font-size: 85%;
 }
 .bs-alert .alert-title {
   color: #333333;
@@ -888,8 +931,8 @@ td {
   color: #b7ad4d;
 }
 .bs-alert .alert-notice {
-  text-shadow: -1px -1px 0 #e9e8e7;
-  background: #f5f5f5;
+  text-shadow: -1px -1px 0 #ededed;
+  background: #fafafa;
   border-top: 1px solid #d4ce96;
   color: #333333;
 }
@@ -1296,6 +1339,9 @@ input[type="text"].bs-form-elem {
 }
 .bs-label.mini {
   font-size: 10.5px;
+}
+.bs-label.box {
+  border-radius: 3px;
 }
 .bs-label.primary {
   background: #2371b1;
