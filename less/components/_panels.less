@@ -29,23 +29,15 @@
   .panel-list {
     .panel-list-item {
       border-top: 1px solid @border;
-      &:first-child, &.first {
-        border-top: none;
-      }
     }
   }
-  .panel-foot {
-    color: @color;
-    background: lighten(@bg, 10%);
-    border-top: 1px solid @border;
-  }
-  margin-bottom: 10px;
 }
 
 .@{css-prefix}panel {
 
   .reset-spacing(0,0);
   .clearfix();
+  margin-bottom: 10px;
 
   .panel-heading,
   .panel-body,
@@ -65,6 +57,14 @@
 
   &.round {
     .border-radius();
+  }
+  
+  .panel-list {
+    .panel-list-item {
+      &:first-child, &.first {
+        border-top: none;
+      }
+    }
   }
 
   .panel-accent();

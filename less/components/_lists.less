@@ -32,7 +32,6 @@
     color: @color;
     &:hover {
       background: lighten(@bg, 7%);
-      cursor: pointer;      
     }
   }
 }
@@ -58,6 +57,9 @@
       margin: 3px 0;
       padding: 0 10px;
       line-height: 21px;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .list-accent();
     &.primary {

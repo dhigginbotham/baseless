@@ -40,13 +40,8 @@
 // </table>
 // 
 // .striped - striped table style
-// .mini - mini table style
 // .small - small table style
 // .large - large table style
-// .primary - primary table style
-// .success - success table style
-// .warning - warning table style
-// .notice - notice table style
 // .info - info table style
 // .info.striped - info and striped table style
 // 
@@ -80,46 +75,21 @@
 .@{css-prefix}table {
   border-collapse: collapse;
   width: 100%;
+
   th,
   td {
     .reset-spacing(0, 5px);
+    text-align: left;
   }
-  thead {
-    tr {
-      th,
-      td {
-        text-align: left;
-      }
-    }
-  }
+
   .table-accent();
-  &.primary {
-    .table-accent(@color-primary);
-  }
-  &.success {
-    .table-accent(@color-success);
-  }
-  &.warning {
-    .table-accent(@color-warning);
-  }
-  &.notice {
-    .table-accent(@color-notice);
-  }
   &.info {
     .table-accent(@color-info);
   }
   &.small {
     th,
     td {
-      .reset-spacing(0, 5px);
       font-size: @typo-font-size-small;
-    }
-  }
-  &.mini {
-    th,
-    td {
-      .reset-spacing(0, 2px 5px);
-      font-size: @typo-font-size-mini;
     }
   }
   &.large {

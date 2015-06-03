@@ -77,6 +77,11 @@ var tasks = {
       }
     }
   },
+  gzip: {
+    name: 'styleguide:gzip',
+    dest: 'dist/',
+    src: 'dist/style.min.css'
+  },
   screens: {
     name: 'styleguide:screenshots',
     src: config.globs.sg + '.html',

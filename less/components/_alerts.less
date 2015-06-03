@@ -27,25 +27,17 @@
 .alert-accent(@bg: #ccc, @color: @color-inverted, @notice: lighten(desaturate(@bg, 40%), 15%)) {
   background: @bg;
   border: 1px solid darken(@bg, 22.5%);
-  .alert-title,
-  .alert-subtext {
-    font-weight: 700;
-  }
   .alert-title {
     color: @color;
-    .reset-spacing(0, 5px 10px 5px);
     text-shadow: 1px 1px 0 darken(@bg, 10%);
   }
   .alert-subtext {
     color: darken(@bg, 30%);
-    .reset-spacing(0, 0 10px 5px);
   }
   .alert-notice {
-    .reset-spacing(0, 10px);
     text-shadow: -1px -1px 0 darken(@notice, 5%);
     background: @notice;
     border-top: 1px solid darken(@bg, 10%);
-    font-size: 85%;
     color: desaturate(@color, 40%);
   }
 }
@@ -53,14 +45,26 @@
 .@{css-prefix}alert {
   .border-radius();
   .reset-spacing(5px 0);
-  .notice {
-    color: @color-light;
+
+  .alert-title,
+  .alert-subtext {
+    font-weight: 700;
   }
-  .thin {
-    font-weight: 400;
-  }
-  .alert-accent(@color-info);
   
+  .alert-title {
+    .reset-spacing(0, 5px 10px 5px);
+  }
+
+  .alert-subtext {
+    .reset-spacing(0, 0 10px 5px);
+  }
+
+  .alert-notice {
+    .reset-spacing(0, 10px);
+    font-size: 85%;
+  }
+
+  .alert-accent(@color-info);
   &.primary {
     .alert-accent(@color-primary, @color-light, lighten(desaturate(@color-primary, 25%), 15%));
   }
