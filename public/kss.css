@@ -149,6 +149,21 @@
   font-weight: normal;
 }
 #kss-node {
+  /* Pretty printing styles. Used with prettify.js. */
+  /* SPAN elements with the classes below are added by prettyprint. */
+  /* plain text */
+  /* string content */
+  /* a keyword */
+  /* a comment */
+  /* a type name */
+  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  /* a markup tag name */
+  /* a markup attribute name */
+  /* a markup attribute value */
+  /* a declaration; a variable name */
+  /* a function name */
+  /* Use higher contrast and text-weight for printable form. */
   /* Specify class=linenums on a pre to get line numbering */
 }
 #kss-node .kss-section {
@@ -229,6 +244,8 @@
 }
 #kss-node .kss-markup {
   margin: 24px 0;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
 }
 #kss-node .kss-markup pre {
   padding: 12px;
@@ -247,6 +264,80 @@
 }
 #kss-node .kss-github img {
   border: 0;
+}
+#kss-node .pln {
+  color: #000000;
+}
+#kss-node .str {
+  color: #008800;
+}
+#kss-node .kwd {
+  color: #000088;
+}
+#kss-node .com {
+  color: #880000;
+}
+#kss-node .typ {
+  color: #660066;
+}
+#kss-node .lit {
+  color: #006666;
+}
+#kss-node .pun,
+#kss-node .opn,
+#kss-node .clo {
+  color: #666600;
+}
+#kss-node .tag {
+  color: #000088;
+}
+#kss-node .atn {
+  color: #660066;
+}
+#kss-node .atv {
+  color: #008800;
+}
+#kss-node .dec,
+#kss-node .var {
+  color: #660066;
+}
+#kss-node .fun {
+  color: red;
+}
+@media print, projection {
+  #kss-node .str {
+    color: #006600;
+  }
+  #kss-node .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  #kss-node .com {
+    color: #600;
+    font-style: italic;
+  }
+  #kss-node .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  #kss-node .lit {
+    color: #004444;
+  }
+  #kss-node .pun,
+  #kss-node .opn,
+  #kss-node .clo {
+    color: #444400;
+  }
+  #kss-node .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  #kss-node .atn {
+    color: #440044;
+  }
+  #kss-node .atv {
+    color: #006600;
+  }
 }
 #kss-node ol.linenums {
   margin: 0;
