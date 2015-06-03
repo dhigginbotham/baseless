@@ -440,12 +440,14 @@
 }
 #kss-node .kss-markup {
   margin: 24px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   background: #F7F7F7;
+  max-height: 300px;
+  overflow: auto;
 }
 #kss-node .kss-markup pre {
-  padding: 12px;
   margin: 0;
+  font-size: 12px;
 }
 #kss-node .kss-github {
   display: none;
@@ -537,7 +539,7 @@
 }
 #kss-node ol.linenums {
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 0 10px;
   list-style-type: none;
   /* Alternate shading for lines */
 }

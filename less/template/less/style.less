@@ -401,12 +401,15 @@
 
   .kss-markup {
     margin: @kss-vertical-rhythm 0;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     background: #F7F7F7;
+    max-height: 300px;
+    overflow: auto;
   }
   .kss-markup pre {
-    padding: (@kss-vertical-rhythm/2);
+    // padding: (@kss-vertical-rhythm/2);
     margin: 0;
+    font-size: 12px;
   }
 
   .kss-github {
@@ -461,7 +464,7 @@
   /* Specify class=linenums on a pre to get line numbering */
   ol.linenums {
     margin: 0;
-    padding: 15px 0;
+    padding: 15px 0 10px;
     list-style-type: none;
 
     li {

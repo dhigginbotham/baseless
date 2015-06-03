@@ -1593,27 +1593,37 @@ input[type="text"].bs-form-elem {
 }
 .bs-shape {
   display: inline-block;
+  margin: 3px 0;
+  padding: 0;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
   /* Firefox all */
   -ms-user-select: none;
   /* IE 10+ */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   cursor: default;
   height: 76px;
+  line-height: 76px;
   width: 76px;
   background: #eeeeee;
 }
 .bs-shape.small {
   height: 51px;
+  line-height: 51px;
   width: 51px;
 }
 .bs-shape.mini {
   height: 33px;
+  line-height: 33px;
   width: 33px;
 }
 .bs-shape.large {
   height: 100px;
+  line-height: 100px;
   width: 100px;
 }
 .bs-shape.circle {

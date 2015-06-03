@@ -1,18 +1,8 @@
 // Shapes
 // 
-// Markup:
-// <div class="bs-shape {{modifier_class}}"></div>
+// Basic shapes like circles, squares, triangles, ovals.
 // 
-// .mini - mini shape
-// .small - small shape
-// .large - large shape
-// .circle - circle shape
-// .primary - primary color
-// .success - success color
-// .warning - warning color
-// .notice - notice color
-// .info - info color
-// .inverted - inverted color
+// Markup: docs/shapes.hbs
 // 
 // Styleguide: 2.8.
 .simple-shape(@bg: @color-grey-default) {
@@ -21,21 +11,28 @@
 
 .@{css-prefix}shape {
   display: inline-block;
+  .reset-spacing(3px 0,0);
   .disable-selection();
+  .center-block();
+  text-align: center;
   cursor: default;
   // sizes
   height: 76px;
+  line-height: 76px;
   width: 76px;
   &.small {
     height: 51px;
+    line-height: 51px;
     width: 51px;
   }
   &.mini {
     height: 33px;
+    line-height: 33px;
     width: 33px;
   }
   &.large {
     height: 100px;
+    line-height: 100px;
     width: 100px;
   }
 
