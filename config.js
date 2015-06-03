@@ -24,9 +24,10 @@ var tasks = {
   },
   maps: {
     name: 'styleguide:sourcemaps',
-    src: ['less/**/*.less', '!less/template/**/*'],
+    src: ['less/style.less', '!*.css'],
     dest: {
-      path: 'dist/'
+      path: 'dist/',
+      file: 'style.css'
     }
   },
   dist: {
@@ -57,7 +58,7 @@ var tasks = {
       source: path.join(__dirname, 'less'),
       destination: path.join(__dirname, 'styleguide'),
       template: path.join(__dirname, 'less', 'template'),
-      css: 'public/style.min.css',
+      css: 'public/style.css',
       title: config.title,
       helpers: path.join(__dirname, 'less', 'template', 'helpers'),
       placeholder: 'default'
@@ -76,7 +77,7 @@ var tasks = {
     src: config.less,
     dest: {
       path: 'less/template/public',
-      file: 'style.min.css'
+      file: 'style.css'
     },
     opts: {
       modifyVars: {

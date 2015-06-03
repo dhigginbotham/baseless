@@ -21,26 +21,22 @@ gulp.task(tasks.clean.name, function(fn) {
   del(tasks.clean.src, fn);
 });
 
-// DIST LESS TASK
-// compiles, minifies, concats distributed version 
-// of baseless
-gulp.task(tasks.dist.name, function() {
-  return gulp.src(tasks.dist.src)
-    .pipe(gless(tasks.less.opts))
-    .pipe(gconcat(tasks.dist.dest.file))
-    .pipe(gmincss())
-    .pipe(gulp.dest(tasks.dist.dest.path))
+// DIST SOURCEMAPS TASK
+gulp.task(tasks.maps.name, function() {
+  return gulp.src(tasks.maps.src)
+    .pipe(gsourcemaps.init())
+      .pipe(gless(tasks.less.opts))
+      .pipe(gconcat(tasks.maps.dest.file))
+    .pipe(gsourcemaps.write('.'))
+    .pipe(gulp.dest(tasks.less.dest.path))
+    .pipe(gulp.dest(tasks.maps.dest.path))
     .on('error', gutil.log);
 });
 
-// DIST SOURCEMAPS TASK
-gulp.task(tasks.maps.name, function() {
-  return gulp.src(['less/style.less', '!*.css'])
-    .pipe(gsourcemaps.init())
-      .pipe(gless(tasks.less.opts))
-      .pipe(gconcat(tasks.dist.dest.file))
-    .pipe(gsourcemaps.write('.'))
-    .pipe(gulp.dest(tasks.less.dest.path))
+gulp.task(tasks.dist.name, [tasks.maps.name], function() {
+  return gulp.src(['dist/*.css', '!*min.css'])
+    .pipe(gconcat(tasks.dist.dest.file))
+    .pipe(gmincss())
     .pipe(gulp.dest(tasks.dist.dest.path))
     .on('error', gutil.log);
 });
@@ -69,6 +65,7 @@ gulp.task(tasks.readme.name, function() {
 // child process to [kss-node](#) that builds the
 // 'living' styleguide
 gulp.task(tasks.kss.name, 
+  [tasks.dist.name],
   gshell.task([tasks.kss.exec], 
   {templateData: tasks.kss.opts}
 ));
@@ -77,6 +74,7 @@ gulp.task(tasks.kss.name,
 // compiles the less files specific to the 
 // styleguides template
 gulp.task(tasks.kss.less.name,
+  [tasks.maps.name],
   gshell.task([tasks.kss.less.exec],
   {templateData: tasks.kss.less.opts}
 ));
@@ -127,7 +125,7 @@ gulp.task(tasks.parker.name, function() {
 // that should be watched on, allows us to dev like
 // a boss
 gulp.task('watch', function() {
-  gulp.watch(['less/**/*.less', '!less/template/less/*.less'], [tasks.dist.name, tasks.less.name, tasks.kss.name]);
+  gulp.watch(['less/**/*.less', '!less/template/less/*.less'], [tasks.kss.name]);
   gulp.watch('./README.md', [tasks.readme.name, 'styleguide']);
   gulp.watch('less/template/less/*.less', [tasks.kss.less.name]);
 });
@@ -140,10 +138,10 @@ gulp.task('boss', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
 // prepare for distribution
-gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.kss.name]);
+gulp.task('styleguide', [tasks.kss.name]);
 
 // DEFAULT TASK
 // ...its default, and helpful, I sometimes like to 
 // be like `gulp styleguide && gulp`, mostly out of
 // habit because its *mostly* not needed.
-gulp.task('default', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
+gulp.task('default', [tasks.kss.name, 'watch']);

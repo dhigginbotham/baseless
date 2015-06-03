@@ -419,7 +419,6 @@ body {
   color: #333333;
   font-family: "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
-  line-height: 17.5px;
 }
 a {
   color: #2371b1;
@@ -440,9 +439,6 @@ a:active {
 a:hover,
 a:active {
   outline: 0;
-}
-p {
-  margin: 8.75px 0;
 }
 h1,
 h2,
@@ -1628,4 +1624,4 @@ input[type="text"].bs-form-elem {
   color: #4c481f;
 }
 
-/*# sourceMappingURL=style.min.css.map */
+/*# sourceMappingURL=style.css.map */
