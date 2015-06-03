@@ -34,17 +34,11 @@ gulp.task(tasks.dist.name, function() {
 });
 
 // DIST SOURCEMAPS TASK
-gulp.task(tasks.maps.name + ':dist', function() {
+gulp.task(tasks.maps.name, function() {
   return gulp.src(tasks.maps.src)
     .pipe(gsourcemaps.init())
+      .pipe(gless(tasks.less.opts))
     .pipe(gsourcemaps.write(tasks.maps.dest.path))
-    .on('error', gutil.log);
-});
-
-gulp.task(tasks.maps.name + ':sg', function() {
-  return gulp.src(tasks.maps.src)
-    .pipe(gsourcemaps.init())
-    .pipe(gsourcemaps.write(tasks.less.dest.path))
     .on('error', gutil.log);
 });
 
@@ -142,7 +136,7 @@ gulp.task('boss', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
 // prepare for distribution
-gulp.task('styleguide', [tasks.dist.name, tasks.maps.name + ':dist', tasks.less.name, tasks.maps.name + ':sg', tasks.kss.name]);
+gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.kss.name]);
 
 // DEFAULT TASK
 // ...its default, and helpful, I sometimes like to 
