@@ -60,7 +60,7 @@
     .reset-spacing(0, 10px);
   }
 
-  .alert-accent(@color-info, @color-inverted, darken(@color-light, 2%));
+  .alert-accent(lighten(@color-info, 5%), @color-inverted, lighten(@color-info, 10%));
   &.primary {
     .alert-accent(@color-primary, @color-light, lighten(desaturate(@color-primary, 25%), 15%));
   }

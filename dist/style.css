@@ -904,8 +904,8 @@ td {
   border-radius: 3px 3px 3px 3px;
   margin: 5px 0;
   padding: 0;
-  background: #e3dfba;
-  border: 1px solid #c2b968;
+  background: #eae7cc;
+  border: 1px solid #c9c27b;
 }
 .bs-alert .alert-title,
 .bs-alert .alert-subtext {
@@ -925,15 +925,15 @@ td {
 }
 .bs-alert .alert-title {
   color: #333333;
-  text-shadow: 1px 1px 0 #d4ce96;
+  text-shadow: 1px 1px 0 #dcd7a8;
 }
 .bs-alert .alert-subtext {
-  color: #b7ad4d;
+  color: #beb55f;
 }
 .bs-alert .alert-notice {
-  text-shadow: -1px -1px 0 #ededed;
-  background: #fafafa;
-  border-top: 1px solid #d4ce96;
+  text-shadow: -1px -1px 0 #eae7cc;
+  background: #f2f0de;
+  border-top: 1px solid #dcd7a8;
   color: #333333;
 }
 .bs-alert.primary {

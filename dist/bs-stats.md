@@ -16,9 +16,9 @@
 - **Total Id Selectors:** 1
 - **Total Identifiers:** 1011
 - **Total Declarations:** 637
-- **Total Unique Colors:** 79
+- **Total Unique Colors:** 82
 - **Total Important Keywords:** 1
 
 * * *
 
-Last generated: 06/03/2015, 12:43:27 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
+Last generated: 06/03/2015, 13:06:49 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
