@@ -24,23 +24,27 @@ gulp.task(tasks.clean.name, function(fn) {
 // DIST LESS TASK
 // compiles, minifies, concats distributed version 
 // of baseless
-gulp.task(tasks.dist.name, function(done) {
-  gulp.src(tasks.dist.src)
-    // .pipe(gsourcemaps.init())
-      .pipe(gless(tasks.less.opts))
-      .pipe(gmincss())
-      .pipe(gconcat(tasks.dist.dest.file))
-    // .pipe(gsourcemaps.write('.'))
+gulp.task(tasks.dist.name, function() {
+  return gulp.src(tasks.dist.src)
+    .pipe(gless(tasks.less.opts))
+    .pipe(gmincss())
+    .pipe(gconcat(tasks.dist.dest.file))
     .pipe(gulp.dest(tasks.dist.dest.path))
     .on('error', gutil.log);
-  return done();
 });
 
 // DIST SOURCEMAPS TASK
-gulp.task(tasks.maps.name, function(done) {
-  gulp.src(tasks.maps.src)
+gulp.task(tasks.maps.name + ':dist', function() {
+  return gulp.src(tasks.maps.src)
     .pipe(gsourcemaps.init())
     .pipe(gsourcemaps.write(tasks.maps.dest.path))
+    .on('error', gutil.log);
+});
+
+gulp.task(tasks.maps.name + ':sg', function(done) {
+  gulp.src(tasks.maps.src)
+    .pipe(gsourcemaps.init())
+    .pipe(gsourcemaps.write(tasks.less.dest.path))
     .on('error', gutil.log);
   return done();
 });
@@ -88,11 +92,9 @@ gulp.task(tasks.kss.less.name,
 // styleguide, and is not the `dist` task
 gulp.task(tasks.less.name, function(done) {
   gulp.src(tasks.less.src)
-    .pipe(gsourcemaps.init())
-      .pipe(gless(tasks.less.opts))
-      // .pipe(gmincss())
-      .pipe(gconcat(tasks.less.dest.file))
-    .pipe(gsourcemaps.write('.'))
+    .pipe(gless(tasks.less.opts))
+    .pipe(gmincss())
+    .pipe(gconcat(tasks.less.dest.file))
     .pipe(gulp.dest(tasks.less.dest.path))
     .on('error', gutil.log);
   return done();
@@ -148,7 +150,7 @@ gulp.task('boss', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
 // prepare for distribution
-gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.kss.name]);
+gulp.task('styleguide', [tasks.dist.name, tasks.maps.name + ':dist', tasks.less.name, tasks.maps.name + ':sg', tasks.kss.name]);
 
 // DEFAULT TASK
 // ...its default, and helpful, I sometimes like to 
