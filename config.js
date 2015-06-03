@@ -27,7 +27,8 @@ var tasks = {
     src: config.less,
     dest: {
       path: 'dist/',
-      file: 'style.min.css'
+      file: 'style.min.css',
+      abs: path.join(__dirname, 'dist')
     }
   },
   readme: {
@@ -107,7 +108,8 @@ var tasks = {
         'TotalUniqueColours',
         'TotalImportantKeywords',
         'TotalMediaQueries'
-      ]
+      ],
+      colophon: false
     }
   }
 };

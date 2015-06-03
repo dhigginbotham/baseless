@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     gpages = require('gulp-gh-pages'),
     gmincss = require('gulp-minify-css'),
     gfilesize = require('gulp-filesize'),
+    gsourcemaps = require('gulp-sourcemaps'),
     gutil = require('gulp-util'),
     del = require('del'),
     path = require('path'),
@@ -24,12 +25,14 @@ gulp.task(tasks.clean.name, function(fn) {
 // compiles, minifies, concats distributed version 
 // of baseless
 gulp.task(tasks.dist.name, function() {
-  gulp.src(tasks.dist.src)
-    .pipe(gless(tasks.less.opts))
-    .pipe(gmincss())
-    .pipe(gconcat(tasks.dist.dest.file))
+  return gulp.src(tasks.dist.src)
+    .pipe(gsourcemaps.init())
+      .pipe(gless(tasks.less.opts))
+      .pipe(gmincss())
+      .pipe(gconcat(tasks.dist.dest.file))
+      .pipe(gfilesize())
+    .pipe(gsourcemaps.write('.'))
     .pipe(gulp.dest(tasks.dist.dest.path))
-    .pipe(gfilesize())
     .on('error', gutil.log);
 });
 
@@ -39,7 +42,7 @@ gulp.task(tasks.dist.name, function() {
 // folder so we can use it as our homepage of the
 // styleguide
 gulp.task(tasks.readme.name, function() {
-  gulp.src(tasks.readme.src)
+  return gulp.src(tasks.readme.src)
     .pipe(grename(tasks.readme.dest.file))
     .pipe(gulp.dest(tasks.readme.dest.path))
     .on('error', gutil.log);
@@ -66,7 +69,7 @@ gulp.task(tasks.kss.less.name,
 // this one specifically gets delivered to the 
 // styleguide, and is not the `dist` task
 gulp.task(tasks.less.name, function() {
-  gulp.src(tasks.less.src)
+  return gulp.src(tasks.less.src)
     .pipe(gless(tasks.less.opts))
     .pipe(gmincss())
     .pipe(gconcat(tasks.less.dest.file))
@@ -78,7 +81,7 @@ gulp.task(tasks.less.name, function() {
 // task to take basic screenshots of various
 // device widths, helpful for pixel diffing
 gulp.task(tasks.screens.name, function() {
-  gulp.src(tasks.screens.src)
+  return gulp.src(tasks.screens.src)
     .pipe(gshot(tasks.screens.opts))
     .on('error', gutil.log);
 });
@@ -87,7 +90,7 @@ gulp.task(tasks.screens.name, function() {
 // automate ghpages! we want this as easy
 // as possible, no excuses
 gulp.task(tasks.ghpages.name, function() {
-  gulp.src(tasks.ghpages.src)
+  return gulp.src(tasks.ghpages.src)
     .pipe(gpages());
 });
 
@@ -96,7 +99,7 @@ gulp.task(tasks.ghpages.name, function() {
 // stylesheet, lists various important selector
 // information
 gulp.task(tasks.parker.name, function() {
-  gulp.src(tasks.parker.src)
+  return gulp.src(tasks.parker.src)
     .pipe(gparker(tasks.parker.opts))
     .on('error', gutil.log);
 });
@@ -120,4 +123,4 @@ gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.readme.name, ta
 // ...its default, and helpful, I sometimes like to 
 // be like `gulp styleguide && gulp`, mostly out of
 // habit because its *mostly* not needed.
-gulp.task('default', [tasks.clean.name, tasks.less.name, tasks.dist.name, tasks.kss.name, 'watch']);
+gulp.task('default', [tasks.clean.name, tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);

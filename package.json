@@ -22,6 +22,9 @@
   "bugs": {
     "url": "https://github.com/dhigginbotham/baseless/issues"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-sourcemaps": "~1.5.2",
+    "gulp-less-sourcemap": "~1.4.2"
+  },
   "dependencies": {}
 }

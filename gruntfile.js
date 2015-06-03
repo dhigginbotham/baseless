@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         options: tasks.less.opts,
         files: {
           src: conf.less,
-          dest: tasks.less.dest.path + '/' + tasks.less.dest.file
+          dest: path.join(tasks.less.dest.path, tasks.less.dest.file)
         }
       },
       dist: {
