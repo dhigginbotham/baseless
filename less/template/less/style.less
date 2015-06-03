@@ -17,8 +17,8 @@
 @kss-colors-link-hover     : lighten(@kss-colors-link, 20%);
 @kss-colors-link-active    : #faa700;
 
-@kss-font-body             : Helvetica, 'Helvetica Neue', Arial, sans-serif;
-@kss-font-code             : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+@kss-font-body             : @typo-font-base;
+@kss-font-code             : @typo-font-code;
 
 @kss-font-size             : 16px;
 @kss-vertical-rhythm       : @kss-font-size * 1.5;
@@ -172,27 +172,6 @@
 
   @media screen and (min-width: 769px) {
     padding: 0;
-
-    // /* Old browsers */
-    // background: @color-light;
-    // /* FF3.6+ */
-    // background: -webkit-linear-gradient(left, darken(@color-info, 5%), @color-info 50%, darken(@color-info, 5%) 100%) 20% 0 ~"/ 10px 1px" repeat-y,
-    //             -webkit-linear-gradient(left, darken(@color-info, 5%), darken(@color-info, 5%) 20%, #fff 20%) 0 0 ~"/ 100% 1px";
-    // /* Chrome, Safari4+ */
-    // background:        -webkit-gradient(linear, left top, right top, color-stop(0%,lighten(@color-info, 5%)), color-stop(50%,@color-info), color-stop(100%,darken(@color-info, 5%))) 20% 0 ~"/ 10px 1px" repeat-y,
-    //                    -webkit-gradient(linear, left top, right top, color-stop(0%,lighten(@color-info, 5%)), color-stop(20%, darken(@color-info, 15%)), color-stop(20%,#fff)) 0 0 ~"/ 100% 1px";
-    // /* Chrome10+, Safari5.1+ */
-    // background: -webkit-linear-gradient(to right, darken(@color-info, 5%), @color-info 50%, darken(@color-info, 5%) 100%) 20% 0 ~"/ 10px 1px" repeat-y,
-    //             -webkit-linear-gradient(to right, darken(@color-info, 5%), darken(@color-info, 15%) 20%, #fff 20%) 0 0 ~"/ 100% 1px";
-    // /* Opera 11.10+ */
-    // background:      -o-linear-gradient(to right, darken(@color-info, 5%), @color-info 50%, darken(@color-info, 5%) 100%) 20% 0 ~"/ 10px 1px" repeat-y,
-    //                  -o-linear-gradient(to right, darken(@color-info, 5%), darken(@color-info, 15%) 20%, #fff 20%) 0 0 ~"/ 100% 1px";
-    // /* IE10+ */
-    // background:     -ms-linear-gradient(to right, darken(@color-info, 5%), @color-info 50%, darken(@color-info, 5%) 100%) 20% 0 ~"/ 10px 1px" repeat-y,
-    //                 -ms-linear-gradient(to right, darken(@color-info, 5%), darken(@color-info, 15%) 20%, #fff 20%) 0 0 ~"/ 100% 1px";
-    // /* W3C */
-    // background:         linear-gradient(to right, darken(@color-info, 5%), @color-info 50%, darken(@color-info, 5%) 100%) 20% 0 ~"/ 10px 1px" repeat-y,
-    //                     linear-gradient(to right, darken(@color-info, 5%), darken(@color-info, 15%) 20%, #fff 20%) 0 0 ~"/ 100% 1px";
 
     .kss-main,
     .kss-sidebar {
@@ -401,7 +380,7 @@
   .kss-markup {
     margin: @kss-vertical-rhythm 0;
     border: 1px solid #ccc;
-    background: #f1f1f1;
+    background: #F7F7F7;
   }
   .kss-markup pre {
     padding: (@kss-vertical-rhythm/2);

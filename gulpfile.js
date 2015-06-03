@@ -34,9 +34,9 @@ gulp.task(tasks.maps.name, function() {
 });
 
 gulp.task(tasks.dist.name, [tasks.maps.name], function() {
-  return gulp.src(['dist/*.css', '!*min.css'])
-    .pipe(gconcat(tasks.dist.dest.file))
+  return gulp.src('dist/style.css')
     .pipe(gmincss())
+    .pipe(gconcat(tasks.dist.dest.file))
     .pipe(gulp.dest(tasks.dist.dest.path))
     .on('error', gutil.log);
 });
@@ -74,7 +74,7 @@ gulp.task(tasks.kss.name,
 // compiles the less files specific to the 
 // styleguides template
 gulp.task(tasks.kss.less.name,
-  [tasks.maps.name],
+  [tasks.dist.name],
   gshell.task([tasks.kss.less.exec],
   {templateData: tasks.kss.less.opts}
 ));
