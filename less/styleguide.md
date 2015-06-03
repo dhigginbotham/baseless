@@ -26,7 +26,7 @@ task runner you'd want to use included you'll find an `npm` script: `npm run gul
 | `styleguide:screenshots` | Runs task to take screenshots of the components in various screen widths
 
 ## Folder Structure
-while `bs` is tiny it can have some confusing parts, here's how it's all layed out in markdown.
+while `bs` is tiny it *may* have some confusing parts. Here's how it's all layed out:
 
 ```js
 |- less/
