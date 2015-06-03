@@ -79,9 +79,11 @@ gulp.task(tasks.kss.less.name,
 // styleguide, and is not the `dist` task
 gulp.task(tasks.less.name, function(done) {
   gulp.src(tasks.less.src)
-    .pipe(gless(tasks.less.opts))
-    .pipe(gmincss())
-    .pipe(gconcat(tasks.less.dest.file))
+    .pipe(gsourcemaps.init())
+      .pipe(gless(tasks.less.opts))
+      .pipe(gmincss())
+      .pipe(gconcat(tasks.less.dest.file))
+    .pipe(gsourcemaps.write('.'))
     .pipe(gulp.dest(tasks.less.dest.path))
     .on('error', gutil.log);
   return done();
@@ -111,6 +113,7 @@ gulp.task(tasks.ghpages.name, function(done) {
 // stylesheet, lists various important selector
 // information
 gulp.task(tasks.parker.name, function(done) {
+  del('dist/bs-stats.md');
   gulp.src(tasks.parker.src)
     .pipe(gparker(tasks.parker.opts))
     .on('error', gutil.log);
@@ -136,10 +139,10 @@ gulp.task('boss', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
 // prepare for distribution
-gulp.task('styleguide', [tasks.clean.name, tasks.dist.name, tasks.less.name, tasks.kss.name]);
+gulp.task('styleguide', [tasks.dist.name, tasks.less.name, tasks.kss.name]);
 
 // DEFAULT TASK
 // ...its default, and helpful, I sometimes like to 
 // be like `gulp styleguide && gulp`, mostly out of
 // habit because its *mostly* not needed.
-gulp.task('default', ['styleguide', 'watch']);
+gulp.task('default', [tasks.dist.name, tasks.less.name, tasks.kss.name, 'watch']);
