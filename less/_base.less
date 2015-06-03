@@ -55,6 +55,13 @@ body {
   font-size: @typo-font-size-base;
 }
 
+// Anchor/Link Styles
+// 
+// Markup:
+// <a href="#">Example Link</a>
+// 
+// Styleguide 1.1.2
+
 a {
   color: @color-link;
   text-decoration: none;
@@ -88,7 +95,7 @@ a {
 // <h2 class="text-info">Example Heading Text</h2>
 // <h1 class="text-inverted">Example Heading Text</h1>
 // 
-// Styleguide 1.1.2
+// Styleguide 1.1.3
 
 h1, h2, h3, h4, h5, h6 {
   margin: @typo-font-size-vertical-rhythm 0 0 0;
@@ -108,17 +115,17 @@ h4 { font-size: @typo-font-size-base * 2;     }
 h5 { font-size: @typo-font-size-base * 1.875; }
 h6 { font-size: @typo-font-size-base * 1.75;  }
 
-// Base Markup Styles
+// Blockquote
 // 
-// Covers a few different examples of minimally styles elements
+// default blockquote
 // 
 // Markup:
 // <blockquote>
 //   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
 // </blockquote>
 // 
-// 
-// 
+// Styleguide 1.1.4
+
 blockquote {
   color: @color-blockquote;
   margin: 0;
@@ -126,6 +133,14 @@ blockquote {
   border-left: 0.5em mix(@color-blockquote, @color-light, 25%) solid;
 }
 
+// Horizontal Rulage
+// 
+// default horizontal rule
+// 
+// Markup:
+// <hr/>
+// 
+// Styleguide 1.1.5
 hr {
   display: block;
   height: 2px;
@@ -135,6 +150,22 @@ hr {
   margin: @typo-font-size-vertical-rhythm 0;
   padding: 0;
 }
+
+// Monospace Examples
+// 
+// `pre`, `code`, `kbd`, `samp` styles
+// 
+// Markup:
+// <h3>Pre Element</h3>
+// <pre>
+//    Lights neon franchise courier wonton soup Legba spook. Vinyl monofilament media Legba futurity faded carbon smart-garage paranoid neural. Urban footage drugs smart-table nodality youtube. Cardboard claymore mine geodesic drone apophenia refrigerator face forwards tattoo long-chain hydrocarbons A.I. advert industrial grade math-office shrine man. Augmented reality nano-A.I. construct chrome rain Kowloon neon smart-man. Grenade cyber-meta-footage-ware stimulate lights boat dolphin. Tower realism BASE jump sub-orbital tube disposable crypto-marketing fetishism sprawl sign military-grade. Render-farm tattoo long-chain hydrocarbons savant towards convenience store 3D-printed Tokyo military-grade engine weathered chrome pre-neon. 
+// </pre>
+// <h3>Code Element</h3>
+// <code>
+//    Dead gang neural fetishism cyber-urban savant carbon motion media marketing denim Chiba kanji. Render-farm digital otaku denim geodesic drugs RAF stimulate numinous. Soul-delay sunglasses pistol San Francisco kanji camera wonton soup Chiba. Car tower knife jeans denim shanty town cartel wonton soup alcohol tiger-team San Francisco faded corrupted realism kanji pre-tube. Shrine grenade knife towards motion tower sentient office numinous sunglasses dead bomb drugs fluidity urban decay silent.-ware convenience store bridge kanji otaku plastic Shibuya stimulate. 
+// </code>
+//
+// Styleguide 1.1.6
 
 pre, code, kbd, samp {
   font-family: @typo-font-code;
@@ -194,15 +225,15 @@ td {
   vertical-align: top;
 }
 
-// @media print {
-//   a, a:visited { text-decoration: underline; }
-//   hr { height: 1px; border:0; border-bottom:1px solid black; }
-//   a[href]:after { content: " (" attr(href) ")"; }
-//   a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-//   abbr[title]:after { content: " (" attr(title) ")"; }
-//   pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
-//   tr, img { page-break-inside: avoid; }
-//   img { max-width: 100% !important; }
-//   p, h2, h3 { orphans: 3; widows: 3; }
-//   h2, h3 { page-break-after: avoid; }
-// }
+@media print {
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

@@ -13,6 +13,7 @@
 // .notice - notice label color
 // .info - info label color
 // .inverted - inverted label color
+// .primary.small.box - small box label
 // .primary.small - small label size
 // .primary.mini - mini label size
 // .primary.large - large label size
@@ -43,6 +44,9 @@
     font-size: @typo-font-size-mini;
   }
   .label-accent();
+  &.box {
+    border-radius: 3px;
+  }
   &.primary {
     .label-accent(@color-primary, @color-light);
   }

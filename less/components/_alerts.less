@@ -21,7 +21,7 @@
 //  
 // Styleguide 2.1.
 
-.alert-accent(@bg: #ccc, @color: @color-inverted, @notice: lighten(desaturate(@bg, 40%), 15%)) {
+.alert-accent(@bg: @color-light, @color: @color-inverted, @notice: lighten(desaturate(@bg, 40%), 15%)) {
   background: @bg;
   border: 1px solid darken(@bg, 22.5%);
   .alert-title {
@@ -58,10 +58,10 @@
 
   .alert-notice {
     .reset-spacing(0, 10px);
-    font-size: 85%;
+    // font-size: 85%;
   }
 
-  .alert-accent(@color-info);
+  .alert-accent(@color-info, @color-inverted, darken(@color-light, 2%));
   &.primary {
     .alert-accent(@color-primary, @color-light, lighten(desaturate(@color-primary, 25%), 15%));
   }
