@@ -41,20 +41,18 @@ gulp.task(tasks.maps.name + ':dist', function() {
     .on('error', gutil.log);
 });
 
-gulp.task(tasks.maps.name + ':sg', function(done) {
-  gulp.src(tasks.maps.src)
+gulp.task(tasks.maps.name + ':sg', function() {
+  return gulp.src(tasks.maps.src)
     .pipe(gsourcemaps.init())
     .pipe(gsourcemaps.write(tasks.less.dest.path))
     .on('error', gutil.log);
-  return done();
 });
 
-gulp.task(tasks.gzip.name, function(done) {
-  gulp.src(tasks.gzip.src)
+gulp.task(tasks.gzip.name, function() {
+  return gulp.src(tasks.gzip.src)
     .pipe(ggzip())
     .pipe(gulp.dest(tasks.gzip.dest))
     .on('error', gutil.log);
-  return done();
 });
 
 // README TASK
@@ -62,12 +60,11 @@ gulp.task(tasks.gzip.name, function(done) {
 // it to `styleguide.md` inside of the template
 // folder so we can use it as our homepage of the
 // styleguide
-gulp.task(tasks.readme.name, function(done) {
-  gulp.src(tasks.readme.src)
+gulp.task(tasks.readme.name, function() {
+  return gulp.src(tasks.readme.src)
     .pipe(grename(tasks.readme.dest.file))
     .pipe(gulp.dest(tasks.readme.dest.path))
     .on('error', gutil.log);
-  return done();
 });
 
 // KSS TASK
@@ -90,56 +87,51 @@ gulp.task(tasks.kss.less.name,
 // base less task for compiling baseless framework,
 // this one specifically gets delivered to the 
 // styleguide, and is not the `dist` task
-gulp.task(tasks.less.name, function(done) {
-  gulp.src(tasks.less.src)
+gulp.task(tasks.less.name, function() {
+  return gulp.src(tasks.less.src)
     .pipe(gless(tasks.less.opts))
     .pipe(gmincss())
     .pipe(gconcat(tasks.less.dest.file))
     .pipe(gulp.dest(tasks.less.dest.path))
     .on('error', gutil.log);
-  return done();
 });
 
 // SCREENSHOTS TASK
 // task to take basic screenshots of various
 // device widths, helpful for pixel diffing
-gulp.task(tasks.screens.name, function(done) {
-  gulp.src(tasks.screens.src)
+gulp.task(tasks.screens.name, function() {
+  return gulp.src(tasks.screens.src)
     .pipe(gshot(tasks.screens.opts))
     .on('error', gutil.log);
-  return done();
 });
 
 // GHPAGES TASK
 // automate ghpages! we want this as easy
 // as possible, no excuses
-gulp.task(tasks.ghpages.name, function(done) {
-  gulp.src(tasks.ghpages.src)
+gulp.task(tasks.ghpages.name, function() {
+  return gulp.src(tasks.ghpages.src)
     .pipe(gpages());
-  return done();
 });
 
 // PARKER TASK
 // generates [parker](#) stats based on our
 // stylesheet, lists various important selector
 // information
-gulp.task(tasks.parker.name, function(done) {
+gulp.task(tasks.parker.name, function() {
   del('dist/bs-stats.md');
-  gulp.src(tasks.parker.src)
+  return gulp.src(tasks.parker.src)
     .pipe(gparker(tasks.parker.opts))
     .on('error', gutil.log);
-  return done();
 });
 
 // WATCH TASK
 // handles all the specific files in the framework
 // that should be watched on, allows us to dev like
 // a boss
-gulp.task('watch', function(done) {
+gulp.task('watch', function() {
   gulp.watch(['less/**/*.less', '!less/template/less/*.less'], [tasks.dist.name, tasks.less.name, tasks.kss.name]);
   gulp.watch('./README.md', [tasks.readme.name, 'styleguide']);
   gulp.watch('less/template/less/*.less', [tasks.kss.less.name]);
-  return done();
 });
 
 // STATS & GH AUTOMATION TASK
