@@ -27,8 +27,8 @@ gulp.task(tasks.clean.name, function(fn) {
 gulp.task(tasks.dist.name, function() {
   return gulp.src(tasks.dist.src)
     .pipe(gless(tasks.less.opts))
-    .pipe(gmincss())
     .pipe(gconcat(tasks.dist.dest.file))
+    .pipe(gmincss())
     .pipe(gulp.dest(tasks.dist.dest.path))
     .on('error', gutil.log);
 });
@@ -45,6 +45,7 @@ gulp.task(tasks.maps.name, function() {
     .on('error', gutil.log);
 });
 
+// GZIP TASK
 gulp.task(tasks.gzip.name, function() {
   return gulp.src(tasks.gzip.src)
     .pipe(ggzip())
@@ -87,8 +88,8 @@ gulp.task(tasks.kss.less.name,
 gulp.task(tasks.less.name, function() {
   return gulp.src(tasks.less.src)
     .pipe(gless(tasks.less.opts))
-    .pipe(gmincss())
     .pipe(gconcat(tasks.less.dest.file))
+    .pipe(gmincss())
     .pipe(gulp.dest(tasks.less.dest.path))
     .on('error', gutil.log);
 });

@@ -76,7 +76,7 @@ var tasks = {
     src: config.less,
     dest: {
       path: 'less/template/public',
-      file: 'style.css'
+      file: 'style.min.css'
     },
     opts: {
       modifyVars: {
