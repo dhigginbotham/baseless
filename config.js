@@ -57,7 +57,7 @@ var tasks = {
       source: path.join(__dirname, 'less'),
       destination: path.join(__dirname, 'styleguide'),
       template: path.join(__dirname, 'less', 'template'),
-      css: 'public/style.css',
+      css: 'public/style.min.css',
       title: config.title,
       helpers: path.join(__dirname, 'less', 'template', 'helpers'),
       placeholder: 'default'

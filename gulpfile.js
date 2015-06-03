@@ -35,10 +35,13 @@ gulp.task(tasks.dist.name, function() {
 
 // DIST SOURCEMAPS TASK
 gulp.task(tasks.maps.name, function() {
-  return gulp.src(tasks.maps.src)
+  return gulp.src(['less/style.less', '!*.css'])
     .pipe(gsourcemaps.init())
       .pipe(gless(tasks.less.opts))
-    .pipe(gsourcemaps.write(tasks.maps.dest.path))
+      .pipe(gconcat(tasks.dist.dest.file))
+    .pipe(gsourcemaps.write('.'))
+    .pipe(gulp.dest(tasks.less.dest.path))
+    .pipe(gulp.dest(tasks.dist.dest.path))
     .on('error', gutil.log);
 });
 
