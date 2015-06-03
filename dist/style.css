@@ -982,8 +982,8 @@ td {
   color: #60310b;
 }
 .bs-alert.warning .alert-notice {
-  text-shadow: -1px -1px 0 #deb18c;
-  background: #e3bea0;
+  text-shadow: -1px -1px 0 #e19556;
+  background: #e5a26c;
   border-top: 1px solid #bc6015;
   color: #ffffff;
 }
@@ -1590,6 +1590,55 @@ input[type="text"].bs-form-elem {
 }
 .bs-panel.inverted .panel-list .panel-list-item {
   border-top: 1px solid #1a1a1a;
+}
+.bs-shape {
+  display: inline-block;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  cursor: default;
+  height: 76px;
+  width: 76px;
+  background: #eeeeee;
+}
+.bs-shape.small {
+  height: 51px;
+  width: 51px;
+}
+.bs-shape.mini {
+  height: 33px;
+  width: 33px;
+}
+.bs-shape.large {
+  height: 100px;
+  width: 100px;
+}
+.bs-shape.circle {
+  border-radius: 100%;
+}
+.bs-shape.primary {
+  background: #2371b1;
+}
+.bs-shape.success {
+  background: #9ebf24;
+}
+.bs-shape.warning {
+  background: #e6781e;
+}
+.bs-shape.notice {
+  background: #cc0c39;
+}
+.bs-shape.info {
+  background: #e3dfba;
+}
+.bs-shape.inverted {
+  background: #333333;
+}
+.bs-shape:after {
+  content: " ";
 }
 .bs-table {
   width: 100%;

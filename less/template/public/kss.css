@@ -119,7 +119,6 @@
   height: 2px;
   border: 0;
   border-top: 1px solid #d5d5d5;
-  margin: 24px 0;
   padding: 0;
 }
 .kss-style pre,
@@ -314,6 +313,17 @@
     padding: 0 0 10px;
   }
 }
+#kss-node .kss-colophon {
+  display: none;
+}
+#kss-node .kss-colophon .kss-colophon__copyright {
+  font-size: 75%;
+}
+@media screen and (min-width: 769px) {
+  #kss-node .kss-colophon {
+    display: inherit;
+  }
+}
 #kss-node .kss-nav__ref {
   color: #333;
   font-weight: bold;
@@ -417,6 +427,16 @@
 }
 #kss-node .kss-modifier__example:last-child {
   margin: 0;
+}
+#kss-node .kss-constants hr {
+  margin: 10px 0;
+}
+#kss-node .kss-constants .kss-constants__colors {
+  line-height: 20px;
+}
+#kss-node .kss-constants .kss-constants__color {
+  padding-top: 8px;
+  display: inline-block;
 }
 #kss-node .kss-markup {
   margin: 24px 0;

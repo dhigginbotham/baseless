@@ -1,0 +1,71 @@
+// Shapes
+// 
+// Markup:
+// <div class="bs-shape {{modifier_class}}"></div>
+// 
+// .mini - mini shape
+// .small - small shape
+// .large - large shape
+// .circle - circle shape
+// .primary - primary color
+// .success - success color
+// .warning - warning color
+// .notice - notice color
+// .info - info color
+// .inverted - inverted color
+// 
+// Styleguide: 2.8.
+.simple-shape(@bg: @color-grey-default) {
+  background: @bg;
+}
+
+.@{css-prefix}shape {
+  display: inline-block;
+  .disable-selection();
+  cursor: default;
+  // sizes
+  height: 76px;
+  width: 76px;
+  &.small {
+    height: 51px;
+    width: 51px;
+  }
+  &.mini {
+    height: 33px;
+    width: 33px;
+  }
+  &.large {
+    height: 100px;
+    width: 100px;
+  }
+
+  // shapes
+  &.circle {
+    border-radius: 100%;
+  }
+
+  // color accents
+  .simple-shape();
+
+  &.primary {
+    .simple-shape(@color-primary)
+  }
+  &.success {
+    .simple-shape(@color-success)
+  }
+  &.warning {
+    .simple-shape(@color-warning)
+  }
+  &.notice {
+    .simple-shape(@color-notice)
+  }
+  &.info {
+    .simple-shape(@color-info)
+  }
+  &.inverted {
+    .simple-shape(@color-inverted)
+  }
+  &:after {
+    content: " ";
+  }
+}

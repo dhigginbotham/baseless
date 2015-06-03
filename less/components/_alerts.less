@@ -58,7 +58,6 @@
 
   .alert-notice {
     .reset-spacing(0, 10px);
-    // font-size: 85%;
   }
 
   .alert-accent(@color-info, @color-inverted, darken(@color-light, 2%));
@@ -71,7 +70,7 @@
   }
   
   &.warning {
-    .alert-accent(@color-warning, @color-light, lighten(desaturate(@color-warning, 25%), 25%));
+    .alert-accent(@color-warning, @color-light, lighten(desaturate(@color-warning, 10%), 15%));
   }
   
   &.notice {
