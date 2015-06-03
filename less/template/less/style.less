@@ -17,8 +17,8 @@
 @kss-colors-link-hover     : lighten(@kss-colors-link, 20%);
 @kss-colors-link-active    : #faa700;
 
-@kss-font-body             : "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
-@kss-font-code             : "PT Mono", Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+@kss-font-body             : Helvetica, 'Helvetica Neue', Arial, sans-serif;
+@kss-font-code             : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 
 @kss-font-size             : 16px;
 @kss-vertical-rhythm       : @kss-font-size * 1.5;
@@ -27,139 +27,139 @@
 // Wrap all of this template's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
 
-.kss-style {
-  color: @kss-colors-foreground;
-  font-family: @kss-font-body;
-  font-size: @kss-font-size;
-  line-height: @kss-vertical-rhythm;
+// .kss-style {
+//   color: @kss-colors-foreground;
+//   font-family: @kss-font-body;
+//   font-size: @kss-font-size;
+//   line-height: @kss-vertical-rhythm;
 
-  a {
-    color: @kss-colors-link;
-    text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.5s;
+//   a {
+//     color: @kss-colors-link;
+//     text-decoration: none;
+//     transition-property: color;
+//     transition-duration: 0.5s;
 
-    &:visited { color: @kss-colors-link-visited; }
-    &:hover,
-    &:focus   { color: @kss-colors-link-hover;   }
-    &:active  { color: @kss-colors-link-active;  }
+//     &:visited { color: @kss-colors-link-visited; }
+//     &:hover,
+//     &:focus   { color: @kss-colors-link-hover;   }
+//     &:active  { color: @kss-colors-link-active;  }
 
-    &:hover,
-    &:active {
-      outline: 0;
-    }
-  }
+//     &:hover,
+//     &:active {
+//       outline: 0;
+//     }
+//   }
 
-  p {
-    margin: (@kss-vertical-rhythm/2) 0 @kss-vertical-rhythm 0;
-  }
+//   // p {
+//   //   margin: (@kss-vertical-rhythm/2) 0 @kss-vertical-rhythm 0;
+//   // }
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: @kss-vertical-rhythm 0 0 0;
-    font-family: @kss-font-body;
-    color: @kss-colors-heading;
-    line-height: 1.15em;
-  }
+//   h1, h2, h3, h4, h5, h6 {
+//     margin: @kss-vertical-rhythm 0 0 0;
+//     font-family: @kss-font-body;
+//     color: @kss-colors-heading;
+//     line-height: 1.15em;
+//   }
 
-  h4, h5, h6 {
-    font-weight: bold;
-  }
+//   h4, h5, h6 {
+//     font-weight: bold;
+//   }
 
-  h1 { font-size: @kss-font-size * 2.5;   }
-  h2 { font-size: @kss-font-size * 2.25;  }
-  h3 { font-size: @kss-font-size * 2.125; }
-  h4 { font-size: @kss-font-size * 2;     }
-  h5 { font-size: @kss-font-size * 1.875; }
-  h6 { font-size: @kss-font-size * 1.75;  }
+//   h1 { font-size: @kss-font-size * 2.5;   }
+//   h2 { font-size: @kss-font-size * 2.25;  }
+//   h3 { font-size: @kss-font-size * 2.125; }
+//   h4 { font-size: @kss-font-size * 2;     }
+//   h5 { font-size: @kss-font-size * 1.875; }
+//   h6 { font-size: @kss-font-size * 1.75;  }
 
-  blockquote {
-    color: @kss-colors-quotes;
-    margin: 0;
-    padding-left: @kss-vertical-rhythm;
-    border-left: 0.5em mix(@kss-colors-quotes, @kss-colors-background, 25%) solid;
-  }
+//   blockquote {
+//     color: @kss-colors-quotes;
+//     margin: 0;
+//     padding-left: @kss-vertical-rhythm;
+//     border-left: 0.5em mix(@kss-colors-quotes, @kss-colors-background, 25%) solid;
+//   }
 
-  hr {
-    display: block;
-    height: 2px;
-    border: 0;
-    border-top: 1px solid darken(#eee, 10%);
-    // border-bottom: 1px solid darken(@kss-colors-background, 10%);
-    margin: @kss-vertical-rhythm 0;
-    padding: 0;
-  }
+//   hr {
+//     display: block;
+//     height: 2px;
+//     border: 0;
+//     border-top: 1px solid darken(#eee, 10%);
+//     // border-bottom: 1px solid darken(@kss-colors-background, 10%);
+//     margin: @kss-vertical-rhythm 0;
+//     padding: 0;
+//   }
 
-  pre, code, kbd, samp {
-    font-family: @kss-font-code;
-    color: mix(@kss-colors-foreground, @kss-colors-heading, 50%);
-    font-size: 1em;
-  }
+//   pre, code, kbd, samp {
+//     font-family: @kss-font-code;
+//     color: mix(@kss-colors-foreground, @kss-colors-heading, 50%);
+//     font-size: 1em;
+//   }
 
-  pre {
-    white-space: pre;
-    overflow: scroll;
-  }
+//   pre {
+//     white-space: pre;
+//     overflow: auto;
+//   }
 
-  ins {
-    color: @kss-colors-heading;
-    background: #ff9;
-    text-decoration: none;
-  }
+//   ins {
+//     color: @kss-colors-heading;
+//     background: #ff9;
+//     text-decoration: none;
+//   }
 
-  mark {
-    color: @kss-colors-heading;
-    background: #ff0;
-    font-weight: bold;
-  }
+//   mark {
+//     color: @kss-colors-heading;
+//     background: #ff0;
+//     font-weight: bold;
+//   }
 
-  sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sup { top: -0.5em;     }
-  sub { bottom: -0.25em; }
+//   sub, sup {
+//     font-size: 75%;
+//     line-height: 0;
+//     position: relative;
+//     vertical-align: baseline;
+//   }
+//   sup { top: -0.5em;     }
+//   sub { bottom: -0.25em; }
 
-  ul, ol {
-    margin: @kss-vertical-rhythm 0;
-    padding: 0 0 0 @kss-vertical-rhythm;
-  }
-  li p:last-child {
-    margin: 0;
-  }
-  dd {
-    margin: 0 0 0 @kss-vertical-rhythm;
-  }
+//   ul, ol {
+//     margin: @kss-vertical-rhythm 0;
+//     padding: 0 0 0 @kss-vertical-rhythm;
+//   }
+//   li p:last-child {
+//     margin: 0;
+//   }
+//   dd {
+//     margin: 0 0 0 @kss-vertical-rhythm;
+//   }
 
-  img {
-    max-width:100%;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-    vertical-align: middle;
-  }
+//   img {
+//     max-width:100%;
+//     border: 0;
+//     -ms-interpolation-mode: bicubic;
+//     vertical-align: middle;
+//   }
 
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  td {
-    vertical-align: top;
-  }
+//   table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//   }
+//   td {
+//     vertical-align: top;
+//   }
 
-  @media print {
-    a, a:visited { text-decoration: underline; }
-    hr { height: 1px; border:0; border-bottom:1px solid black; }
-    a[href]:after { content: " (" attr(href) ")"; }
-    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-    abbr[title]:after { content: " (" attr(title) ")"; }
-    pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
-    tr, img { page-break-inside: avoid; }
-    img { max-width: 100% !important; }
-    p, h2, h3 { orphans: 3; widows: 3; }
-    h2, h3 { page-break-after: avoid; }
-  }
-}
+//   @media print {
+//     a, a:visited { text-decoration: underline; }
+//     hr { height: 1px; border:0; border-bottom:1px solid black; }
+//     a[href]:after { content: " (" attr(href) ")"; }
+//     a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+//     abbr[title]:after { content: " (" attr(title) ")"; }
+//     pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+//     tr, img { page-break-inside: avoid; }
+//     img { max-width: 100% !important; }
+//     p, h2, h3 { orphans: 3; widows: 3; }
+//     h2, h3 { page-break-after: avoid; }
+//   }
+// }
 
 // ------------------------------------------------------------------------------
 // Layout and page background
@@ -400,9 +400,9 @@
 
   .kss-markup {
     margin: @kss-vertical-rhythm 0;
-    border: 1px solid #999;
   }
   .kss-markup pre {
+    padding: (@kss-vertical-rhythm/2);
     margin: 0;
   }
 
@@ -421,51 +421,51 @@
     }
   }
 
-  // ------------------------------------------------------------------------------
-  //   @group prettyprint.js styling
-  // ------------------------------------------------------------------------------
-  /* Pretty printing styles. Used with prettify.js. */
+//   // ------------------------------------------------------------------------------
+//   //   @group prettyprint.js styling
+//   // ------------------------------------------------------------------------------
+//   /* Pretty printing styles. Used with prettify.js. */
 
-  /* SPAN elements with the classes below are added by prettyprint. */
-  .pln { color: #000 }  /* plain text */
+//   /* SPAN elements with the classes below are added by prettyprint. */
+//   .pln { color: #000 }  /* plain text */
 
-  .str { color: #080 }  /* string content */
-  .kwd { color: #008 }  /* a keyword */
-  .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
-  .lit { color: #066 }  /* a literal value */
-  /* punctuation, lisp open bracket, lisp close bracket */
-  .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #080 }  /* a markup attribute value */
-  .dec, .var { color: #606 }  /* a declaration; a variable name */
-  .fun { color: red }  /* a function name */
+//   .str { color: #080 }  /* string content */
+//   .kwd { color: #008 }  /* a keyword */
+//   .com { color: #800 }  /* a comment */
+//   .typ { color: #606 }  /* a type name */
+//   .lit { color: #066 }  /* a literal value */
+//   /* punctuation, lisp open bracket, lisp close bracket */
+//   .pun, .opn, .clo { color: #660 }
+//   .tag { color: #008 }  /* a markup tag name */
+//   .atn { color: #606 }  /* a markup attribute name */
+//   .atv { color: #080 }  /* a markup attribute value */
+//   .dec, .var { color: #606 }  /* a declaration; a variable name */
+//   .fun { color: red }  /* a function name */
 
-  /* Use higher contrast and text-weight for printable form. */
-  @media print, projection {
-    .str { color: #060 }
-    .kwd { color: #006; font-weight: bold }
-    .com { color: #600; font-style: italic }
-    .typ { color: #404; font-weight: bold }
-    .lit { color: #044 }
-    .pun, .opn, .clo { color: #440 }
-    .tag { color: #006; font-weight: bold }
-    .atn { color: #404 }
-    .atv { color: #060 }
-  }
+//   /* Use higher contrast and text-weight for printable form. */
+//   @media print, projection {
+//     .str { color: #060 }
+//     .kwd { color: #006; font-weight: bold }
+//     .com { color: #600; font-style: italic }
+//     .typ { color: #404; font-weight: bold }
+//     .lit { color: #044 }
+//     .pun, .opn, .clo { color: #440 }
+//     .tag { color: #006; font-weight: bold }
+//     .atn { color: #404 }
+//     .atv { color: #060 }
+//   }
 
   /* Specify class=linenums on a pre to get line numbering */
   ol.linenums {
     margin: 0;
-    padding: 0 0 3px 0;
+    padding: 15px 0;
     list-style-type: none;
 
     li {
       min-height: @kss-vertical-rhythm;
-      border-bottom: 1px solid #eee;
+      // border-bottom: 1px solid #eee;
       padding: 0 10px;
-      background: #fff;
+      // background: #fff;
 
       &:first-child {
         padding-top: 3px;
@@ -477,7 +477,7 @@
     li.L4,
     li.L6,
     li.L8 {
-      background: #fcfcfc;
+      // background: #fcfcfc;
     }
   }
 }

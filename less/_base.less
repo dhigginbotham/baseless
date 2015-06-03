@@ -73,8 +73,22 @@ a {
 }
 
 p {
-  margin: (@typo-font-size-vertical-rhythm/2) 0 @typo-font-size-vertical-rhythm 0;
+  margin: (@typo-font-size-vertical-rhythm/2) 0;
 }
+
+// Heading Styles
+// 
+// Styles for headings, 1 through 6
+// 
+// Markup:
+// <h6 class="text-primary">Example Heading Text</h6>
+// <h5 class="text-success">Example Heading Text</h5>
+// <h4 class="text-warning">Example Heading Text</h4>
+// <h3 class="text-notice">Example Heading Text</h3>
+// <h2 class="text-info">Example Heading Text</h2>
+// <h1 class="text-inverted">Example Heading Text</h1>
+// 
+// Styleguide 1.1.2
 
 h1, h2, h3, h4, h5, h6 {
   margin: @typo-font-size-vertical-rhythm 0 0 0;
@@ -119,7 +133,7 @@ pre, code, kbd, samp {
 
 pre {
   white-space: pre;
-  overflow: scroll;
+  overflow: auto;
 }
 
 ins {

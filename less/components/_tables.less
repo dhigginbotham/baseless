@@ -44,6 +44,7 @@
 // .large - large table style
 // .info - info table style
 // .info.striped - info and striped table style
+// .info.striped.hover - info and striped table style
 // 
 // Styleguide 2.8.
 
@@ -70,12 +71,18 @@
       }
     }
   }
+  &.hover {
+    th,
+    td {
+      &:hover {
+        background: lighten(@border, 10%);
+      }
+    }
+  }
 }
 
 .@{css-prefix}table {
-  border-collapse: collapse;
   width: 100%;
-
   th,
   td {
     .reset-spacing(0, 5px);
