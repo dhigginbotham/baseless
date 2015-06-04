@@ -92,6 +92,32 @@
 }
 
 //
+// .opacity(@opacity)
+// set opacity for all the browsers
+//
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  @opacity-ie: @opacity * 100;
+  filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
+}
+
+//
+// .size(@width, @height)
+// set size for block elems and other various helpers
+//
+
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+  line-height: @height;
+}
+
+.square(@size) {
+  .size(@size, @size);
+}
+
+//
 // .disable-selection
 // makes modern browsers not allow the selection
 // more info @ https://css-tricks.com/almanac/properties/u/user-select/
@@ -116,11 +142,9 @@
 }
 
 .grid-column(@columns) {
-  @media (min-width: @grid-float-breakpoint) {
-    float: left;
-    // calculate width based on number of columns available
-    width: percentage(@columns / @grid-columns);
-  }
+  float: left;
+  // calculate width based on number of columns available
+  width: percentage(@columns / @grid-columns);
   // prevent columns from collapsing when empty
   min-height: 1px;
   // set inner padding as gutters instead of margin
@@ -131,9 +155,14 @@
 }
 
 .grid-column-offset(@columns) {
-  @media (min-width: @grid-float-breakpoint) {
-    margin-left: percentage(@columns / @grid-columns);
+  margin-left: percentage(@columns / @grid-columns);
+}
+
+.grid-column-generator (@i) when (@i > 0) {
+  &.@{i}-col {
+    .grid-column(@i);
   }
+  .grid-column-generator(@i - 1);
 }
 
 //
