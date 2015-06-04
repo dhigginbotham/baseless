@@ -475,10 +475,10 @@ h6 {
   font-size: 24.5px;
 }
 blockquote {
-  color: #2371b1;
+  color: #333333;
   margin: 0;
   padding-left: 17.5px;
-  border-left: 0.5em #c8dcec solid;
+  border-left: 0.5em #cccccc solid;
 }
 hr {
   display: block;
