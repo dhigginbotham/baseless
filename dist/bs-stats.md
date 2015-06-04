@@ -4,7 +4,7 @@
 ### d:\node\baseless\dist\style.min.css
 
 - **Total Stylesheets:** 1
-- **Total Stylesheet Size:** 25094
+- **Total Stylesheet Size:** 25055
 - **Total Media Queries:** 2
 - **Total Rules:** 271
 - **Selectors Per Rule:** 1.7084870848708487
@@ -21,4 +21,4 @@
 
 * * *
 
-Last generated: 06/04/2015, 03:45:00 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
+Last generated: 06/04/2015, 04:22:45 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
