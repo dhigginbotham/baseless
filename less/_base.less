@@ -99,7 +99,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   margin: @typo-font-size-vertical-rhythm 0 0 0;
-  font-family: @typo-font-base;
+  font-family: @typo-font-heading;
   color: @typo-font-size-base;
   line-height: 1.15em;
 }
@@ -145,8 +145,8 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  border-top: 1px solid lighten(@color-hr-top, 60%);
-  border-bottom: 1px solid darken(@color-hr-bottom, 10%);
+  border-top: none;
+  border-bottom: 1px solid darken(@color-hr, 10%);
   margin: @typo-font-size-vertical-rhythm 0;
   padding: 0;
 }
@@ -223,17 +223,4 @@ table {
 }
 td {
   vertical-align: top;
-}
-
-@media print {
-  a, a:visited { text-decoration: underline; }
-  hr { height: 1px; border:0; border-bottom:1px solid black; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
 }
