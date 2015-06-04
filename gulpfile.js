@@ -74,7 +74,7 @@ gulp.task(tasks.kss.name,
 // compiles the less files specific to the 
 // styleguides template
 gulp.task(tasks.kss.less.name,
-  [tasks.dist.name],
+  [tasks.kss.less.name, tasks.dist.name],
   gshell.task([tasks.kss.less.exec],
   {templateData: tasks.kss.less.opts}
 ));
