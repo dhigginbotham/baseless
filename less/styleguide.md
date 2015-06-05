@@ -46,9 +46,8 @@ while `bs` is tiny it *may* have some confusing parts. Here's how it's all layed
 |----- helpers/ - handlebars helpers, kss-node has a wiki on registeringHerlpers in kss
 |------- cssPrefis.js - adds {{cssPrefix}} to handlebars compiler in time to compile the html
 |----- less/ - less stylesheets for styleguide template
-|------- style.less - ...stylez
+|------- style.less - kss less file for styling your styleguide
 |----- public/ - binary images, js, css
-|------- kss.less - kss less file for styling your styleguide
 |----- index.html - template for your styleguide, w/ handlebars
 |----- template_config.js - configuration file for kss-node generator
 |
