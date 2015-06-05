@@ -133,7 +133,7 @@ gulp.task('watch', function() {
 // STATS & GH AUTOMATION TASK
 // tasks specifically for stat generation, gh-pages, 
 // and other analytical stats
-gulp.task('boss', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
+gulp.task('auto', [tasks.gzip.name, tasks.parker.name, tasks.ghpages.name]);
 
 // STYLEGUIDE TASK
 // collection of styleguide related tasks so we can 
