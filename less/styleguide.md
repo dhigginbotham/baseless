@@ -39,6 +39,7 @@ while `bs` is tiny it *may* have some confusing parts. Here's how it's all layed
 |----- _labels.less - from price tags to ctas to push notifications, labels wont let you down
 |----- _lists.less - gives you a little more control over the display of your list items
 |----- _panels.less - panels are an everyday item from dashboard ui's to user profiles, get 'em
+|----- _shapes.less - ...
 |----- _tables.less - very, very simple table styling, there's still a time and place for tables
 |----- _wells.less - wells also double as utility-boxs very easily, what you'd expect
 |
@@ -59,3 +60,17 @@ while `bs` is tiny it *may* have some confusing parts. Here's how it's all layed
 |- style.less - @import style file
 |- styleguide.md - automated copy of ./README.md
 ```
+
+##  Components
+`bs` components are all modular, so you can include only the components you need.
+
+  - **alerts.less** - ever feel the need to get your point across, use me.
+  - **buttons.less** - dynamic buttons, can morph their colors in the time it takes you to mouseup
+  - **forms.less** - ...
+  - **grid.less** - highly experimental, mostly volatile and will be refactored 12 column grids
+  - **labels.less** - from price tags to ctas to push notifications, labels wont let you down
+  - **lists.less** - gives you a little more control over the display of your list items
+  - **panels.less** - panels are an everyday item from dashboard ui's to user profiles, get 'em
+  - **shapes.less** - ...
+  - **tables.less** - very, very simple table styling, there's still a time and place for tables
+  - **wells.less** - wells also double as utility-boxs very easily, what you'd expect
