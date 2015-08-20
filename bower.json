@@ -1,0 +1,25 @@
+{
+  "name": "baseless",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dhigginbotham/baseless",
+  "authors": [
+    "David Higginbotham <davehigginbotham@gmail.com>"
+  ],
+  "description": "minimal ui components with styleguide",
+  "main": "./dist/style.min.css",
+  "keywords": [
+    "ui",
+    "css",
+    "less",
+    "components",
+    "minimal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
