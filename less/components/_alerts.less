@@ -33,7 +33,13 @@
 
 .@{css-prefix}alert {
   .border-radius();
-  .reset-spacing(15px 0, 10px);
+  .reset-spacing(15px 0);
+
+  div,
+  p,
+  span {
+    .reset-spacing(0,10px);
+  }
 
   .alert-title,
   .alert-subtext {
@@ -41,7 +47,7 @@
   }
   
   .alert-title {
-    .reset-spacing(0, 0 10px 0);
+    .reset-spacing(0, 6px);
   }
 
   .alert-subtext {

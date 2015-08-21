@@ -867,10 +867,16 @@ td {
 .bs-alert {
   border-radius: 3px 3px 3px 3px;
   margin: 15px 0;
-  padding: 10px;
+  padding: 0;
   background: #f9f8f0;
   border: 1px solid #c9c27b;
   color: #333333;
+}
+.bs-alert div,
+.bs-alert p,
+.bs-alert span {
+  margin: 0;
+  padding: 10px;
 }
 .bs-alert .alert-title,
 .bs-alert .alert-subtext {
@@ -878,7 +884,7 @@ td {
 }
 .bs-alert .alert-title {
   margin: 0;
-  padding: 0 10px 0;
+  padding: 6px;
 }
 .bs-alert .alert-subtext {
   margin: 0;
