@@ -872,9 +872,7 @@ td {
   border: 1px solid #c9c27b;
   color: #333333;
 }
-.bs-alert div,
-.bs-alert p,
-.bs-alert span {
+.bs-alert .alert-text {
   margin: 0;
   padding: 10px;
 }
