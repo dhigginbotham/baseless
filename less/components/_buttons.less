@@ -23,17 +23,11 @@
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
   #gradient > .vertical(@bg, darken(@bg, 5%));
-  border: 1px solid darken(@bg, 7%);
-  box-shadow: 0 1px 0 darken(@bg, @i2),
-              inset 0 1px 0 rgba(255,255,255,0.2);
-  text-shadow: 1px 1px 0 darken(@bg, @i2);
   &:hover {
     #gradient > .vertical(@bg, darken(@bg, 7%));
   }
   &:active {
     background: darken(@bg, @i2);
-    box-shadow: 0 1px 0 darken(@bg, @i2),
-                inset 0 1px 0 darken(@bg, @i2);
   }
   color: @color;
   &:visited {
@@ -42,8 +36,6 @@
   &:disabled, &.disabled {
     cursor: not-allowed;
     background: darken(@bg, @i2);
-    border: 1px solid darken(@bg, 10%);
-    box-shadow: 0 1px 0 darken(@bg, @i2);
   }
 }
 
@@ -51,10 +43,10 @@
   
   cursor: pointer;
 
-  .reset-spacing(3px 0, 5px 10px);
+  .reset-spacing(0, 3px 10px);
 
   border: 0;
-  
+  display: inline-block;
   color: @color-inverted;
   &:visited,
   &:hover,
@@ -77,7 +69,7 @@
 
   .disable-selection();
 
-  .border-radius();
+  .border-radius(3px);
 
   .btn-accent();
 

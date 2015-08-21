@@ -42,7 +42,7 @@
 // .border-radius
 //
 
-.border-radius(@tleft: 3px, @tright: 3px, @bright: 3px, @bleft: 3px) {
+.border-radius(@tleft: 3px, @tright: @tleft, @bright: @tleft, @bleft: @tright) {
   border-radius: @tleft @tright @bright @bleft;
 }
 
@@ -146,7 +146,9 @@
   // calculate width based on number of columns available
   width: percentage(@columns / @grid-columns);
   // prevent columns from collapsing when empty
-  min-height: 1px;
+  &.no-collapse {
+    min-height: 1px;
+  }
   // set inner padding as gutters instead of margin
   padding-left: @grid-column-padding;
   padding-right: @grid-column-padding;

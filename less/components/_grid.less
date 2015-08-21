@@ -51,8 +51,12 @@
 // 
 // Styleguide 2.4.
 
-.row,
 .container {
+  max-width: @grid-container-width;
+  .clearfix();
+}
+
+.row {
   .grid-row();
   .col {
     .grid-column(12);
