@@ -23,6 +23,9 @@
     &:hover {
       background: lighten(@bg, 7%);
     }
+    a {
+      color: @color;
+    }
   }
 }
 
@@ -44,8 +47,7 @@
     li {
       max-width: 100%;
       border-radius: 15px;
-      margin: 3px 0;
-      padding: 0 10px;
+      .reset-spacing(7px 2px 7px 0,0 10px);
       line-height: 21px;
       &:hover {
         cursor: pointer;

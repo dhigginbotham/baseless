@@ -14,8 +14,9 @@
 // Styleguide 2.1.
 
 .alert-accent(@bg: @color-light, @color: @color-inverted, @notice: lighten(desaturate(@bg, 40%), 15%)) {
-  background: @bg;
+  background: lighten(@bg, 10%);
   border: 1px solid darken(@bg, 22.5%);
+  color: desaturate(@color, 40%);
   .alert-title {
     color: @color;
     text-shadow: 1px 1px 0 darken(@bg, 10%);
@@ -27,13 +28,12 @@
     text-shadow: -1px -1px 0 darken(@notice, 5%);
     background: @notice;
     border-top: 1px solid darken(@bg, 10%);
-    color: desaturate(@color, 40%);
   }
 }
 
 .@{css-prefix}alert {
   .border-radius();
-  .reset-spacing(5px 0);
+  .reset-spacing(15px 0, 10px);
 
   .alert-title,
   .alert-subtext {
@@ -41,11 +41,11 @@
   }
   
   .alert-title {
-    .reset-spacing(0, 5px 10px 5px);
+    .reset-spacing(0, 0 10px 0);
   }
 
   .alert-subtext {
-    .reset-spacing(0, 0 10px 5px);
+    .reset-spacing(0, 0 10px 0);
   }
 
   .alert-notice {

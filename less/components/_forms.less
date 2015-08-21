@@ -18,17 +18,23 @@
     display: block;
   }
   &.inline {
-    li {
+    label {
       display: inline-block;
     }
   }
 }
 
-textarea.@{css-prefix}form-elem,
-select.@{css-prefix}form-elem,
-input[type="text"].@{css-prefix}form-elem {
+.@{css-prefix}form-elem {
   .reset-spacing(0, 3px 7px);
   .border-radius();
   border: 1px solid @color-grey-default-accent;
   box-shadow: inset 1px 1px 0 @color-grey-default;
+  &.full-width {
+    width: 100%;
+  }
+}
+
+.@{css-prefix}form-control {
+  .reset-spacing(10px 0 0,10px 0 0);
+  border-top: 1px solid @color-grey-default-accent;
 }
