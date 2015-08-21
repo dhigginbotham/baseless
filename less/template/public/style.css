@@ -995,6 +995,9 @@ input[type="text"].bs-form-elem {
 }
 .container {
   max-width: 1140px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container:before,
 .container:after {
