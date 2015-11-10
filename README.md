@@ -1,6 +1,5 @@
 # [BASELESS](http://dhigginbotham.github.io/baseless)
-[BASELESS](https://github.com/dhigginbotham/baseless) (`"bs"` for short) is a tiny (`~6k`) ui framework for any modern website. The idea behind bs was to 
-create a living styleguide for your website, with pre assembled common use components. You'll find a lot of familiarity between this framework and 
+[BASELESS](https://github.com/dhigginbotham/baseless) (`"bs"` for short) is a small (`~23k`) modular ui framework for any modern website. The idea behind bs was to create a living styleguide for your website, with pre assembled common use components. You'll find a lot of familiarity between this framework and 
 many other popular frameworks, as a huge fan of [`@mdo`](https://twitter.com/mdo) and of his ideas I take a lot of naming  conventions found in 
 [`twbs`](https://github.com/twbs/bootstrap), this is namely just to help anyone else on a team pickup a basic naming convention, have you not one 
 of your own.
@@ -20,39 +19,86 @@ of your own.
   - **wells.less** - wells also double as utility-boxs very easily, what you'd expect
 
 ## Folder Structure
-while `bs` is tiny it *may* have some confusing parts. Here's how it's all layed out:
+while `bs` is small it *may* have some confusing parts. Here's how it's all layed out:
 
 ```js
-|- less/
-|
-|--- components/
-|----- _alerts.less - ever feel the need to get your point across, use me.
-|----- _buttons.less - dynamic buttons, can morph their colors in the time it takes you to mouseup
-|----- _forms.less - ...
-|----- _grid.less - highly experimental, mostly volatile and will be refactored 12 column grids
-|----- _labels.less - from price tags to ctas to push notifications, labels wont let you down
-|----- _lists.less - gives you a little more control over the display of your list items
-|----- _panels.less - panels are an everyday item from dashboard ui's to user profiles, get 'em
-|----- _shapes.less - ...
-|----- _tables.less - very, very simple table styling, there's still a time and place for tables
-|----- _wells.less - wells also double as utility-boxs very easily, what you'd expect
-|
-|--- template/ - styleguide template
-|----- helpers/ - handlebars helpers, kss-node has a wiki on registeringHerlpers in kss
-|------- cssPrefis.js - adds {{cssPrefix}} to handlebars compiler in time to compile the html
-|----- less/ - less stylesheets for styleguide template
-|------- style.less - kss less file for styling your styleguide
-|----- public/ - binary images, js, css
-|----- index.html - template for your styleguide, w/ handlebars
-|----- template_config.js - configuration file for kss-node generator
-|
-|- _base.less - bas[e|ic] file, keep it basic, mobile, and awesome.
-|- _constants.less - the holy grail of your style, *keep it secret, keep it safe*
-|- _helpers.less - general use helper classes
-|- _mixins.less - mixins that touch all the things
-|- _normalize.less - normalize.css because every developer I know wanna reinvent wheels, <3
-|- style.less - @import style file
-|- styleguide.md - automated copy of ./README.md
+.
+├── bower.json
+├── config.js
+├── dist
+│   ├── bs-stats.md
+│   ├── style.css
+│   ├── style.css.map
+│   ├── style.min.css
+│   └── style.min.css.gz
+├── gruntfile.js
+├── gulpfile.js
+├── less
+│   ├── _base.less
+│   ├── components
+│   │   ├── _alerts.less
+│   │   ├── _buttons.less
+│   │   ├── docs
+│   │   │   ├── alerts.hbs
+│   │   │   ├── buttons.hbs
+│   │   │   ├── forms.hbs
+│   │   │   ├── grid.hbs
+│   │   │   ├── includes
+│   │   │   │   ├── form-label.hbs
+│   │   │   │   ├── form-label-select.hbs
+│   │   │   │   ├── form-label-textarea.hbs
+│   │   │   │   ├── form-label-text-input.hbs
+│   │   │   │   └── form-label-text-input--inline.hbs
+│   │   │   ├── labels.hbs
+│   │   │   ├── lists.hbs
+│   │   │   ├── panels.hbs
+│   │   │   ├── shapes.hbs
+│   │   │   ├── tables.hbs
+│   │   │   └── wells.hbs
+│   │   ├── _forms.less
+│   │   ├── _grid.less
+│   │   ├── _labels.less
+│   │   ├── _lists.less
+│   │   ├── _panels.less
+│   │   ├── _shapes.less
+│   │   ├── _tables.less
+│   │   └── _wells.less
+│   ├── _constants.less
+│   ├── _helpers.less
+│   ├── _mixins.less
+│   ├── _normalize.less
+│   ├── _print.less
+│   ├── styleguide.md
+│   ├── style.less
+│   └── template
+│       ├── helpers
+│       │   └── cssPrefix.js
+│       ├── index.html
+│       ├── less
+│       │   └── style.less
+│       ├── package.json
+│       ├── public
+│       │   ├── kss.css
+│       │   ├── kss.js
+│       │   ├── less.js
+│       │   ├── prettify.js
+│       │   ├── style.css
+│       │   └── style.css.map
+│       └── template_config.js
+├── LICENSE
+├── package.json
+├── README.md
+└── styleguide
+    ├── index.html
+    ├── public
+    │   ├── kss.css
+    │   ├── kss.js
+    │   ├── less.js
+    │   ├── prettify.js
+    │   ├── style.css
+    │   └── style.css.map
+    ├── section-1.html
+    └── section-2.html
 ```
   
 ## Tasks
