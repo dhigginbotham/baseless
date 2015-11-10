@@ -1,6 +1,6 @@
 {
   "name": "baseless",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A minimal approach to base UI design and templating",
   "main": "gulpfile.js",
   "scripts": {

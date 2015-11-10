@@ -142,9 +142,11 @@
 }
 
 .grid-column(@columns) {
-  float: left;
-  // calculate width based on number of columns available
-  width: percentage(@columns / @grid-columns);
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    // Calculate width based on number of columns available
+    width: percentage(@columns / @grid-columns);
+  }
   // prevent columns from collapsing when empty
   &.no-collapse {
     min-height: 1px;
