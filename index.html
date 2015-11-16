@@ -53,8 +53,7 @@
 <article role="main" class="kss-main">
   <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
      <h1 id="-baseless-http-dhigginbotham-github-io-baseless-"><a href="http://dhigginbotham.github.io/baseless">BASELESS</a></h1>
-<p><a href="https://github.com/dhigginbotham/baseless">BASELESS</a> (<code>&quot;bs&quot;</code> for short) is a tiny (<code>~6k</code>) ui framework for any modern website. The idea behind bs was to 
-create a living styleguide for your website, with pre assembled common use components. You&#39;ll find a lot of familiarity between this framework and 
+<p><a href="https://github.com/dhigginbotham/baseless">BASELESS</a> (<code>&quot;bs&quot;</code> for short) is a small (<code>~23k</code>) modular ui framework for any modern website. The idea behind bs was to create a living styleguide for your website, with pre assembled common use components. You&#39;ll find a lot of familiarity between this framework and 
 many other popular frameworks, as a huge fan of <a href="https://twitter.com/mdo"><code>@mdo</code></a> and of his ideas I take a lot of naming  conventions found in 
 <a href="https://github.com/twbs/bootstrap"><code>twbs</code></a>, this is namely just to help anyone else on a team pickup a basic naming convention, have you not one 
 of your own.</p>
@@ -73,37 +72,84 @@ of your own.</p>
 <li><strong>wells.less</strong> - wells also double as utility-boxs very easily, what you&#39;d expect</li>
 </ul>
 <h2 id="folder-structure">Folder Structure</h2>
-<p>while <code>bs</code> is tiny it <em>may</em> have some confusing parts. Here&#39;s how it&#39;s all layed out:</p>
-<pre><code class="lang-js">|- less/
-|
-|--- components/
-|----- _alerts.less - ever feel the need to get your point across, use me.
-|----- _buttons.less - dynamic buttons, can morph their colors in the time it takes you to mouseup
-|----- _forms.less - ...
-|----- _grid.less - highly experimental, mostly volatile and will be refactored 12 column grids
-|----- _labels.less - from price tags to ctas to push notifications, labels wont let you down
-|----- _lists.less - gives you a little more control over the display of your list items
-|----- _panels.less - panels are an everyday item from dashboard ui&#39;s to user profiles, get &#39;em
-|----- _shapes.less - ...
-|----- _tables.less - very, very simple table styling, there&#39;s still a time and place for tables
-|----- _wells.less - wells also double as utility-boxs very easily, what you&#39;d expect
-|
-|--- template/ - styleguide template
-|----- helpers/ - handlebars helpers, kss-node has a wiki on registeringHerlpers in kss
-|------- cssPrefis.js - adds {{cssPrefix}} to handlebars compiler in time to compile the html
-|----- less/ - less stylesheets for styleguide template
-|------- style.less - kss less file for styling your styleguide
-|----- public/ - binary images, js, css
-|----- index.html - template for your styleguide, w/ handlebars
-|----- template_config.js - configuration file for kss-node generator
-|
-|- _base.less - bas[e|ic] file, keep it basic, mobile, and awesome.
-|- _constants.less - the holy grail of your style, *keep it secret, keep it safe*
-|- _helpers.less - general use helper classes
-|- _mixins.less - mixins that touch all the things
-|- _normalize.less - normalize.css because every developer I know wanna reinvent wheels, &lt;3
-|- style.less - @import style file
-|- styleguide.md - automated copy of ./README.md
+<p>while <code>bs</code> is small it <em>may</em> have some confusing parts. Here&#39;s how it&#39;s all layed out:</p>
+<pre><code class="lang-js">.
+├── bower.json
+├── config.js
+├── dist
+│   ├── bs-stats.md
+│   ├── style.css
+│   ├── style.css.map
+│   ├── style.min.css
+│   └── style.min.css.gz
+├── gruntfile.js
+├── gulpfile.js
+├── less
+│   ├── _base.less
+│   ├── components
+│   │   ├── _alerts.less
+│   │   ├── _buttons.less
+│   │   ├── docs
+│   │   │   ├── alerts.hbs
+│   │   │   ├── buttons.hbs
+│   │   │   ├── forms.hbs
+│   │   │   ├── grid.hbs
+│   │   │   ├── includes
+│   │   │   │   ├── form-label.hbs
+│   │   │   │   ├── form-label-select.hbs
+│   │   │   │   ├── form-label-textarea.hbs
+│   │   │   │   ├── form-label-text-input.hbs
+│   │   │   │   └── form-label-text-input--inline.hbs
+│   │   │   ├── labels.hbs
+│   │   │   ├── lists.hbs
+│   │   │   ├── panels.hbs
+│   │   │   ├── shapes.hbs
+│   │   │   ├── tables.hbs
+│   │   │   └── wells.hbs
+│   │   ├── _forms.less
+│   │   ├── _grid.less
+│   │   ├── _labels.less
+│   │   ├── _lists.less
+│   │   ├── _panels.less
+│   │   ├── _shapes.less
+│   │   ├── _tables.less
+│   │   └── _wells.less
+│   ├── _constants.less
+│   ├── _helpers.less
+│   ├── _mixins.less
+│   ├── _normalize.less
+│   ├── _print.less
+│   ├── styleguide.md
+│   ├── style.less
+│   └── template
+│       ├── helpers
+│       │   └── cssPrefix.js
+│       ├── index.html
+│       ├── less
+│       │   └── style.less
+│       ├── package.json
+│       ├── public
+│       │   ├── kss.css
+│       │   ├── kss.js
+│       │   ├── less.js
+│       │   ├── prettify.js
+│       │   ├── style.css
+│       │   └── style.css.map
+│       └── template_config.js
+├── LICENSE
+├── package.json
+├── README.md
+└── styleguide
+    ├── index.html
+    ├── public
+    │   ├── kss.css
+    │   ├── kss.js
+    │   ├── less.js
+    │   ├── prettify.js
+    │   ├── style.css
+    │   └── style.css.map
+    ├── section-1.html
+    └── section-2.html
 </code></pre>
 <h2 id="tasks">Tasks</h2>
 <p>bs uses <a href="https://github.com/gulpjs/gulp"><code>gulp</code></a> or <a href="#"><code>grunt</code></a> under the hood to do all the compilation and build steps. With that said I&#39;m not unnecessarily forcing you to download devDependencies for both of them. For whichever
