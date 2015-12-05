@@ -7,31 +7,23 @@
 // 
 // .small - a small well
 // .large - a large well
-// .round - a rounded well
+// .rounded - a rounded well
 // .info - box colored well
+// .info.shadow.no-border - a dynamic well
 // .info.round - rounded box well
 //  
 // Styleguide components.wells.
 
-.well-accent(@bg: @color-grey-default, @border: darken(@bg, 10%), @color: @color-inverted) {
-  background: @bg;
-  border: 1px solid @border;
-  color: @color;
-}
-
 .@{css-prefix}well {
   .reset-spacing(0, 15px);
-  .well-accent();
+  .card-generator(@color-grey-default, darken(@bg, 10%), @color-inverted);
   &.small {
     .reset-spacing(0, 10px);
   }
   &.large {
     .reset-spacing(0, 25px);
   }
-  &.round {
-    .border-radius();
-  }
   &.info {
-    .well-accent(@color-info, darken(@color-info, 7%), desaturate(lighten(@color-info, 40%), 5%));
+    .card-generator(@color-info, darken(@color-info, 7%), desaturate(lighten(@color-info, 40%), 5%));
   }
 }

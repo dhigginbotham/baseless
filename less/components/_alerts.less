@@ -14,9 +14,10 @@
 // Styleguide components.alerts.
 
 .alert-accent(@bg: @color-light, @color: @color-light) {
-  background: mix(@color-light, @bg, 60%);
-  border: 1px solid mix(@color-light, darken(@bg, 4%), 40%);
-  color: darken(@bg, 20%);
+  .card-generator(mix(@color-light, @bg, 60%), mix(@color-light, darken(@bg, 4%), 40%), darken(@bg, 20%));
+  // background: mix(@color-light, @bg, 60%);
+  // border: 1px solid mix(@color-light, darken(@bg, 4%), 40%);
+  // color: darken(@bg, 20%);
   .alert-subtext {
     color: darken(@bg, 30%);
   }
