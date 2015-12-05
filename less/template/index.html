@@ -40,7 +40,7 @@
         {{#eachSection reference}}
           {{#ifDepth 2}}
             <li class="kss-nav__menu-item">
-              <a href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+              <a href="section-{{../referenceURI}}.html#bs:{{referenceURI}}">
                 <span class="kss-nav__ref">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
                 ><span class="kss-nav__name">{{header}}</span>
               </a>
@@ -61,7 +61,7 @@
 </div>
 <article role="main" class="kss-main">
 {{#if homepage}}
-  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+  <div id="bs:0" class="kss-section kss-section--depth-0 kss-overview kss-style">
     {{{homepage}}}
   </div>
 {{else}}
@@ -74,14 +74,14 @@
   }}
   {{#eachSection rootName}}
     {{#ifDepth 1}}
-      <div     id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+      <div     id="bs:{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{else}}
-      <section id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
+      <section id="bs:{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
     {{/ifDepth}}
 
     <div class="kss-style">
       <h{{depth}} class="kss-title kss-title--level-{{depth}}">
-        <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
+        <a class="kss-title__permalink" href="#bs:{{referenceURI}}">
           <span class="kss-title__ref">
             {{#ifNumeric reference}}
               {{reference}}

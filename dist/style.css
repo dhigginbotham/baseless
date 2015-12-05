@@ -1603,7 +1603,7 @@ td {
   background: #FFF;
 }
 .bs-table.striped tbody tr:nth-child(even) {
-  background: #d9d9d9;
+  background: #ffffff;
 }
 .bs-table.hover tbody th:hover,
 .bs-table.hover tbody td:hover {
@@ -1624,7 +1624,7 @@ td {
   background: #FFF;
 }
 .bs-table.primary.striped tbody tr:nth-child(even) {
-  background: #6292ae;
+  background: #e2e2e2;
 }
 .bs-table.primary.hover tbody th:hover,
 .bs-table.primary.hover tbody td:hover {
@@ -1645,7 +1645,7 @@ td {
   background: #FFF;
 }
 .bs-table.success.striped tbody tr:nth-child(even) {
-  background: #76c701;
+  background: #c4e497;
 }
 .bs-table.success.hover tbody th:hover,
 .bs-table.success.hover tbody td:hover {
@@ -1666,7 +1666,7 @@ td {
   background: #FFF;
 }
 .bs-table.warning.striped tbody tr:nth-child(even) {
-  background: #f89c37;
+  background: #f8f1e9;
 }
 .bs-table.warning.hover tbody th:hover,
 .bs-table.warning.hover tbody td:hover {
@@ -1687,7 +1687,7 @@ td {
   background: #FFF;
 }
 .bs-table.notice.striped tbody tr:nth-child(even) {
-  background: #bf1a1a;
+  background: #dbb1b1;
 }
 .bs-table.notice.hover tbody th:hover,
 .bs-table.notice.hover tbody td:hover {
@@ -1708,7 +1708,7 @@ td {
   background: #FFF;
 }
 .bs-table.info.striped tbody tr:nth-child(even) {
-  background: #7fb6bc;
+  background: #f7f7f7;
 }
 .bs-table.info.hover tbody th:hover,
 .bs-table.info.hover tbody td:hover {
