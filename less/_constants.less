@@ -79,9 +79,9 @@
 // 
 // Styleguide 1.2.2
 
-@color-primary:                                       #2371B1; //#1693A7; //#428bca;
-@color-success:                                       #9EBF24; //#C8CF02; //#5cb85c;
-@color-warning:                                       #E6781E; //#f0ad4e;
+@color-primary:                                       #5486a3;//#2371B1; //#1693A7; //#428bca;
+@color-success:                                       lighten(#589401, 10%); //#9EBF24; //#C8CF02; //#5cb85c;
+@color-warning:                                       #f7901e; //#E6781E; //#f0ad4e;
 @color-notice:                                        #A91717; //#CC0C39; //#d9534f;
 @color-info:                                          #6EACB3; //#5F99C9; //#F9F2E1; //#E3DFBA; //#FCF7D3; //#F8FCC1; //#5bc0de;
 @color-inverted:                                      #333;
@@ -151,7 +151,8 @@
 
 @typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.25;
 
-@typo-font-weight-base:                               normal;
+@typo-font-weight-thin:                               300;
+@typo-font-weight-base:                               400;
 @typo-font-weight-bold:                               600;
 
 @typo-font-base:                                      "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -167,6 +168,6 @@
 // box-sizing constants
 //
 
-@line-height-base:                                    @typo-font-size-vertical-rhythm;
+@elem-line-height-base:                               @typo-font-size-vertical-rhythm;
 @elem-border-radius-base:							  4px;
 @elem-border-radius-label: 							  15px;

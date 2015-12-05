@@ -14,21 +14,13 @@
 // Styleguide 2.1.
 
 .alert-accent(@bg: @color-light, @color: @color-light, @notice: darken(screen(@bg, desaturate(@bg, 40%)), 3%)) {
-  background: @notice;
-  border: 1px solid darken(@bg, 2%);
-  color: desaturate(@color, 40%);
-  .alert-title {
-    color: @color;
-    text-shadow: 1px 1px 0 darken(@bg, 10%);
-  }
+  background: @bg;
+  border: 1px solid darken(@bg, 4%);
+  color: @color;
   .alert-subtext {
     color: darken(@bg, 30%);
   }
-  .alert-notice {
-    text-shadow: -1px -1px 0 darken(@notice, 5%);
-  }
 }
-
 
 .@{css-prefix}alert {
   .border-radius();
@@ -40,11 +32,11 @@
 
   .alert-title,
   .alert-subtext {
-    font-weight: 700;
+    font-weight: @typo-font-weight-bold;
   }
   
   .alert-title {
-    .reset-spacing(0, 6px);
+    .reset-spacing(0, 10px);
   }
 
   .alert-subtext {
