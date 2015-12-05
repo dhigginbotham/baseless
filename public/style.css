@@ -431,7 +431,7 @@ a {
   color: #5486a3;
   text-decoration: none;
   transition-property: color;
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
 }
 a:visited {
   color: #5486a3;
@@ -738,7 +738,7 @@ td {
 .bs-btn {
   cursor: pointer;
   margin: 0;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border: 0;
   display: inline-block;
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -757,6 +757,7 @@ td {
   /* IE 10+ */
   border-radius: 4px 4px 4px 4px;
   background: #e6e6e6;
+  border: 2px solid transparent;
   color: #333;
 }
 .bs-btn:visited,
@@ -781,6 +782,17 @@ td {
   cursor: not-allowed;
   background: #e6e6e6;
 }
+.bs-btn.hollow {
+  background: transparent;
+  border-color: #e6e6e6;
+  color: #e6e6e6;
+}
+.bs-btn.hollow:disabled,
+.bs-btn.hollow.disabled {
+  background: transparent;
+  border-color: #e6e6e6;
+  color: #e6e6e6;
+}
 .bs-btn.large {
   font-size: 18px;
   margin: 0;
@@ -803,6 +815,7 @@ td {
 }
 .bs-btn.primary {
   background: #5486a3;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.primary:hover {
@@ -819,8 +832,20 @@ td {
   cursor: not-allowed;
   background: #7b7b7b;
 }
+.bs-btn.primary.hollow {
+  background: transparent;
+  border-color: #5486a3;
+  color: #5486a3;
+}
+.bs-btn.primary.hollow:disabled,
+.bs-btn.primary.hollow.disabled {
+  background: transparent;
+  border-color: #7b7b7b;
+  color: #7b7b7b;
+}
 .bs-btn.success {
   background: #67ad01;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.success:hover {
@@ -837,8 +862,20 @@ td {
   cursor: not-allowed;
   background: #618a24;
 }
+.bs-btn.success.hollow {
+  background: transparent;
+  border-color: #67ad01;
+  color: #67ad01;
+}
+.bs-btn.success.hollow:disabled,
+.bs-btn.success.hollow.disabled {
+  background: transparent;
+  border-color: #608628;
+  color: #608628;
+}
 .bs-btn.warning {
   background: #f7901e;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.warning:hover {
@@ -855,8 +892,20 @@ td {
   cursor: not-allowed;
   background: #c88e4d;
 }
+.bs-btn.warning.hollow {
+  background: transparent;
+  border-color: #f7901e;
+  color: #f7901e;
+}
+.bs-btn.warning.hollow:disabled,
+.bs-btn.warning.hollow.disabled {
+  background: transparent;
+  border-color: #c38d52;
+  color: #c38d52;
+}
 .bs-btn.notice {
   background: #A91717;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.notice:hover {
@@ -873,8 +922,20 @@ td {
   cursor: not-allowed;
   background: #833d3d;
 }
+.bs-btn.notice.hollow {
+  background: transparent;
+  border-color: #A91717;
+  color: #A91717;
+}
+.bs-btn.notice.hollow:disabled,
+.bs-btn.notice.hollow.disabled {
+  background: transparent;
+  border-color: #7e4242;
+  color: #7e4242;
+}
 .bs-btn.info {
   background: #6EACB3;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.info:hover {
@@ -891,8 +952,20 @@ td {
   cursor: not-allowed;
   background: #919191;
 }
+.bs-btn.info.hollow {
+  background: transparent;
+  border-color: #6EACB3;
+  color: #6EACB3;
+}
+.bs-btn.info.hollow:disabled,
+.bs-btn.info.hollow.disabled {
+  background: transparent;
+  border-color: #919191;
+  color: #919191;
+}
 .bs-btn.text {
   background: transparent;
+  border: 2px solid transparent;
   color: #5486a3;
 }
 .bs-btn.text:hover {
@@ -909,8 +982,20 @@ td {
   cursor: not-allowed;
   background: rgba(0, 0, 0, 0);
 }
+.bs-btn.text.hollow {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.bs-btn.text.hollow:disabled,
+.bs-btn.text.hollow.disabled {
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
 .bs-btn.inverted {
   background: #333;
+  border: 2px solid transparent;
   color: #FFF;
 }
 .bs-btn.inverted:hover {
@@ -926,6 +1011,17 @@ td {
 .bs-btn.inverted.disabled {
   cursor: not-allowed;
   background: #333333;
+}
+.bs-btn.inverted.hollow {
+  background: transparent;
+  border-color: #333;
+  color: #333;
+}
+.bs-btn.inverted.hollow:disabled,
+.bs-btn.inverted.hollow.disabled {
+  background: transparent;
+  border-color: #333333;
+  color: #333333;
 }
 .bs-form {
   margin: 0;
