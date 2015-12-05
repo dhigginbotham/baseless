@@ -13,9 +13,9 @@
 //  
 // Styleguide 2.1.
 
-.alert-accent(@bg: @color-light, @color: @color-inverted, @notice: average(@bg, @color)) {
-  background: lighten(@bg, 10%);
-  border: 1px solid darken(@bg, 5%);
+.alert-accent(@bg: @color-light, @color: @color-light, @notice: darken(screen(@bg, desaturate(@bg, 40%)), 3%)) {
+  background: @notice;
+  border: 1px solid darken(@bg, 2%);
   color: desaturate(@color, 40%);
   .alert-title {
     color: @color;
@@ -26,8 +26,6 @@
   }
   .alert-notice {
     text-shadow: -1px -1px 0 darken(@notice, 5%);
-    background: @notice;
-    border-top: 1px solid darken(@bg, 10%);
   }
 }
 
@@ -56,7 +54,7 @@
     .reset-spacing(0, 10px);
   }
 
-  .alert-accent(@color-info, @color-inverted);
+  .alert-accent(@color-info, @color-light);
 
   &.primary {
     .alert-accent(@color-primary, @color-light);
@@ -75,7 +73,7 @@
   }
   
   &.info {
-    .alert-accent(@color-info, @color-inverted);
+    .alert-accent(@color-info, @color-light);
   }
   
   &.inverted {

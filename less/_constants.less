@@ -82,8 +82,8 @@
 @color-primary:                                       #2371B1; //#1693A7; //#428bca;
 @color-success:                                       #9EBF24; //#C8CF02; //#5cb85c;
 @color-warning:                                       #E6781E; //#f0ad4e;
-@color-notice:                                        #CC0C39; //#d9534f;
-@color-info:                                          #E3DFBA; //#FCF7D3; //#F8FCC1; //#5bc0de;
+@color-notice:                                        #A91717; //#CC0C39; //#d9534f;
+@color-info:                                          #6EACB3; //#5F99C9; //#F9F2E1; //#E3DFBA; //#FCF7D3; //#F8FCC1; //#5bc0de;
 @color-inverted:                                      #333;
 @color-light:                                         #FFF; //#F1F1F1;
 
@@ -93,9 +93,9 @@
 //
 
 @color-grey-darkest:                                  #333;
-@color-grey-dark:                                     lighten(@color-grey-darkest, 20%);  
-@color-grey-light:                                    lighten(@color-grey-darkest, 50%);  
-@color-grey-lightest:                                 lighten(@color-grey-darkest, 70%);
+@color-grey-dark:                                     #666;  
+@color-grey-light:                                    #999;  
+@color-grey-lightest:                                 #e6e6e6;
 
 @color-grey-default:                                  #eee;
 @color-grey-default-accent:                           #ccc;  
@@ -143,14 +143,19 @@
 // typography constants
 //
 
-@typo-font-size-base:                                 14px;
-@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.25;
-@typo-font-size-large:                                @typo-font-size-base * 1.25; // ~20px
-@typo-font-size-small:                                @typo-font-size-base * 0.85; // ~14px
-@typo-font-size-mini:                                 @typo-font-size-base * 0.75; // ~12px
+@typo-font-size-large:                                18px;
+@typo-font-size-medium:                               16px;
+@typo-font-size-small:                                14px;
+@typo-font-size-mini:                                 12px;
+@typo-font-size-base:                                 @typo-font-size-mini;
 
-@typo-font-base:                                      "PT Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
-@typo-font-code:                                      "PT Mono", Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.25;
+
+@typo-font-weight-base:                               normal;
+@typo-font-weight-bold:                               600;
+
+@typo-font-base:                                      "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
+@typo-font-code:                                      Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 @typo-font-heading:                                   @typo-font-base;
 
 @typo-font-lineheight:                                @typo-font-size-vertical-rhythm;
@@ -163,3 +168,5 @@
 //
 
 @line-height-base:                                    @typo-font-size-vertical-rhythm;
+@elem-border-radius: 								  4px;
+

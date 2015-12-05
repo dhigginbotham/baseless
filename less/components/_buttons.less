@@ -13,21 +13,21 @@
 // .text - text button color
 // .disabled - disabled button color
 // .primary.large - large button style
+// .primary.medium - medium button style
+// .primary.base - base button style
 // .primary.small - small button style
 // .primary.mini - mini button style
 //  
 // Styleguide 2.2.
-
-.btn-accent(@bg: @color-light, @color: @color-inverted, @intensity: 10) {
+.btn-accent(@bg: #e6e6e6, @color: @color-inverted, @intensity: 10) {
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
-  #gradient > .vertical(@bg, darken(@bg, 5%));
   &:hover {
-    #gradient > .vertical(@bg, darken(@bg, 7%));
+    background: darken(@bg, 7%);
   }
   &:active {
-    background: darken(@bg, @i2);
+    background: darken(@bg, 9%);
   }
   color: @color;
   &:visited {
@@ -35,7 +35,7 @@
   }
   &:disabled, &.disabled {
     cursor: not-allowed;
-    background: darken(@bg, @i2);
+    background: desaturate(darken(@bg, @i2),20%);
   }
 }
 
@@ -43,7 +43,7 @@
   
   cursor: pointer;
 
-  .reset-spacing(0, 3px 10px);
+  .reset-spacing(0, (@typo-font-size-base / 1.5) @typo-font-size-base);
 
   border: 0;
   display: inline-block;
@@ -60,8 +60,10 @@
 
   font-family: @typo-font-heading;
   font-size: @typo-font-size-base;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
+
+  vertical-align: middle;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -69,20 +71,28 @@
 
   .disable-selection();
 
-  .border-radius(3px);
+  .border-radius(4px);
 
   .btn-accent();
 
   &.large {
     font-size: @typo-font-size-large;
+    .reset-spacing(0, (@typo-font-size-large / 1.5) @typo-font-size-large);
   }
 
   &.small {
     font-size: @typo-font-size-small;
+    .reset-spacing(0, (@typo-font-size-small / 1.5) @typo-font-size-small);
   }
-
+  
+  &.medium {
+    font-size: @typo-font-size-medium;
+    .reset-spacing(0, (@typo-font-size-medium / 1.5) @typo-font-size-medium);
+  }
+  
   &.mini {
     font-size: @typo-font-size-mini;
+    .reset-spacing(0, (@typo-font-size-mini / 1.5) @typo-font-size-mini);
   }
 
   &.primary {
@@ -102,7 +112,11 @@
   }
   
   &.info {
-    .btn-accent(desaturate(lighten(@color-info, 9%), 8%));
+    .btn-accent(@color-info, @color-light);
+  }
+  
+  &.text {
+    .btn-accent(transparent, @color-primary);
   }
 
   &.inverted {

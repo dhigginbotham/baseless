@@ -1,3 +1,4 @@
+/* global __dirname */
 //
 // Configuration file for your styleguide, by keeping these values dry
 // and reusable we'll hopefully be able to make quicker, more sweeping
