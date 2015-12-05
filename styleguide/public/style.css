@@ -401,9 +401,14 @@ th {
 }
 .rounded {
   border-radius: 4px 4px 4px 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 -1px -1px rgba(0, 0, 0, 0.1);
 }
 .shadow {
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+}
+.inset-shadow {
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
   border-bottom: none;
 }
 .center-block {
@@ -1448,73 +1453,93 @@ textarea.bs-form-elem {
 .bs-list.inline li {
   display: inline-block;
 }
-.bs-list.nav li {
-  font-weight: 300;
-  background: #5486a3;
+.bs-list.nav {
+  background: #f8f7f1;
   border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav li.no-border {
-  border-color: transparent;
-}
-.bs-list.nav li:hover {
-  background: #6997b2;
-}
-.bs-list.nav li a {
-  color: #FFF;
-}
-.bs-list.nav.success li {
-  font-weight: 300;
-  background: #67ad01;
-  border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav.success li.no-border {
-  border-color: transparent;
-}
-.bs-list.nav.success li:hover {
-  background: #7cd101;
-}
-.bs-list.nav.success li a {
-  color: #FFF;
-}
-.bs-list.nav.warning li {
-  font-weight: 300;
-  background: #f7901e;
-  border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav.warning li.no-border {
-  border-color: transparent;
-}
-.bs-list.nav.warning li:hover {
-  background: #f8a140;
-}
-.bs-list.nav.warning li a {
-  color: #FFF;
-}
-.bs-list.nav.notice li {
-  font-weight: 300;
-  background: #A91717;
-  border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav.notice li.no-border {
-  border-color: transparent;
-}
-.bs-list.nav.notice li:hover {
-  background: #c81b1b;
-}
-.bs-list.nav.notice li a {
-  color: #FFF;
+  color: #333;
 }
 .bs-list.nav li {
-  border-radius: 4px 4px 4px 4px;
   margin: 3px 2px 3px 0;
   padding: 4px 10px;
 }
 .bs-list.nav li:hover {
   cursor: pointer;
+}
+.bs-list.nav.no-border {
+  border-color: transparent;
+}
+.bs-list.nav li {
+  font-weight: 600;
+}
+.bs-list.nav li:hover {
+  background: #e7e4cf;
+}
+.bs-list.nav li a {
+  color: #333;
+}
+.bs-list.nav.success {
+  background: #67ad01;
+  border: 1px solid transparent;
+  color: #FFF;
+}
+.bs-list.nav.success.no-border {
+  border-color: transparent;
+}
+.bs-list.nav.success li {
+  font-weight: 600;
+}
+.bs-list.nav.success li:hover {
+  background: #497b01;
+}
+.bs-list.nav.success li a {
+  color: #FFF;
+}
+.bs-list.nav.warning {
+  background: #f7901e;
+  border: 1px solid transparent;
+  color: #FFF;
+}
+.bs-list.nav.warning.no-border {
+  border-color: transparent;
+}
+.bs-list.nav.warning li {
+  font-weight: 600;
+}
+.bs-list.nav.warning li:hover {
+  background: #da7608;
+}
+.bs-list.nav.warning li a {
+  color: #FFF;
+}
+.bs-list.nav.notice {
+  background: #A91717;
+  border: 1px solid transparent;
+  color: #FFF;
+}
+.bs-list.nav.notice.no-border {
+  border-color: transparent;
+}
+.bs-list.nav.notice li {
+  font-weight: 600;
+}
+.bs-list.nav.notice li:hover {
+  background: #7c1111;
+}
+.bs-list.nav.notice li a {
+  color: #FFF;
+}
+.bs-list.connected {
+  margin: 5px 0;
+  padding: 0;
+}
+.bs-list.connected li {
+  float: left;
+  margin: 0;
+  padding: 4px 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bs-list.connected li:last-child {
+  border-right: none;
 }
 .bs-panel {
   margin: 0;
@@ -1544,7 +1569,8 @@ textarea.bs-form-elem {
   padding: 10px;
 }
 .bs-panel .panel-heading {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
 }
 .bs-panel .panel-body {
   background: #FFF;
@@ -1558,16 +1584,19 @@ textarea.bs-form-elem {
 .bs-panel .panel-list .panel-list-item.first {
   border-top: none;
 }
+.bs-panel.utility,
 .bs-panel.default {
-  border: 1px solid #ccc;
+  border: 1px solid #e0d5c8;
 }
+.bs-panel.utility .panel-heading,
 .bs-panel.default .panel-heading {
   color: #333;
-  background: #eee;
-  border-bottom: 1px solid #ccc;
+  background: #f8f7f1;
+  border-bottom: 1px solid #e0d5c8;
 }
+.bs-panel.utility .panel-list-item,
 .bs-panel.default .panel-list-item {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #e0d5c8;
 }
 .bs-panel.primary {
   border: 1px solid #436a81;

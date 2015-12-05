@@ -7,56 +7,72 @@
 // .flat - flattens list style
 // .inline - inline list style
 // .nav.flat - nav list style
-// .nav.flat.inline - combined inline nav list style
-// .nav.flat.inline.success - success colored nav list
-// .nav.flat.inline.warning - warning colored nav list
-// .nav.flat.inline.notice - notice colored nav list
+// .nav.flat.connected.inline - combined inline nav list style
+// .nav.flat.connected.inline.success - success colored nav list
+// .nav.flat.connected.inline.warning - warning colored nav list
+// .nav.flat.connected.inline.notice - notice colored nav list
 //  
 // Styleguide components.lists.
 
-.list-accent(@bg: @color-primary, @color: @color-light) {
+.list-accent(@bg: @color-card-warm-grey, @color: @color-grey-darkest) {
+  .card-generator(@bg, transparent, @color);
   li {
-    font-weight: @typo-font-weight-thin;
-    .card-generator(@bg, transparent, @color);
+    font-weight: @typo-font-weight-bold;
     &:hover {
-      background: lighten(@bg, 7%);
+      background: darken(@bg, 10%);
     }
     a {
       color: @color;
     }
   }
 }
+
 .@{css-prefix}list {
+  
   .clearfix();
+  
   &.flat {
-    .reset-spacing(0,0);
+    .reset-spacing();
     list-style: none;
     li {
-      .reset-spacing(0,0);
+      .reset-spacing();
       vertical-align: middle;
     }
   }
+  
   &.inline {
     li {
       display: inline-block;
     }
   }
+  
   &.nav {
-    .list-accent();
-    &.success {
-      .list-accent(@color-success);
-    }
-    &.warning {
-      .list-accent(@color-warning);
-    }
-    &.notice {
-      .list-accent(@color-notice);
-    }
     li {
-      .border-radius();
-      .reset-spacing(3px 2px 3px 0,4px 10px);
+      .reset-spacing(3px 2px 3px 0, 4px 10px);
       &:hover {
         cursor: pointer;
+      }
+    }
+    .list-accent();
+    &.success {
+      .list-accent(@color-success, @color-light);
+    }
+    &.warning {
+      .list-accent(@color-warning, @color-light);
+    }
+    &.notice {
+      .list-accent(@color-notice, @color-light);
+    }
+  }
+  
+  &.connected {
+    .reset-spacing(5px 0);
+    li {
+      .pull-left();
+      .reset-spacing(0, 4px 10px);
+      border-right: 1px solid rgba(0,0,0,0.1);
+      &:last-child {
+        border-right: none;
       }
     }
   }

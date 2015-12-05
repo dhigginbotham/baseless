@@ -7,11 +7,12 @@
 // .primary - primary panel color
 // .success - success panel color
 // .warning - warning panel color
+// .utility - utility panel color
 // .rounded.default - round panel
 //  
 // Styleguide components.panels.
 
-.panel-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-inverted) {
+.panel-accent(@bg: #f8f7f1, @border: #e0d5c8, @color: @color-grey-darkest) {
   border: 1px solid @border;
   .panel-heading {
     color: @color;
@@ -36,7 +37,8 @@
   }
 
   .panel-heading {
-    font-weight: @typo-font-weight-bold;
+    font-weight: @typo-font-weight-heavy;
+    font-size: @typo-font-size-small;
   }
 
   .panel-body {
@@ -55,7 +57,8 @@
       }
     }
   }
-
+  
+  &.utility,
   &.default {
     .panel-accent();
   }
@@ -71,7 +74,7 @@
   &.warning {
     .panel-accent(@color-warning, darken(@color-warning, 10%), @color-light);
   }
-
+  
   // &.notice {
   //   .panel-accent(@color-notice, darken(@color-notice, 10%), @color-light);
   // }
