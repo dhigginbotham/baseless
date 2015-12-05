@@ -12,10 +12,10 @@
 @kss-colors-heading        : #111;
 @kss-colors-quotes         : #666;
 
-@kss-colors-link           : #0645ad;
-@kss-colors-link-visited   : #0645ad;
-@kss-colors-link-hover     : lighten(@kss-colors-link, 20%);
-@kss-colors-link-active    : #faa700;
+@kss-colors-link           : @color-warning;
+@kss-colors-link-visited   : @kss-colors-link;
+@kss-colors-link-hover     : darken(@kss-colors-link, 10%);
+@kss-colors-link-active    : @kss-colors-link-hover;
 
 @kss-font-body             : @typo-font-base;
 @kss-font-code             : @typo-font-code;
@@ -180,7 +180,7 @@
   }
   .kss-title__permalink {
     display: block;
-    color: #000;
+    color: @color-grey-darkest;
     text-decoration: none;
 
     &:hover,

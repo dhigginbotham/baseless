@@ -4,7 +4,7 @@
 ### /home/higgamuffin/code/baseless/dist/style.min.css
 
 - **Total Stylesheets:** 1
-- **Total Stylesheet Size:** 17219
+- **Total Stylesheet Size:** 17216
 - **Total Media Queries:** 2
 - **Total Rules:** 293
 - **Selectors Per Rule:** 1.6245733788395904
@@ -21,4 +21,4 @@
 
 * * *
 
-Last generated: 12/05/2015, 12:28:36 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
+Last generated: 12/05/2015, 12:39:27 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).

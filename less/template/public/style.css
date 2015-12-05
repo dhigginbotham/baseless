@@ -566,7 +566,7 @@ code,
 kbd,
 samp {
   font-family: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
-  color: #b3b3b3;
+  color: #666;
   font-size: 1em;
 }
 pre {
