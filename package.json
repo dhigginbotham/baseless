@@ -23,5 +23,7 @@
     "url": "https://github.com/dhigginbotham/baseless/issues"
   },
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "less": "^2.5.3"
+  }
 }
