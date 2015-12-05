@@ -7,6 +7,7 @@
 // 
 // .small - a small well
 // .large - a large well
+// .large.shadow - a large well with a shadow
 // .rounded - a rounded well
 // .info - box colored well
 // .info.shadow.no-border - a dynamic well
@@ -15,15 +16,19 @@
 // Styleguide components.wells.
 
 .@{css-prefix}well {
+  .card-generator(@color-grey-default, darken(@color-grey-default, 10%), @color-inverted);
   .reset-spacing(0, 15px);
-  .card-generator(@color-grey-default, darken(@bg, 10%), @color-inverted);
+
   &.small {
     .reset-spacing(0, 10px);
   }
+
   &.large {
     .reset-spacing(0, 25px);
   }
+
   &.info {
     .card-generator(@color-info, darken(@color-info, 7%), desaturate(lighten(@color-info, 40%), 5%));
   }
+
 }

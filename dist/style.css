@@ -1983,11 +1983,21 @@ td {
   font-size: 18px;
 }
 .bs-well {
-  margin: 0;
-  padding: 15px;
   background: #eee;
   border: 1px solid #d5d5d5;
   color: #333;
+  margin: 0;
+  padding: 15px;
+}
+.bs-well.rounded {
+  border-radius: 4px 4px 4px 4px;
+}
+.bs-well.shadow {
+  box-shadow: inset 0 -3px 0 #d5d5d5;
+  border-bottom: none;
+}
+.bs-well.no-border {
+  border-color: #eee;
 }
 .bs-well.small {
   margin: 0;
@@ -1997,13 +2007,20 @@ td {
   margin: 0;
   padding: 25px;
 }
-.bs-well.round {
-  border-radius: 4px 4px 4px 4px;
-}
 .bs-well.info {
   background: #6EACB3;
   border: 1px solid #579ea6;
   color: #f4f8f9;
+}
+.bs-well.info.rounded {
+  border-radius: 4px 4px 4px 4px;
+}
+.bs-well.info.shadow {
+  box-shadow: inset 0 -3px 0 #579ea6;
+  border-bottom: none;
+}
+.bs-well.info.no-border {
+  border-color: #6EACB3;
 }
 @media print {
   a,
