@@ -595,7 +595,7 @@ td {
 }
 .bs-alert {
   border-radius: 4px 4px 4px 4px;
-  margin: 15px 0;
+  margin: 0;
   padding: 0;
   background: #6EACB3;
   border: 1px solid #61a4ac;
@@ -608,6 +608,7 @@ td {
 .bs-alert .alert-title,
 .bs-alert .alert-subtext {
   font-weight: 600;
+  font-style: italic;
 }
 .bs-alert .alert-title {
   margin: 0;
@@ -615,11 +616,12 @@ td {
 }
 .bs-alert .alert-subtext {
   margin: 0;
-  padding: 0 10px 0;
+  padding: 0 10px;
 }
 .bs-alert .alert-notice {
   margin: 0;
-  padding: 10px;
+  padding: 0 10px 10px;
+  font-weight: 300;
 }
 .bs-alert .alert-subtext {
   color: #2f5559;
@@ -960,7 +962,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col {
     float: left;
     width: 100%;
@@ -976,7 +978,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.twelvecol {
     float: left;
     width: 100%;
@@ -992,7 +994,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.elevencol {
     float: left;
     width: 91.66666667%;
@@ -1008,7 +1010,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.tencol {
     float: left;
     width: 83.33333333%;
@@ -1024,7 +1026,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.ninecol {
     float: left;
     width: 75%;
@@ -1040,7 +1042,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.eightcol {
     float: left;
     width: 66.66666667%;
@@ -1056,7 +1058,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.sevencol {
     float: left;
     width: 58.33333333%;
@@ -1072,7 +1074,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.sixcol {
     float: left;
     width: 50%;
@@ -1088,7 +1090,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.fivecol {
     float: left;
     width: 41.66666667%;
@@ -1104,7 +1106,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.fourcol {
     float: left;
     width: 33.33333333%;
@@ -1120,7 +1122,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.threecol {
     float: left;
     width: 25%;
@@ -1136,7 +1138,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.twocol {
     float: left;
     width: 16.66666667%;
@@ -1152,7 +1154,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .row .col.onecol {
     float: left;
     width: 8.33333333%;

@@ -24,7 +24,7 @@
 
 .@{css-prefix}alert {
   .border-radius();
-  .reset-spacing(15px 0);
+  .reset-spacing();
 
   .alert-text {
     .reset-spacing(0,10px);
@@ -33,18 +33,20 @@
   .alert-title,
   .alert-subtext {
     font-weight: @typo-font-weight-bold;
+    font-style: italic;
   }
   
   .alert-title {
-    .reset-spacing(0, 10px);
+    .reset-spacing(0,10px);
   }
 
   .alert-subtext {
-    .reset-spacing(0, 0 10px 0);
+    .reset-spacing(0,0 10px);
   }
 
   .alert-notice {
-    .reset-spacing(0, 10px);
+    .reset-spacing(0,0 10px 10px);
+    font-weight: @typo-font-weight-thin;
   }
 
   .alert-accent(@color-info, @color-light);
