@@ -623,23 +623,15 @@ td {
 .bs-alert {
   border-radius: 4px 4px 4px 4px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   background: #c5dee1;
   border: 1px solid #a0c9cd;
   color: #40757b;
-}
-.bs-alert .alert-text {
-  margin: 0;
-  padding: 10px;
 }
 .bs-alert .alert-title,
 .bs-alert .alert-subtext {
   font-weight: 600;
   font-style: italic;
-}
-.bs-alert .alert-title {
-  margin: 0;
-  padding: 10px;
 }
 .bs-alert .alert-subtext {
   margin: 0;
@@ -659,21 +651,6 @@ td {
 }
 .bs-alert .alert-subtext {
   color: #2f5559;
-}
-.bs-alert.primary {
-  background: #bbcfda;
-  border: 1px solid #94b0c0;
-  color: #314f60;
-}
-.bs-alert.primary.shadow {
-  box-shadow: inset 0 -3px 0 #94b0c0;
-  border-bottom: none;
-}
-.bs-alert.primary.no-border {
-  border-color: #bbcfda;
-}
-.bs-alert.primary .alert-subtext {
-  color: #20333e;
 }
 .bs-alert.success {
   background: #c2de99;
@@ -719,36 +696,6 @@ td {
 }
 .bs-alert.notice .alert-subtext {
   color: #220505;
-}
-.bs-alert.info {
-  background: #c5dee1;
-  border: 1px solid #a0c9cd;
-  color: #40757b;
-}
-.bs-alert.info.shadow {
-  box-shadow: inset 0 -3px 0 #a0c9cd;
-  border-bottom: none;
-}
-.bs-alert.info.no-border {
-  border-color: #c5dee1;
-}
-.bs-alert.info .alert-subtext {
-  color: #2f5559;
-}
-.bs-alert.inverted {
-  background: #adadad;
-  border: 1px solid #7e7e7e;
-  color: #000000;
-}
-.bs-alert.inverted.shadow {
-  box-shadow: inset 0 -3px 0 #7e7e7e;
-  border-bottom: none;
-}
-.bs-alert.inverted.no-border {
-  border-color: #adadad;
-}
-.bs-alert.inverted .alert-subtext {
-  color: #000000;
 }
 .bs-cards {
   margin: 0;
@@ -1749,7 +1696,8 @@ td {
 }
 .bs-table.hover tbody th:hover,
 .bs-table.hover tbody td:hover {
-  background: #ebebeb;
+  background: #f0f0f0;
+  color: #adadad;
 }
 .bs-table.primary th {
   color: #FFF;
@@ -1770,91 +1718,8 @@ td {
 }
 .bs-table.primary.hover tbody th:hover,
 .bs-table.primary.hover tbody td:hover {
-  background: #7aa3ba;
-}
-.bs-table.success th {
-  color: #FFF;
-}
-.bs-table.success th,
-.bs-table.success td {
-  border: 1px solid #67ad01;
-}
-.bs-table.success thead tr th,
-.bs-table.success thead tr td {
-  background: #67ad01;
-}
-.bs-table.success.striped tbody tr {
-  background: #FFF;
-}
-.bs-table.success.striped tbody tr:nth-child(even) {
-  background: #e1efcc;
-}
-.bs-table.success.hover tbody th:hover,
-.bs-table.success.hover tbody td:hover {
-  background: #8bea02;
-}
-.bs-table.warning th {
-  color: #FFF;
-}
-.bs-table.warning th,
-.bs-table.warning td {
-  border: 1px solid #f7901e;
-}
-.bs-table.warning thead tr th,
-.bs-table.warning thead tr td {
-  background: #f7901e;
-}
-.bs-table.warning.striped tbody tr {
-  background: #FFF;
-}
-.bs-table.warning.striped tbody tr:nth-child(even) {
-  background: #fde9d2;
-}
-.bs-table.warning.hover tbody th:hover,
-.bs-table.warning.hover tbody td:hover {
-  background: #f9ad59;
-}
-.bs-table.notice th {
-  color: #FFF;
-}
-.bs-table.notice th,
-.bs-table.notice td {
-  border: 1px solid #A91717;
-}
-.bs-table.notice thead tr th,
-.bs-table.notice thead tr td {
-  background: #A91717;
-}
-.bs-table.notice.striped tbody tr {
-  background: #FFF;
-}
-.bs-table.notice.striped tbody tr:nth-child(even) {
-  background: #eed1d1;
-}
-.bs-table.notice.hover tbody th:hover,
-.bs-table.notice.hover tbody td:hover {
-  background: #df1e1e;
-}
-.bs-table.info th {
-  color: #FFF;
-}
-.bs-table.info th,
-.bs-table.info td {
-  border: 1px solid #6EACB3;
-}
-.bs-table.info thead tr th,
-.bs-table.info thead tr td {
-  background: #6EACB3;
-}
-.bs-table.info.striped tbody tr {
-  background: #FFF;
-}
-.bs-table.info.striped tbody tr:nth-child(even) {
-  background: #e2eef0;
-}
-.bs-table.info.hover tbody th:hover,
-.bs-table.info.hover tbody td:hover {
-  background: #96c3c8;
+  background: #ccdbe3;
+  color: #3f657b;
 }
 .bs-table.small th,
 .bs-table.small td {
@@ -1888,17 +1753,17 @@ td {
   margin: 0;
   padding: 25px;
 }
-.bs-well.info {
-  background: #6EACB3;
-  border: 1px solid #579ea6;
-  color: #f4f8f9;
+.bs-well.warning {
+  background: #f7901e;
+  border: 1px solid #e97e08;
+  color: #fdf1e4;
 }
-.bs-well.info.shadow {
-  box-shadow: inset 0 -3px 0 #579ea6;
+.bs-well.warning.shadow {
+  box-shadow: inset 0 -3px 0 #e97e08;
   border-bottom: none;
 }
-.bs-well.info.no-border {
-  border-color: #6EACB3;
+.bs-well.warning.no-border {
+  border-color: #f7901e;
 }
 @media print {
   a,

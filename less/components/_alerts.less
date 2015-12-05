@@ -4,12 +4,9 @@
 // 
 // Markup: docs/alerts.hbs
 // 
-// .primary - primary alert color
 // .success - success alert color
 // .warning - warning alert color
 // .notice - notice alert color
-// .info - info alert color
-// .inverted - inverted alert color
 //  
 // Styleguide components.alerts.
 
@@ -23,20 +20,12 @@
 .@{css-prefix}alert {
   
   .border-radius();
-  .reset-spacing();
-
-  .alert-text {
-    .reset-spacing(0,10px);
-  }
+  .reset-spacing(0,10px);
 
   .alert-title,
   .alert-subtext {
     font-weight: @typo-font-weight-bold;
     font-style: italic;
-  }
-  
-  .alert-title {
-    .reset-spacing(0,10px);
   }
 
   .alert-subtext {
@@ -50,10 +39,6 @@
 
   .alert-accent(@color-info, @color-light);
 
-  &.primary {
-    .alert-accent(@color-primary, @color-light);
-  }
-  
   &.success {
     .alert-accent(@color-success, @color-light);
   }
@@ -64,13 +49,5 @@
   
   &.notice {
     .alert-accent(@color-notice, @color-light);
-  }
-  
-  &.info {
-    .alert-accent(@color-info, @color-light);
-  }
-  
-  &.inverted {
-    .alert-accent(@color-inverted, @color-light);
   }
 }

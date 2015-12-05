@@ -5,16 +5,9 @@
 // 
 // Markup: docs/tables.hbs
 // 
-// .striped - striped table style
-// .small - small table style
-// .large - large table style
-// .primary.striped - primary table style
-// .success.striped - success table style
-// .warning.striped - warning table style
-// .notice.striped - notice table style
-// .info.striped - info table style
-// .default.striped - info and striped table style
-// .default.striped.hover - info and striped table style
+// .striped - primary striped table style
+// .striped.large.hover - info and striped table style
+// .primary.striped.small.hover - info table style
 //  
 // Styleguide components.tables.
 
@@ -49,7 +42,8 @@
       th,
       td {
         &:hover {
-          background: lighten(@border, 12%);
+          background: mix(@color, @border, 70%);
+          color: darken(@border, 12%);
         }
       }
     }
@@ -70,18 +64,6 @@
   .table-accent();
   &.primary {
     .table-accent(@color-primary);
-  }
-  &.success {
-    .table-accent(@color-success);
-  }
-  &.warning {
-    .table-accent(@color-warning);
-  }
-  &.notice {
-    .table-accent(@color-notice);
-  }
-  &.info {
-    .table-accent(@color-info, @color-light);
   }
   &.small {
     th,
