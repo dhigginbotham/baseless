@@ -299,19 +299,19 @@
   /* Pretty printing styles. Used with prettify.js. */
 
   /* SPAN elements with the classes below are added by prettyprint. */
-  .pln { color: #000 }  /* plain text */
+  .pln { color: @color-primary }  /* plain text */
 
-  .str { color: #080 }  /* string content */
-  .kwd { color: #008 }  /* a keyword */
-  .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
+  .str { color: @color-warning }  /* string content */
+  .kwd { color: @color-grey-darkest }  /* a keyword */
+  .com { color: @color-grey-light }  /* a comment */
+  .typ { color: @color-grey-dark }  /* a type name */
   .lit { color: #066 }  /* a literal value */
   /* punctuation, lisp open bracket, lisp close bracket */
   .pun, .opn, .clo { color: #660 }
-  .tag { color: #008 }  /* a markup tag name */
-  .atn { color: #606 }  /* a markup attribute name */
-  .atv { color: #080 }  /* a markup attribute value */
-  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .tag { color: @color-grey-darkest }  /* a markup tag name */
+  .atn { color: @color-grey-dark }  /* a markup attribute name */
+  .atv { color: @color-warning }  /* a markup attribute value */
+  .dec, .var { color: @color-grey-dark }  /* a declaration; a variable name */
   .fun { color: red }  /* a function name */
 
   /* Use higher contrast and text-weight for printable form. */
