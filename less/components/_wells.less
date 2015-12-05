@@ -11,24 +11,20 @@
 // .rounded - a rounded well
 // .info - box colored well
 // .info.shadow.no-border - a dynamic well
-// .info.round - rounded box well
+// .info.rounded - rounded box well
 //  
 // Styleguide components.wells.
 
 .@{css-prefix}well {
   .card-generator(@color-grey-default, darken(@color-grey-default, 10%), @color-inverted);
   .reset-spacing(0, 15px);
-
   &.small {
     .reset-spacing(0, 10px);
   }
-
   &.large {
     .reset-spacing(0, 25px);
   }
-
   &.info {
     .card-generator(@color-info, darken(@color-info, 7%), desaturate(lighten(@color-info, 40%), 5%));
   }
-
 }

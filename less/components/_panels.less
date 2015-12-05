@@ -7,10 +7,7 @@
 // .primary - primary panel color
 // .success - success panel color
 // .warning - warning panel color
-// .notice - notice panel color
-// .info - info panel color
-// .inverted - inverted panel color
-// .round - round panel
+// .rounded.default - round panel
 //  
 // Styleguide components.panels.
 
@@ -20,12 +17,9 @@
     color: @color;
     background: @bg;
     border-bottom: 1px solid @border;
-    // text-shadow: 1px 1px 0 darken(@bg, 10%);
   }
-  .panel-list {
-    .panel-list-item {
-      border-top: 1px solid @border;
-    }
+  .panel-list-item {
+    border-top: 1px solid @border;
   }
 }
 
@@ -38,22 +32,22 @@
   .panel-body,
   .panel-list-item,
   .panel-notice {
-    .reset-spacing(0, 10px);
+    .reset-spacing(0, @elem-default-padding);
   }
 
   .panel-heading {
     font-weight: @typo-font-weight-bold;
   }
 
+  .panel-body {
+    background: @color-light;
+  }
+
   .panel-foot {
-    .reset-spacing(0, 5px 10px);
+    .reset-spacing(0, 5px @elem-default-padding);
     font-size: 75%;
   }
 
-  &.round {
-    .border-radius();
-  }
-  
   .panel-list {
     .panel-list-item {
       &:first-child, &.first {
@@ -62,8 +56,6 @@
     }
   }
 
-  .panel-accent();
-  
   &.default {
     .panel-accent();
   }
@@ -80,16 +72,16 @@
     .panel-accent(@color-warning, darken(@color-warning, 10%), @color-light);
   }
 
-  &.notice {
-    .panel-accent(@color-notice, darken(@color-notice, 10%), @color-light);
-  }
+  // &.notice {
+  //   .panel-accent(@color-notice, darken(@color-notice, 10%), @color-light);
+  // }
 
-  &.info {
-    .panel-accent(@color-info, darken(@color-info, 10%), @color-light);
-  }
+  // &.info {
+  //   .panel-accent(@color-info, darken(@color-info, 10%), @color-light);
+  // }
 
-  &.inverted {
-    .panel-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
-  }
+  // &.inverted {
+  //   .panel-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
+  // }
 
 }
