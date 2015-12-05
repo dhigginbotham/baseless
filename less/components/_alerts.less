@@ -20,12 +20,20 @@
 .@{css-prefix}alert {
   
   .border-radius();
-  .reset-spacing(0,10px);
+  .reset-spacing();
+
+  .alert-text {
+    .reset-spacing(0,10px);
+  }
 
   .alert-title,
   .alert-subtext {
     font-weight: @typo-font-weight-bold;
     font-style: italic;
+  }
+  
+  .alert-title {
+    .reset-spacing(0,10px);
   }
 
   .alert-subtext {

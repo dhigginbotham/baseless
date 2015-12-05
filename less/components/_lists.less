@@ -8,12 +8,9 @@
 // .inline - inline list style
 // .nav.flat - nav list style
 // .nav.flat.inline - combined inline nav list style
-// .nav.flat.inline.primary - primary colored nav list
 // .nav.flat.inline.success - success colored nav list
 // .nav.flat.inline.warning - warning colored nav list
 // .nav.flat.inline.notice - notice colored nav list
-// .nav.flat.inline.info - info colored nav list
-// .nav.flat.inline.inverted - inverted colored nav list
 //  
 // Styleguide components.lists.
 
@@ -45,10 +42,7 @@
     }
   }
   &.nav {
-    &,
-    &.primary {
-      .list-accent();
-    }
+    .list-accent();
     &.success {
       .list-accent(@color-success);
     }
@@ -57,12 +51,6 @@
     }
     &.notice {
       .list-accent(@color-notice);
-    }
-    &.info {
-      .list-accent(@color-info);
-    }
-    &.inverted {
-      .list-accent(@color-inverted);
     }
     li {
       .border-radius();

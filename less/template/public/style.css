@@ -623,15 +623,23 @@ td {
 .bs-alert {
   border-radius: 4px 4px 4px 4px;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   background: #c5dee1;
   border: 1px solid #a0c9cd;
   color: #40757b;
+}
+.bs-alert .alert-text {
+  margin: 0;
+  padding: 10px;
 }
 .bs-alert .alert-title,
 .bs-alert .alert-subtext {
   font-weight: 600;
   font-style: italic;
+}
+.bs-alert .alert-title {
+  margin: 0;
+  padding: 10px;
 }
 .bs-alert .alert-subtext {
   margin: 0;
@@ -1393,28 +1401,23 @@ td {
 .bs-list.inline li {
   display: inline-block;
 }
-.bs-list.nav li,
-.bs-list.nav.primary li {
+.bs-list.nav li {
   font-weight: 300;
   background: #5486a3;
   border: 1px solid transparent;
   color: #FFF;
 }
-.bs-list.nav li.shadow,
-.bs-list.nav.primary li.shadow {
+.bs-list.nav li.shadow {
   box-shadow: inset 0 -3px 0 transparent;
   border-bottom: none;
 }
-.bs-list.nav li.no-border,
-.bs-list.nav.primary li.no-border {
+.bs-list.nav li.no-border {
   border-color: #5486a3;
 }
-.bs-list.nav li:hover,
-.bs-list.nav.primary li:hover {
+.bs-list.nav li:hover {
   background: #6997b2;
 }
-.bs-list.nav li a,
-.bs-list.nav.primary li a {
+.bs-list.nav li a {
   color: #FFF;
 }
 .bs-list.nav.success li {
@@ -1472,44 +1475,6 @@ td {
   background: #c81b1b;
 }
 .bs-list.nav.notice li a {
-  color: #FFF;
-}
-.bs-list.nav.info li {
-  font-weight: 300;
-  background: #6EACB3;
-  border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav.info li.shadow {
-  box-shadow: inset 0 -3px 0 transparent;
-  border-bottom: none;
-}
-.bs-list.nav.info li.no-border {
-  border-color: #6EACB3;
-}
-.bs-list.nav.info li:hover {
-  background: #85b9bf;
-}
-.bs-list.nav.info li a {
-  color: #FFF;
-}
-.bs-list.nav.inverted li {
-  font-weight: 300;
-  background: #333;
-  border: 1px solid transparent;
-  color: #FFF;
-}
-.bs-list.nav.inverted li.shadow {
-  box-shadow: inset 0 -3px 0 transparent;
-  border-bottom: none;
-}
-.bs-list.nav.inverted li.no-border {
-  border-color: #333;
-}
-.bs-list.nav.inverted li:hover {
-  background: #454545;
-}
-.bs-list.nav.inverted li a {
   color: #FFF;
 }
 .bs-list.nav li {
