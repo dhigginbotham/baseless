@@ -19,7 +19,6 @@
 // .primary.mini - mini button style
 //  
 // Styleguide 2.2.
-
 .btn-accent(@bg: #e6e6e6, @color: @color-inverted, @intensity: 10) {
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
@@ -39,7 +38,6 @@
     background: desaturate(darken(@bg, @i2),20%);
   }
 }
-
 
 .@{css-prefix}btn {
   
@@ -88,8 +86,8 @@
   }
   
   &.medium {
-    font-size: 16px;
-    .reset-spacing(0, (16px / 1.5));
+    font-size: @typo-font-size-medium;
+    .reset-spacing(0, (@typo-font-size-medium / 1.5));
   }
   
   &.mini {

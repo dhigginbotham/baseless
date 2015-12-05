@@ -125,7 +125,7 @@ gulp.task(tasks.parker.name, function() {
 // that should be watched on, allows us to dev like
 // a boss
 gulp.task('watch', function() {
-  gulp.watch(['less/**/*.less', '!less/template/less/*.less'], [tasks.kss.name]);
+  gulp.watch(['less/**/*.less', '!less/template/less/style.less'], [tasks.kss.name]);
   gulp.watch('./README.md', [tasks.readme.name, 'styleguide']);
   gulp.watch('less/template/less/*.less', [tasks.kss.less.name]);
 });

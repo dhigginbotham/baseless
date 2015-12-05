@@ -450,6 +450,7 @@ h6 {
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
   color: 12px;
   line-height: 1.15em;
+  font-weight: 600;
 }
 h1:before,
 h2:before,
@@ -496,11 +497,6 @@ h4:after,
 h5:after,
 h6:after {
   clear: both;
-}
-h4,
-h5,
-h6 {
-  font-weight: bold;
 }
 h1 {
   font-size: 30px;
@@ -638,10 +634,10 @@ td {
 .bs-alert.primary {
   background: #59a7d7;
   border: 1px solid #216ca8;
-  color: #48657d;
+  color: #ffffff;
 }
 .bs-alert.primary .alert-title {
-  color: #2069a4;
+  color: #FFF;
   text-shadow: 1px 1px 0 #1b5686;
 }
 .bs-alert.primary .alert-subtext {
@@ -653,10 +649,10 @@ td {
 .bs-alert.success {
   background: #cce15d;
   border: 1px solid #97b622;
-  color: #8a9855;
+  color: #ffffff;
 }
 .bs-alert.success .alert-title {
-  color: #a5c826;
+  color: #FFF;
   text-shadow: 1px 1px 0 #7b941c;
 }
 .bs-alert.success .alert-subtext {
@@ -782,9 +778,9 @@ td {
   padding: 7.33333333px;
 }
 .bs-btn.medium {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
-  padding: 10.66666667px;
+  padding: 9.33333333px;
 }
 .bs-btn.mini {
   font-size: 10px;
@@ -1268,6 +1264,9 @@ td {
   background: #333;
   color: #FFF;
 }
+.bs-list {
+  vertical-align: middle;
+}
 .bs-list:before,
 .bs-list:after {
   content: " ";
@@ -1406,7 +1405,7 @@ td {
   padding: 10px;
 }
 .bs-panel .panel-heading {
-  font-weight: bold;
+  font-weight: 600;
 }
 .bs-panel .panel-foot {
   margin: 0;
@@ -1574,6 +1573,9 @@ td {
 }
 .bs-table {
   width: 100%;
+}
+.bs-table th {
+  text-align: left;
 }
 .bs-table th,
 .bs-table td {

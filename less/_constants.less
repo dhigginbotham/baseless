@@ -93,9 +93,9 @@
 //
 
 @color-grey-darkest:                                  #333;
-@color-grey-dark:                                     lighten(@color-grey-darkest, 20%);  
-@color-grey-light:                                    lighten(@color-grey-darkest, 50%);  
-@color-grey-lightest:                                 lighten(@color-grey-darkest, 70%);
+@color-grey-dark:                                     #666;  
+@color-grey-light:                                    #999;  
+@color-grey-lightest:                                 #e6e6e6;
 
 @color-grey-default:                                  #eee;
 @color-grey-default-accent:                           #ccc;  
@@ -144,11 +144,15 @@
 //
 
 @typo-font-size-base:                                 12px;
-@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.25;
 @typo-font-size-large:                                18px;
+@typo-font-size-medium:                               14px;
 @typo-font-size-small:                                11px;
 @typo-font-size-mini:                                 10px;
 
+@typo-font-size-vertical-rhythm:                      @typo-font-size-base * 1.25;
+
+@typo-font-weight-base:                               normal;
+@typo-font-weight-bold:                               600;
 
 @typo-font-base:                                      "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
 @typo-font-code:                                      Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
@@ -164,3 +168,5 @@
 //
 
 @line-height-base:                                    @typo-font-size-vertical-rhythm;
+@elem-border-radius: 								  4px;
+

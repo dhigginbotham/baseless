@@ -57,11 +57,11 @@
   .alert-accent(@color-info, @color-inverted);
 
   &.primary {
-    .alert-accent(@color-primary, darken(@color-primary, 3%));
+    .alert-accent(@color-primary, @color-light);
   }
   
   &.success {
-    .alert-accent(@color-success, lighten(@color-success, 2%));
+    .alert-accent(@color-success, @color-light);
   }
   
   &.warning {
