@@ -8,13 +8,14 @@
 // .inline - inline list style
 // .nav - nav list style
 // .nav.flat.inline - combined inline nav list style
+// .nav.flat.inline.primary - primary colored nav list
 // .nav.flat.inline.success - success colored nav list
 // .nav.flat.inline.warning - warning colored nav list
 // .nav.flat.inline.notice - notice colored nav list
 // .nav.flat.inline.info - info colored nav list
 // .nav.flat.inline.inverted - inverted colored nav list
 //  
-// Styleguide 2.7.
+// Styleguide components.lists.
 
 .list-accent(@bg: @color-primary, @color: @color-light) {
   li {
@@ -31,7 +32,20 @@
 }
 .@{css-prefix}list {
   .clearfix();
-  li {
+  &.flat {
+    .reset-spacing(0,0);
+    list-style: none;
+    li {
+      .reset-spacing(0,0);
+      vertical-align: middle;
+    }
+  }
+  &.inline {
+    li {
+      display: inline-block;
+    }
+  }
+  &.nav {
     &,
     &.primary {
       .list-accent();
@@ -51,21 +65,6 @@
     &.inverted {
       .list-accent(@color-inverted);
     }
-  }
-  &.flat {
-    .reset-spacing(0,0);
-    list-style: none;
-    li {
-      .reset-spacing(0,0);
-      vertical-align: middle;
-    }
-  }
-  &.inline {
-    li {
-      display: inline-block;
-    }
-  }
-  &.nav {
     li {
       .border-radius();
       .reset-spacing(3px 2px 3px 0,4px 10px);
