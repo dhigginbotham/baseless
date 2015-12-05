@@ -39,7 +39,7 @@
       tr {
         background: @bg;
         &:nth-child(even) {
-          background: lighten(desaturate(@border, 40%), 40%);
+          background: mix(@color-light, @border, 80%);
         }
       }
     }

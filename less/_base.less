@@ -88,33 +88,64 @@ a {
 // Styles for headings, 1 through 6
 // 
 // Markup:
-// <h6 class="text-primary">Example Heading Text</h6>
-// <h5 class="text-success">Example Heading Text</h5>
-// <h4 class="text-warning">Example Heading Text</h4>
-// <h3 class="text-notice">Example Heading Text</h3>
-// <h2 class="text-info">Example Heading Text</h2>
-// <h1 class="text-inverted">Example Heading Text</h1>
-// 
+// <h6 class="heading-dark">Example Heading Text</h6>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+// <h5 class="heading-light">Example Heading Text</h5>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+// <h4 class="heading-orange">Example Heading Text</h4>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+// <h2 class="heading-light">Example Heading Text</h2>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+// <h3 class="heading-dark">Example Heading Text</h3>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+// <h1>Example Heading Text</h1>
+// <div>
+//   Grenade BASE jump artisanal footage concrete assassin katana sub-orbital sentient advert euro-pop hacker. Face forwards disposable Tokyo dissident free-market urban girl nodality vehicle motion. Carbon plastic-space pen office uplink narrative man digital dolphin. 
+// </div>
+// <hr/>
+//
 // Styleguide scaffolding.base.headings
 
 h1, h2, h3, h4, h5, h6 {
   .clearfix();
-  margin: @typo-font-size-vertical-rhythm 0 0 0;
-  font-family: @typo-font-heading;
-  color: @typo-font-size-base;
-  line-height: 1.15em;
-  font-weight: 600;
+  .reset-spacing(@typo-font-size-vertical-rhythm 0 (@typo-font-size-vertical-rhythm / 1.5));
+  color: @typo-font-color;
+  font-weight: @typo-font-weight-bold;
+  &.heading-dark {
+    color: @color-grey-darkest;
+  }
+  &.heading-light {
+    color: @color-grey-light;
+  }
+  &.heading-orange {
+    color: @color-warning;
+  }
 }
 
-h1 { font-size: @typo-font-size-base * 2.5;   }
-h2 { font-size: @typo-font-size-base * 2.25;  }
-h3 { font-size: @typo-font-size-base * 2.125; }
-h4 { font-size: @typo-font-size-base * 2;     }
-h5 { font-size: @typo-font-size-base * 1.875; }
-h6 { font-size: @typo-font-size-base * 1.75;  }
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
 
 p {
-  margin: @typo-font-size-vertical-rhythm 0 0 0;
+  .reset-spacing(@typo-font-size-vertical-rhythm 0 0);
 }
 
 // Blockquote
