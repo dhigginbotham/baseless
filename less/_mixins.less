@@ -247,3 +247,21 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
+// Card Generator
+//
+// Useful when you use this as the base for your UI component
+.card-generator(@bg: @color-card-warm-grey, @border: @color-card-warm-grey-border, @color: @color-inverted) {
+  background: @bg;
+  border: 1px solid @border;
+  color: @color;
+  &.rounded {
+	 .border-radius();
+  }
+  &.shadow {
+	  box-shadow: inset 0 -3px 0 @border;
+    border-bottom: none;
+  }
+  &.no-border {
+    border-color: @bg;
+  }
+}
