@@ -10,10 +10,10 @@
 // .notice - notice button color
 // .inverted - inverted button color
 // .text - text button color
-// .primary.large - large button style
-// .primary.medium - medium button style
-// .primary.small - small button style
-// .primary.mini - mini button style
+// .success.hollow.large - large button style
+// .success.hollow.medium - medium button style
+// .success.hollow.small - small button style
+// .success.hollow.mini - mini button style
 //  
 // Styleguide components.buttons.
 
@@ -21,6 +21,7 @@
   @i1: unit(@intensity*1,~"%");
   @i2: unit(@intensity*1.2,~"%");
   background: @bg;
+  border: 2px solid transparent;
   &:hover {
     background: darken(@bg, 7%);
   }
@@ -35,13 +36,23 @@
     cursor: not-allowed;
     background: desaturate(@bg,40%);
   }
+  &.hollow {
+    background: transparent;
+    border-color: @bg;
+    color: @bg;
+    &:disabled, &.disabled {
+      background: transparent;
+      border-color: desaturate(@bg, 45%);
+      color: desaturate(@bg, 45%);
+    }
+  }
 }
 
 .@{css-prefix}btn {
   
   cursor: pointer;
 
-  .reset-spacing(0, (@typo-font-size-base / 1.5) @typo-font-size-base);
+  .reset-spacing(0, (@typo-font-size-base / 2) @typo-font-size-base);
 
   border: 0;
   display: inline-block;
@@ -60,9 +71,7 @@
   font-size: @typo-font-size-base;
   font-weight: 600;
   text-decoration: none;
-
   vertical-align: middle;
-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
