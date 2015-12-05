@@ -1472,44 +1472,44 @@ textarea.bs-form-elem {
   font-weight: 600;
 }
 .bs-list.nav li:hover {
-  background: #e7e4cf;
+  background: #f1efe3;
 }
 .bs-list.nav li a {
   color: #333;
 }
-.bs-list.nav.success {
-  background: #67ad01;
+.bs-list.nav.primary {
+  background: #5486a3;
   border: 1px solid transparent;
   color: #FFF;
 }
-.bs-list.nav.success.no-border {
+.bs-list.nav.primary.no-border {
   border-color: transparent;
 }
-.bs-list.nav.success li {
+.bs-list.nav.primary li {
   font-weight: 600;
 }
-.bs-list.nav.success li:hover {
-  background: #497b01;
+.bs-list.nav.primary li:hover {
+  background: #4d7b96;
 }
-.bs-list.nav.success li a {
+.bs-list.nav.primary li a {
   color: #FFF;
 }
-.bs-list.nav.warning {
-  background: #f7901e;
+.bs-list.nav.light-grey {
+  background: #f1f1f1;
   border: 1px solid transparent;
-  color: #FFF;
+  color: #333;
 }
-.bs-list.nav.warning.no-border {
+.bs-list.nav.light-grey.no-border {
   border-color: transparent;
 }
-.bs-list.nav.warning li {
+.bs-list.nav.light-grey li {
   font-weight: 600;
 }
-.bs-list.nav.warning li:hover {
-  background: #da7608;
+.bs-list.nav.light-grey li:hover {
+  background: #e7e7e7;
 }
-.bs-list.nav.warning li a {
-  color: #FFF;
+.bs-list.nav.light-grey li a {
+  color: #333;
 }
 .bs-list.nav.notice {
   background: #A91717;
@@ -1523,19 +1523,22 @@ textarea.bs-form-elem {
   font-weight: 600;
 }
 .bs-list.nav.notice li:hover {
-  background: #7c1111;
+  background: #971515;
 }
 .bs-list.nav.notice li a {
   color: #FFF;
 }
 .bs-list.connected {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
   margin: 5px 0;
   padding: 0;
 }
 .bs-list.connected li {
   float: left;
   margin: 0;
-  padding: 4px 10px;
+  padding: 7px 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .bs-list.connected li:last-child {

@@ -6,11 +6,11 @@
 // 
 // .flat - flattens list style
 // .inline - inline list style
-// .nav.flat - nav list style
 // .nav.flat.connected.inline - combined inline nav list style
-// .nav.flat.connected.inline.success - success colored nav list
-// .nav.flat.connected.inline.warning - warning colored nav list
-// .nav.flat.connected.inline.notice - notice colored nav list
+// .nav.flat.connected.inline.rounded.primary - primary colored nav list
+// .nav.flat.connected.inline.rounded.light-grey - light grey colored nav list
+// .nav.flat.connected.inline.rounded.notice - notice colored nav list
+// .nav.flat.connected.inline.rounded - notice colored nav list
 //  
 // Styleguide components.lists.
 
@@ -19,7 +19,7 @@
   li {
     font-weight: @typo-font-weight-bold;
     &:hover {
-      background: darken(@bg, 10%);
+      background: darken(@bg, 4%);
     }
     a {
       color: @color;
@@ -54,22 +54,24 @@
       }
     }
     .list-accent();
-    &.success {
-      .list-accent(@color-success, @color-light);
+    &.primary {
+      .list-accent(@color-primary, @color-light);
     }
-    &.warning {
-      .list-accent(@color-warning, @color-light);
+    &.light-grey {
+      .list-accent(@color-card-light-grey);
     }
     &.notice {
       .list-accent(@color-notice, @color-light);
     }
   }
-  
   &.connected {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
     .reset-spacing(5px 0);
     li {
       .pull-left();
-      .reset-spacing(0, 4px 10px);
+      .reset-spacing(0, 7px 10px);
       border-right: 1px solid rgba(0,0,0,0.1);
       &:last-child {
         border-right: none;
