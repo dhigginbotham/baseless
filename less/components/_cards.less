@@ -13,18 +13,6 @@
 //  
 // Styleguide components.cards.
 
-.card-generator(@bg: @color-card-warm-grey, @border: @color-card-warm-grey-border, @color: @color-inverted) {
-  background: @bg;
-  border: 1px solid @border;
-  color: @color;
-  &.shadow {
-	  border-bottom: 2px solid @border;
-  }
-  &.no-border {
-    border: 1px solid @bg;
-  }
-}
-
 .@{css-prefix}cards {
   .reset-spacing(0,10px);
   &,
@@ -45,5 +33,11 @@
   }
   &.rounded {
 	 .border-radius();
+  }
+  &.shadow {
+	  border-bottom-width: 2px;
+  }
+  &.no-border {
+    border: 1px solid @bg;
   }
 }
