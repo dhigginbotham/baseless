@@ -418,7 +418,7 @@ html {
 body {
   color: #333;
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 a {
   color: #2371B1;
@@ -446,9 +446,9 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 15px 0 0 0;
+  margin: 17.5px 0 0 0;
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
-  color: 12px;
+  color: 14px;
   line-height: 1.15em;
   font-weight: 600;
 }
@@ -499,30 +499,30 @@ h6:after {
   clear: both;
 }
 h1 {
-  font-size: 30px;
+  font-size: 35px;
 }
 h2 {
-  font-size: 27px;
+  font-size: 31.5px;
 }
 h3 {
-  font-size: 25.5px;
+  font-size: 29.75px;
 }
 h4 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h5 {
-  font-size: 22.5px;
+  font-size: 26.25px;
 }
 h6 {
-  font-size: 21px;
+  font-size: 24.5px;
 }
 p {
-  margin: 15px 0 0 0;
+  margin: 17.5px 0 0 0;
 }
 blockquote {
   color: #333;
   margin: 0;
-  padding-left: 15px;
+  padding-left: 17.5px;
   border-left: 0.5em #cccccc solid;
 }
 hr {
@@ -531,7 +531,7 @@ hr {
   border: 0;
   border-top: none;
   border-bottom: 1px solid #e6e6e6;
-  margin: 15px 0;
+  margin: 17.5px 0;
   padding: 0;
 }
 pre,
@@ -571,14 +571,14 @@ sub {
 }
 ul,
 ol {
-  margin: 15px 0;
-  padding: 0 0 0 15px;
+  margin: 17.5px 0;
+  padding: 0 0 0 17.5px;
 }
 li p:last-child {
   margin: 0;
 }
 dd {
-  margin: 0 0 0 15px;
+  margin: 0 0 0 17.5px;
 }
 img {
   max-width: 100%;
@@ -594,7 +594,7 @@ td {
   vertical-align: top;
 }
 .bs-alert {
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 4px 4px 4px 4px;
   margin: 15px 0;
   padding: 0;
   background: #b6d5d9;
@@ -724,11 +724,11 @@ td {
 .bs-btn {
   cursor: pointer;
   margin: 0;
-  padding: 8px 12px;
+  padding: 9.33333333px 14px;
   border: 0;
   display: inline-block;
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   vertical-align: middle;
@@ -938,7 +938,7 @@ td {
   clear: both;
 }
 .bs-form-group label {
-  font-weight: 700;
+  font-weight: 600;
   display: block;
 }
 .bs-form-group.inline label {
@@ -947,9 +947,10 @@ td {
 .bs-form-elem {
   margin: 0;
   padding: 3px 7px;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 4px 4px 4px 4px;
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 0 #eee;
+  background: #FFF;
 }
 .bs-form-elem.full-width {
   width: 100%;
@@ -1008,7 +1009,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col {
     float: left;
     width: 100%;
@@ -1024,7 +1025,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.twelvecol {
     float: left;
     width: 100%;
@@ -1040,7 +1041,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.elevencol {
     float: left;
     width: 91.66666667%;
@@ -1056,7 +1057,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.tencol {
     float: left;
     width: 83.33333333%;
@@ -1072,7 +1073,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.ninecol {
     float: left;
     width: 75%;
@@ -1088,7 +1089,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.eightcol {
     float: left;
     width: 66.66666667%;
@@ -1104,7 +1105,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.sevencol {
     float: left;
     width: 58.33333333%;
@@ -1120,7 +1121,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.sixcol {
     float: left;
     width: 50%;
@@ -1136,7 +1137,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.fivecol {
     float: left;
     width: 41.66666667%;
@@ -1152,7 +1153,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.fourcol {
     float: left;
     width: 33.33333333%;
@@ -1168,7 +1169,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.threecol {
     float: left;
     width: 25%;
@@ -1184,7 +1185,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.twocol {
     float: left;
     width: 16.66666667%;
@@ -1200,7 +1201,7 @@ td {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .row .col.onecol {
     float: left;
     width: 8.33333333%;
@@ -1212,12 +1213,12 @@ td {
 .bs-label {
   margin: 0;
   padding: 0 7px 2px;
-  border-radius: 15px;
+  border-radius: 15px 15px 15px 15px;
   display: inline-block;
   font-weight: 600;
   vertical-align: middle;
   text-align: center;
-  font-size: 9px;
+  font-size: 11px;
   cursor: default;
   -webkit-user-select: none;
   /* Chrome all / Safari all */
@@ -1238,7 +1239,7 @@ td {
   font-size: 9px;
 }
 .bs-label.box {
-  border-radius: 3px;
+  border-radius: 4px 4px 4px 4px;
 }
 .bs-label.primary {
   background: #2371B1;
@@ -1264,9 +1265,6 @@ td {
   background: #333;
   color: #FFF;
 }
-.bs-list {
-  vertical-align: middle;
-}
 .bs-list:before,
 .bs-list:after {
   content: " ";
@@ -1291,16 +1289,15 @@ td {
 .bs-list.flat li {
   margin: 0;
   padding: 0;
+  vertical-align: middle;
 }
 .bs-list.inline li {
   display: inline-block;
 }
 .bs-list.nav li {
-  max-width: 100%;
-  border-radius: 15px;
-  margin: 7px 2px 7px 0;
-  padding: 0 10px;
-  line-height: 21px;
+  border-radius: 4px 4px 4px 4px;
+  margin: 3px 2px 3px 0;
+  padding: 4px 10px;
 }
 .bs-list.nav li:hover {
   cursor: pointer;
@@ -1378,7 +1375,6 @@ td {
 .bs-panel {
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
   border: 1px solid #ccc;
 }
 .bs-panel:before,
@@ -1413,7 +1409,7 @@ td {
   font-size: 75%;
 }
 .bs-panel.round {
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 4px 4px 4px 4px;
 }
 .bs-panel .panel-list .panel-list-item:first-child,
 .bs-panel .panel-list .panel-list-item.first {
@@ -1592,16 +1588,16 @@ td {
 }
 .bs-table thead tr th,
 .bs-table thead tr td {
-  background: #dbdbdb;
+  background: #ccc;
 }
 .bs-table.striped tbody tr {
-  background: #ffffff;
+  background: #FFF;
 }
-.bs-table.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.striped tbody tr:nth-child(even) {
+  background: #d9d9d9;
 }
-.bs-table.hover th:hover,
-.bs-table.hover td:hover {
+.bs-table.hover tbody th:hover,
+.bs-table.hover tbody td:hover {
   background: #ebebeb;
 }
 .bs-table.primary th {
@@ -1613,16 +1609,16 @@ td {
 }
 .bs-table.primary thead tr th,
 .bs-table.primary thead tr td {
-  background: #2881cb;
+  background: #2371B1;
 }
 .bs-table.primary.striped tbody tr {
-  background: #87b0d1;
+  background: #FFF;
 }
-.bs-table.primary.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.primary.striped tbody tr:nth-child(even) {
+  background: #277fc6;
 }
-.bs-table.primary.hover th:hover,
-.bs-table.primary.hover td:hover {
+.bs-table.primary.hover tbody th:hover,
+.bs-table.primary.hover tbody td:hover {
   background: #3990d8;
 }
 .bs-table.success th {
@@ -1634,16 +1630,16 @@ td {
 }
 .bs-table.success thead tr th,
 .bs-table.success thead tr td {
-  background: #b2d72b;
+  background: #9EBF24;
 }
 .bs-table.success.striped tbody tr {
-  background: #c8d791;
+  background: #FFF;
 }
-.bs-table.success.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.success.striped tbody tr:nth-child(even) {
+  background: #b0d428;
 }
-.bs-table.success.hover th:hover,
-.bs-table.success.hover td:hover {
+.bs-table.success.hover tbody th:hover,
+.bs-table.success.hover tbody td:hover {
   background: #bcdc44;
 }
 .bs-table.warning th {
@@ -1655,16 +1651,16 @@ td {
 }
 .bs-table.warning thead tr th,
 .bs-table.warning thead tr td {
-  background: #e9893a;
+  background: #E6781E;
 }
 .bs-table.warning.striped tbody tr {
-  background: #e6c1a2;
+  background: #FFF;
 }
-.bs-table.warning.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.warning.striped tbody tr:nth-child(even) {
+  background: #e98635;
 }
-.bs-table.warning.hover th:hover,
-.bs-table.warning.hover td:hover {
+.bs-table.warning.hover tbody th:hover,
+.bs-table.warning.hover tbody td:hover {
   background: #ec9955;
 }
 .bs-table.notice th {
@@ -1676,16 +1672,16 @@ td {
 }
 .bs-table.notice thead tr th,
 .bs-table.notice thead tr td {
-  background: #c41b1b;
+  background: #A91717;
 }
 .bs-table.notice.striped tbody tr {
-  background: #d47070;
+  background: #FFF;
 }
-.bs-table.notice.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.notice.striped tbody tr:nth-child(even) {
+  background: #bf1a1a;
 }
-.bs-table.notice.hover th:hover,
-.bs-table.notice.hover td:hover {
+.bs-table.notice.hover tbody th:hover,
+.bs-table.notice.hover tbody td:hover {
   background: #df1e1e;
 }
 .bs-table.info th {
@@ -1697,16 +1693,16 @@ td {
 }
 .bs-table.info thead tr th,
 .bs-table.info thead tr td {
-  background: #82b7be;
+  background: #6EACB3;
 }
 .bs-table.info.striped tbody tr {
-  background: #cfd6d7;
+  background: #FFF;
 }
-.bs-table.info.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.info.striped tbody tr:nth-child(even) {
+  background: #7fb6bc;
 }
-.bs-table.info.hover th:hover,
-.bs-table.info.hover td:hover {
+.bs-table.info.hover tbody th:hover,
+.bs-table.info.hover tbody td:hover {
   background: #96c3c8;
 }
 .bs-table.inverted th {
@@ -1718,16 +1714,16 @@ td {
 }
 .bs-table.inverted thead tr th,
 .bs-table.inverted thead tr td {
-  background: #424242;
+  background: #333;
 }
 .bs-table.inverted.striped tbody tr {
-  background: #757575;
+  background: #FFF;
 }
-.bs-table.inverted.striped tbody tr:nth-child(odd) {
-  background: #ffffff;
+.bs-table.inverted.striped tbody tr:nth-child(even) {
+  background: #404040;
 }
-.bs-table.inverted.hover th:hover,
-.bs-table.inverted.hover td:hover {
+.bs-table.inverted.hover tbody th:hover,
+.bs-table.inverted.hover tbody td:hover {
   background: #525252;
 }
 .bs-table.small th,
@@ -1756,7 +1752,7 @@ td {
   padding: 25px;
 }
 .bs-well.round {
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 4px 4px 4px 4px;
 }
 .bs-well.info {
   background: #6EACB3;

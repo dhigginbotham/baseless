@@ -30,13 +30,13 @@
 }
 
 .@{css-prefix}list {
-  vertical-align: middle;
   .clearfix();
   &.flat {
     .reset-spacing(0,0);
     list-style: none;
     li {
       .reset-spacing(0,0);
+      vertical-align: middle;
     }
   }
   &.inline {
@@ -46,10 +46,8 @@
   }
   &.nav {
     li {
-      max-width: 100%;
-      border-radius: 15px;
-      .reset-spacing(7px 2px 7px 0,0 10px);
-      line-height: 21px;
+      .border-radius();
+      .reset-spacing(3px 2px 3px 0,4px 10px);
       &:hover {
         cursor: pointer;
       }

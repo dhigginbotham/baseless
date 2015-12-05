@@ -14,8 +14,8 @@
 // .notice - notice table style
 // .info - info table style
 // .inverted - inverted table style
-// .success.striped - info and striped table style
-// .success.striped.hover - info and striped table style
+// .default.striped - info and striped table style
+// .default.striped.hover - info and striped table style
 // 
 // Styleguide 2.9.
 
@@ -31,25 +31,27 @@
     tr {
       th,
       td {
-        background: lighten(@border, 6%);
+        background: @border;
       }
     }
   }
   &.striped {
     tbody {
       tr {
-        background: lighten(desaturate(@border, 22%), 26%);
-        &:nth-child(odd) {
-          background: lighten(desaturate(@bg, 30%), 6%);
+        background: @bg;
+        &:nth-child(even) {
+          background: lighten(@border, 5%);
         }
       }
     }
   }
   &.hover {
-    th,
-    td {
-      &:hover {
-        background: lighten(@border, 12%);
+    tbody {
+      th,
+      td {
+        &:hover {
+          background: lighten(@border, 12%);
+        }
       }
     }
   }

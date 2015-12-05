@@ -42,7 +42,7 @@
 // .border-radius
 //
 
-.border-radius(@tleft: 3px, @tright: @tleft, @bright: @tleft, @bleft: @tright) {
+.border-radius(@tleft: @elem-border-radius-base, @tright: @tleft, @bright: @tleft, @bleft: @tright) {
   border-radius: @tleft @tright @bright @bleft;
 }
 
@@ -107,7 +107,7 @@
 // set size for block elems and other various helpers
 //
 
-.size(@width, @height: @width) {
+.size(@width, @height) {
   width: @width;
   height: @height;
   line-height: @height;
