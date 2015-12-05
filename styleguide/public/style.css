@@ -599,7 +599,7 @@ td {
   padding: 0;
   background: #b6d5d9;
   border: 1px solid #67a8af;
-  color: #333333;
+  color: #ffffff;
 }
 .bs-alert .alert-text {
   margin: 0;
@@ -622,7 +622,7 @@ td {
   padding: 10px;
 }
 .bs-alert .alert-title {
-  color: #333;
+  color: #FFF;
   text-shadow: 1px 1px 0 #52959c;
 }
 .bs-alert .alert-subtext {
@@ -694,10 +694,10 @@ td {
 .bs-alert.info {
   background: #b6d5d9;
   border: 1px solid #67a8af;
-  color: #333333;
+  color: #ffffff;
 }
 .bs-alert.info .alert-title {
-  color: #333;
+  color: #FFF;
   text-shadow: 1px 1px 0 #52959c;
 }
 .bs-alert.info .alert-subtext {
@@ -1258,7 +1258,7 @@ td {
 }
 .bs-label.info {
   background: #6EACB3;
-  color: #333;
+  color: #FFF;
 }
 .bs-label.inverted {
   background: #333;
@@ -1492,7 +1492,7 @@ td {
   border: 1px solid #52959c;
 }
 .bs-panel.info .panel-heading {
-  color: #333;
+  color: #FFF;
   background: #6EACB3;
   border-bottom: 1px solid #52959c;
   text-shadow: 1px 1px 0 #52959c;
@@ -1576,6 +1576,7 @@ td {
 }
 .bs-table th {
   text-align: left;
+  color: #333;
 }
 .bs-table th,
 .bs-table td {
@@ -1591,17 +1592,17 @@ td {
 }
 .bs-table thead tr th,
 .bs-table thead tr td {
-  background: #d1d1d1;
+  background: #dbdbdb;
 }
 .bs-table.striped tbody tr {
-  background: #d4d4d4;
+  background: #ffffff;
 }
 .bs-table.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.hover th:hover,
 .bs-table.hover td:hover {
-  background: #d1d1d1;
+  background: #ebebeb;
 }
 .bs-table.primary th {
   color: #FFF;
@@ -1612,17 +1613,17 @@ td {
 }
 .bs-table.primary thead tr th,
 .bs-table.primary thead tr td {
-  background: #2576ba;
+  background: #2881cb;
 }
 .bs-table.primary.striped tbody tr {
-  background: #2679be;
+  background: #87b0d1;
 }
 .bs-table.primary.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.primary.hover th:hover,
 .bs-table.primary.hover td:hover {
-  background: #2576ba;
+  background: #3990d8;
 }
 .bs-table.success th {
   color: #FFF;
@@ -1633,17 +1634,17 @@ td {
 }
 .bs-table.success thead tr th,
 .bs-table.success thead tr td {
-  background: #a5c826;
+  background: #b2d72b;
 }
 .bs-table.success.striped tbody tr {
-  background: #a9cc26;
+  background: #c8d791;
 }
 .bs-table.success.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.success.hover th:hover,
 .bs-table.success.hover td:hover {
-  background: #a5c826;
+  background: #bcdc44;
 }
 .bs-table.warning th {
   color: #FFF;
@@ -1654,17 +1655,17 @@ td {
 }
 .bs-table.warning thead tr th,
 .bs-table.warning thead tr td {
-  background: #e77e27;
+  background: #e9893a;
 }
 .bs-table.warning.striped tbody tr {
-  background: #e8802c;
+  background: #e6c1a2;
 }
 .bs-table.warning.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.warning.hover th:hover,
 .bs-table.warning.hover td:hover {
-  background: #e77e27;
+  background: #ec9955;
 }
 .bs-table.notice th {
   color: #FFF;
@@ -1675,17 +1676,17 @@ td {
 }
 .bs-table.notice thead tr th,
 .bs-table.notice thead tr td {
-  background: #b21818;
+  background: #c41b1b;
 }
 .bs-table.notice.striped tbody tr {
-  background: #b61919;
+  background: #d47070;
 }
 .bs-table.notice.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.notice.hover th:hover,
 .bs-table.notice.hover td:hover {
-  background: #b21818;
+  background: #df1e1e;
 }
 .bs-table.info th {
   color: #FFF;
@@ -1696,17 +1697,17 @@ td {
 }
 .bs-table.info thead tr th,
 .bs-table.info thead tr td {
-  background: #75b0b7;
+  background: #82b7be;
 }
 .bs-table.info.striped tbody tr {
-  background: #78b2b8;
+  background: #cfd6d7;
 }
 .bs-table.info.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.info.hover th:hover,
 .bs-table.info.hover td:hover {
-  background: #75b0b7;
+  background: #96c3c8;
 }
 .bs-table.inverted th {
   color: #FFF;
@@ -1717,17 +1718,17 @@ td {
 }
 .bs-table.inverted thead tr th,
 .bs-table.inverted thead tr td {
-  background: #383838;
+  background: #424242;
 }
 .bs-table.inverted.striped tbody tr {
-  background: #3b3b3b;
+  background: #757575;
 }
 .bs-table.inverted.striped tbody tr:nth-child(odd) {
   background: #ffffff;
 }
 .bs-table.inverted.hover th:hover,
 .bs-table.inverted.hover td:hover {
-  background: #383838;
+  background: #525252;
 }
 .bs-table.small th,
 .bs-table.small td {
@@ -1759,8 +1760,8 @@ td {
 }
 .bs-well.info {
   background: #6EACB3;
-  border: 1px solid #40757b;
-  color: #000000;
+  border: 1px solid #579ea6;
+  color: #2f5559;
 }
 @media print {
   a,

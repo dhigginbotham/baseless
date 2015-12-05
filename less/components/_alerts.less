@@ -13,7 +13,7 @@
 //  
 // Styleguide 2.1.
 
-.alert-accent(@bg: @color-light, @color: @color-inverted, @notice: darken(screen(@bg, desaturate(@bg, 40%)), 3%)) {
+.alert-accent(@bg: @color-light, @color: @color-light, @notice: darken(screen(@bg, desaturate(@bg, 40%)), 3%)) {
   background: @notice;
   border: 1px solid darken(@bg, 2%);
   color: desaturate(@color, 40%);
@@ -54,7 +54,7 @@
     .reset-spacing(0, 10px);
   }
 
-  .alert-accent(@color-info, @color-inverted);
+  .alert-accent(@color-info, @color-light);
 
   &.primary {
     .alert-accent(@color-primary, @color-light);
@@ -73,7 +73,7 @@
   }
   
   &.info {
-    .alert-accent(@color-info, @color-inverted);
+    .alert-accent(@color-info, @color-light);
   }
   
   &.inverted {
