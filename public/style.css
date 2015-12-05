@@ -399,6 +399,9 @@ th {
 .text-center {
   text-align: center;
 }
+.rounded {
+  border-radius: 4px 4px 4px 4px;
+}
 .center-block {
   display: block;
   margin-left: auto;
