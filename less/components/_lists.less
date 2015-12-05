@@ -13,8 +13,8 @@
 // .nav.flat.inline.notice - notice colored nav list
 // .nav.flat.inline.info - info colored nav list
 // .nav.flat.inline.inverted - inverted colored nav list
-// 
-// Styleguide 2.6.
+//  
+// Styleguide 2.7.
 
 .list-accent(@bg: @color-primary, @color: @color-light) {
   li {
@@ -32,6 +32,27 @@
 
 .@{css-prefix}list {
   .clearfix();
+  li {
+    &,
+    &.primary {
+      .list-accent();
+    }
+    &.success {
+      .list-accent(@color-success);
+    }
+    &.warning {
+      .list-accent(@color-warning);
+    }
+    &.notice {
+      .list-accent(@color-notice);
+    }
+    &.info {
+      .list-accent(@color-info);
+    }
+    &.inverted {
+      .list-accent(@color-inverted);
+    }
+  }
   &.flat {
     .reset-spacing(0,0);
     list-style: none;
@@ -52,25 +73,6 @@
       &:hover {
         cursor: pointer;
       }
-    }
-    .list-accent();
-    &.primary {
-      .list-accent();
-    }
-    &.success {
-      .list-accent(@color-success);
-    }
-    &.warning {
-      .list-accent(@color-warning);
-    }
-    &.notice {
-      .list-accent(@color-notice);
-    }
-    &.info {
-      .list-accent(@color-info);
-    }
-    &.inverted {
-      .list-accent(@color-inverted);
     }
   }
 }
