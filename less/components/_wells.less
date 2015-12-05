@@ -10,9 +10,9 @@
 // .large.shadow - a large well with a shadow
 // .large.inset-shadow - a large well with a shadow
 // .rounded - a rounded well
-// .warning - box colored well
-// .warning.shadow.no-border - a dynamic well
-// .warning.rounded - rounded box well
+// .yellow - box colored well
+// .yellow.shadow.no-border - a dynamic well
+// .yellow.rounded - rounded box well
 //  
 // Styleguide components.wells.
 
@@ -25,7 +25,8 @@
   &.large {
     .reset-spacing(0, 25px);
   }
-  &.warning {
-    .card-generator(@color-warning, darken(@color-warning, 7%), desaturate(lighten(@color-warning, 40%), 5%));
+  &.yellow {
+    .card-generator(@color-card-yellow, @color-card-yellow-border, darken(desaturate(@color-card-yellow, 40%), 45%));
   }
 }
+

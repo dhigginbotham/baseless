@@ -6,11 +6,11 @@
 // 
 // .flat - flattens list style
 // .inline - inline list style
-// .nav.flat.connected.inline - combined inline nav list style
-// .nav.flat.connected.inline.rounded.primary - primary colored nav list
-// .nav.flat.connected.inline.rounded.light-grey - light grey colored nav list
-// .nav.flat.connected.inline.rounded.notice - notice colored nav list
-// .nav.flat.connected.inline.rounded - notice colored nav list
+// .nav.flat.connected - combined inline nav list style
+// .nav.flat.connected.rounded.primary - primary colored nav list
+// .nav.flat.connected.rounded.light-grey - light grey colored nav list
+// .nav.flat.connected.rounded.notice - notice colored nav list
+// .nav.flat.connected.rounded - notice colored nav list
 //  
 // Styleguide components.lists.
 
@@ -72,6 +72,7 @@
     li {
       .pull-left();
       .reset-spacing(0, 7px 10px);
+      display: inline-block;
       border-right: 1px solid rgba(0,0,0,0.1);
       &:last-child {
         border-right: none;

@@ -7,11 +7,11 @@
 // 
 // .striped - primary striped table style
 // .striped.large.hover - info and striped table style
-// .primary.striped.small.hover - info table style
+// .warm-grey.striped.small.hover - info table style
 //  
 // Styleguide components.tables.
 
-.table-accent(@border: @color-grey-default-accent, @bg: @color-light, @color: @color-light) {
+.table-accent(@bg: @color-light, @border: @color-grey-default-accent, @color: @color-light) {
   th {
     color: @color;
   }
@@ -32,7 +32,7 @@
       tr {
         background: @bg;
         &:nth-child(even) {
-          background: mix(@color-light, @border, 80%);
+          background: mix(@color, @bg, 10%);
         }
       }
     }
@@ -42,8 +42,8 @@
       th,
       td {
         &:hover {
-          background: mix(@color, @border, 70%);
-          color: darken(@border, 12%);
+          background: mix(@bg, @color, 90%);
+          // color: mix(@border, @bg, 12%);
         }
       }
     }
@@ -62,8 +62,8 @@
     .reset-spacing(0, 5px);
   }
   .table-accent();
-  &.primary {
-    .table-accent(@color-primary);
+  &.warm-grey {
+    .table-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-grey-dark);
   }
   &.small {
     th,
