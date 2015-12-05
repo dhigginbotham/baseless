@@ -1714,27 +1714,6 @@ td {
 .bs-table.info.hover tbody td:hover {
   background: #96c3c8;
 }
-.bs-table.inverted th {
-  color: #FFF;
-}
-.bs-table.inverted th,
-.bs-table.inverted td {
-  border: 1px solid #333;
-}
-.bs-table.inverted thead tr th,
-.bs-table.inverted thead tr td {
-  background: #333;
-}
-.bs-table.inverted.striped tbody tr {
-  background: #FFF;
-}
-.bs-table.inverted.striped tbody tr:nth-child(even) {
-  background: #404040;
-}
-.bs-table.inverted.hover tbody th:hover,
-.bs-table.inverted.hover tbody td:hover {
-  background: #525252;
-}
 .bs-table.small th,
 .bs-table.small td {
   font-size: 14px;
