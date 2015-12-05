@@ -43,7 +43,7 @@
   
   cursor: pointer;
 
-  .reset-spacing(0, (@typo-font-size-base / 1.5));
+  .reset-spacing(0, (@typo-font-size-base / 1.5) @typo-font-size-base);
 
   border: 0;
   display: inline-block;
@@ -77,22 +77,22 @@
 
   &.large {
     font-size: @typo-font-size-large;
-    .reset-spacing(0, (@typo-font-size-large / 1.5));
+    .reset-spacing(0, (@typo-font-size-large / 1.5) @typo-font-size-large);
   }
 
   &.small {
     font-size: @typo-font-size-small;
-    .reset-spacing(0, (@typo-font-size-small / 1.5));
+    .reset-spacing(0, (@typo-font-size-small / 1.5) @typo-font-size-small);
   }
   
   &.medium {
     font-size: @typo-font-size-medium;
-    .reset-spacing(0, (@typo-font-size-medium / 1.5));
+    .reset-spacing(0, (@typo-font-size-medium / 1.5) @typo-font-size-medium);
   }
   
   &.mini {
     font-size: @typo-font-size-mini;
-    .reset-spacing(0, (@typo-font-size-mini / 1.5));
+    .reset-spacing(0, (@typo-font-size-mini / 1.5) @typo-font-size-mini);
   }
 
   &.primary {
@@ -112,7 +112,7 @@
   }
   
   &.info {
-    .btn-accent(@color-info);
+    .btn-accent(@color-info, @color-light);
   }
   
   &.text {

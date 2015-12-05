@@ -8,13 +8,21 @@
 // .striped - striped table style
 // .small - small table style
 // .large - large table style
+// .primary - primary table style
+// .success - success table style
+// .warning - warning table style
+// .notice - notice table style
 // .info - info table style
+// .inverted - inverted table style
 // .info.striped - info and striped table style
 // .info.striped.hover - info and striped table style
 // 
 // Styleguide 2.9.
 
-.table-accent(@border: @color-grey-default-accent, @bg: @color-light) {
+.table-accent(@border: @color-grey-default-accent, @bg: @color-light, @color: @color-light) {
+  th {
+    color: @color;
+  }
   th,
   td {
     border: 1px solid @border;
@@ -23,16 +31,16 @@
     tr {
       th,
       td {
-        background: lighten(@border, 10%);
+        background: lighten(@border, 2%);
       }
     }
   }
   &.striped {
     tbody {
       tr {
-        background: lighten(@border, 15%);
+        background: lighten(@border, 3%);
         &:nth-child(odd) {
-          background: @bg;
+          background: lighten(desaturate(@bg, 30%), 6%);
         }
       }
     }
@@ -41,7 +49,7 @@
     th,
     td {
       &:hover {
-        background: lighten(@border, 10%);
+        background: lighten(@border, 2%);
       }
     }
   }
@@ -58,8 +66,23 @@
   }
 
   .table-accent();
+  &.primary {
+    .table-accent(@color-primary);
+  }
+  &.success {
+    .table-accent(@color-success);
+  }
+  &.warning {
+    .table-accent(@color-warning);
+  }
+  &.notice {
+    .table-accent(@color-notice);
+  }
   &.info {
-    .table-accent(@color-info);
+    .table-accent(@color-info, @color-light);
+  }
+  &.inverted {
+    .table-accent(@color-inverted);
   }
   &.small {
     th,
