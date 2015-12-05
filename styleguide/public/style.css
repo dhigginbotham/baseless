@@ -738,7 +738,7 @@ td {
 .bs-btn {
   cursor: pointer;
   margin: 0;
-  padding: 6px 12px;
+  padding: 7.05882353px 12px;
   border: 0;
   display: inline-block;
   font-family: "Open Sans", Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -796,22 +796,22 @@ td {
 .bs-btn.large {
   font-size: 18px;
   margin: 0;
-  padding: 12px 18px;
+  padding: 10.58823529px 18px;
 }
 .bs-btn.small {
   font-size: 14px;
   margin: 0;
-  padding: 9.33333333px 14px;
+  padding: 8.23529412px 14px;
 }
 .bs-btn.medium {
   font-size: 16px;
   margin: 0;
-  padding: 10.66666667px 16px;
+  padding: 9.41176471px 16px;
 }
 .bs-btn.mini {
   font-size: 12px;
   margin: 0;
-  padding: 8px 12px;
+  padding: 7.05882353px 12px;
 }
 .bs-btn.primary {
   background: #5486a3;
@@ -1024,11 +1024,13 @@ td {
   color: #333333;
 }
 .bs-form {
+  vertical-align: middle;
   margin: 0;
   padding: 0;
 }
 .bs-form-group {
-  margin: 3px 0;
+  vertical-align: middle;
+  margin: 10px 5px;
   padding: 0;
 }
 .bs-form-group:before,
@@ -1048,22 +1050,36 @@ td {
   clear: both;
 }
 .bs-form-group label {
+  margin-bottom: 3px;
   font-weight: 600;
+  font-size: 14px;
   display: block;
 }
 .bs-form-group.inline label {
   display: inline-block;
 }
 .bs-form-elem {
+  font-size: 12px;
   margin: 0;
-  padding: 3px 7px;
+  padding: 7.5px 12px;
   border-radius: 4px 4px 4px 4px;
+  min-height: 35px;
+  display: inline-block;
   border: 1px solid #ccc;
-  box-shadow: inset 1px 1px 0 #eee;
+  box-shadow: inset 1px 1px 0 #eee, inset -1px -1px 0 #eee;
   background: #FFF;
+  position: relative;
+  top: 1px;
 }
 .bs-form-elem.full-width {
   width: 100%;
+}
+select.bs-form-elem {
+  height: 35px;
+}
+textarea.bs-form-elem {
+  min-height: 85px;
+  min-width: 300px;
 }
 .bs-form-control {
   margin: 10px 0 0;

@@ -8,14 +8,18 @@
 
 
 .@{css-prefix}form {
+  vertical-align: middle;
   .reset-spacing(0,0);
 }
 
 .@{css-prefix}form-group {
-  .reset-spacing(3px 0, 0);
+  vertical-align: middle;
+  .reset-spacing(10px 5px, 0);
   .clearfix();
   label {
+    margin-bottom: 3px;
     font-weight: @typo-font-weight-bold;
+    font-size: @typo-font-size-small;
     display: block;
   }
   &.inline {
@@ -26,14 +30,29 @@
 }
 
 .@{css-prefix}form-elem {
-  .reset-spacing(0, 3px 7px);
+  font-size: @typo-font-size-base;
+  .reset-spacing(0, (@typo-font-size-base / 1.6) @typo-font-size-base);
   .border-radius();
+  min-height: 35px;
+  display: inline-block;
   border: 1px solid @color-grey-default-accent;
-  box-shadow: inset 1px 1px 0 @color-grey-default;
+  box-shadow: inset 1px 1px 0 @color-grey-default,
+              inset -1px -1px 0 @color-grey-default;
   background: @color-light;
+  position: relative;
+  top: 1px;
   &.full-width {
     width: 100%;
   }
+}
+
+select.@{css-prefix}form-elem {
+  height: 35px;
+}
+
+textarea.@{css-prefix}form-elem {
+  min-height: 85px;
+  min-width: 300px;
 }
 
 .@{css-prefix}form-control {

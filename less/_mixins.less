@@ -181,3 +181,13 @@
     border-color: transparent;
   }
 }
+
+.padding-generator(@font-size: @typo-font-size-base, @offset: 1.7) {
+  padding: (@font-size / @offset) @font-size;
+}
+
+.nuke-appearance() {  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
