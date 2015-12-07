@@ -718,8 +718,6 @@ td {
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 0 #eee, inset -1px -1px 0 #eee;
   background: #FFF;
-  position: relative;
-  top: 1px;
 }
 .bs-form-elem.full-width {
   width: 100%;
