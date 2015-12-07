@@ -30,4 +30,5 @@ screenshots
 
 # ide
 .vscode
+.idea
 typings
