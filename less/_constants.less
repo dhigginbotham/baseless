@@ -153,15 +153,59 @@
 // grid constants
 //
 
-@grid-container-width:                                @breakpoint-desktop;
-@grid-columns:                                        12;
-@grid-column-padding:                                 10px;
-@grid-float-breakpoint:                               @breakpoint-tablet-ls;
+// row column sizes
+@onecolwidth: 8.33333%;
+@twocolwidth: 16.66666%;
+@threecolwidth: 25%;
+@fourcolwidth: 33.33333%;
+@fivecolwidth: 41.66666%;
+@sixcolwidth: 50%;
+@sevencolwidth: 58.33333%;
+@eightcolwidth: 66.66666%;
+@ninecolwidth: 75%;
+@tencolwidth: 83.33333%;
+@elevencolwidth: 91.66666%;
+@twelvecolwidth: 100%;
+
+// gutter sizes
+@gutter-width: .5em;
+@gutter-width-skinny: .3em;
+@gutter-width-thick: 1em;
+
+// base breakpoint sizes
+@tabletbreakpoint:                480px;
+@tabletlsbreakpoint:              768px;
+@desktopbreakpoint:               1000px;
+
+// hidden constants, they're variablized so you
+// shouldn't have to ever touch these...
+@phone-hidden-breakpoint-max:     (@tabletbreakpoint - 1);        //479px;
+@tablet-hidden-breakpoint-min:    @tabletbreakpoint;              //480px;
+@tablet-hidden-breakpoint-max:    (@tabletlsbreakpoint - 1);      //767px;
+@tabletls-hidden-breakpoint-min:  @tabletlsbreakpoint;            //768px;
+@tabletls-hidden-breakpoint-max:  (@desktopbreakpoint - 1);       //999px;
+@desktop-hidden-breakpoint-min:   @desktopbreakpoint;             //1000px;
+
+// visible only sizes
+@tablet-visible-breakpoint:       @tabletbreakpoint;
+@tabletls-visible-breakpoint:     @tabletlsbreakpoint;
+@desktop-visible-breakpoint:      @desktopbreakpoint;
+
+// hidden media query targets
+@phone-hidden-breakpoint-media: ~"(max-width: @{phone-hidden-breakpoint-max})";
+@tablet-hidden-breakpoint-media: ~"(min-width: @{tablet-hidden-breakpoint-min}) and (max-width: @{tablet-hidden-breakpoint-max})";
+@tabletls-hidden-breakpoint-media: ~"(min-width: @{tabletls-hidden-breakpoint-min}) and (max-width: @{tabletls-hidden-breakpoint-max})";
+@desktop-hidden-breakpoint-media: ~"(min-width: @{desktop-hidden-breakpoint-min})";
+
+// visible media query targets
+@phone-visible-breakpoint-media: ~"(max-width: @{tabletbreakpoint})";
+@tablet-visible-breakpoint-media: ~"(min-width: @{tablet-visible-breakpoint}) and (max-width: @{tabletlsbreakpoint})";
+@tabletls-visible-breakpoint-media: ~"(min-width: @{tabletls-visible-breakpoint}) and (max-width: @{desktopbreakpoint})";
+@desktop-visible-breakpoint-media: ~"(min-width: @{desktop-visible-breakpoint})";
 
 //
 // typography constants
 //
-
 @typo-font-size-large:                                18px;
 @typo-font-size-medium:                               16px;
 @typo-font-size-small:                                14px;
@@ -200,4 +244,4 @@
 @elem-line-height-base:                               @typo-font-size-vertical-rhythm;
 @elem-border-radius-base:							  4px;
 @elem-border-radius-label: 							  15px;
-@elem-default-padding:                                @grid-column-padding;
+@elem-default-padding:                                10px;

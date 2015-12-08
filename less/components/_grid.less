@@ -51,51 +51,305 @@
 //  
 // Styleguide components.grid.
 
+
+.createColumn(@width, @columnSize) {
+  &.@{columnSize} {
+    width: @width;
+  }
+}
+
+.no-start-end-gutters(){
+  .row{
+    margin: 0;
+  }
+  & > .col{
+    &:first-of-type{
+      padding-left: 0;
+    }
+    &:last-of-type{
+      padding-right: 0;
+    }
+  }
+}
+
+.push(@size; @screen: default){
+  position: relative; /* No Matter What Screen Sizes, the position needs to be relative. */
+
+  .screen_loop(@index, @stop) when (@index <= @stop){
+    @type: extract(@screen, @index);
+
+    & when (@type = default){
+      @offset: "@{size}colwidth";
+      left: @@offset;
+    }
+    & when (@type = tablet){
+      @media (min-width: @tabletbreakpoint){
+        @offset: "@{size}colwidth";
+        left: @@offset;
+      }
+    }
+    & when (@type = hf){
+      @media (min-width: @hfbreakpoint){
+        @offset: "@{size}colwidth";
+        left: @@offset;
+      }
+    }
+    & when (@type = tabletls){
+      @media (min-width: @tabletlsbreakpoint){
+        @offset: "@{size}colwidth";
+        left: @@offset;
+      }
+    }
+    & when (@type = desktop){
+      @media (min-width: @desktopbreakpoint){
+        @offset: "@{size}colwidth";
+        left: @@offset;
+      }
+    }
+
+    .screen_loop(@index+1,@stop);
+  }
+
+  @num: length(@screen);
+  .screen_loop(1, @num);
+}
+.pull(@size; @screen: default){
+  position: relative; /* No Matter What Screen Sizes, the position needs to be relative. */
+
+  .screen_loop(@index, @stop) when (@index <= @stop){
+    @type: extract(@screen, @index);
+
+    & when (@type = default){
+      @offset: "@{size}colwidth";
+      right: @@offset;
+    }
+    & when (@type = tablet){
+      @media (min-width: @tabletbreakpoint){
+        @offset: "@{size}colwidth";
+        right: @@offset;
+      }
+    }
+    & when (@type = hf){
+      @media (min-width: @hfbreakpoint){
+        @offset: "@{size}colwidth";
+        right: @@offset;
+      }
+    }
+    & when (@type = tabletls){
+      @media (min-width: @tabletlsbreakpoint){
+        @offset: "@{size}colwidth";
+        right: @@offset;
+      }
+    }
+    & when (@type = desktop){
+      @media (min-width: @desktopbreakpoint){
+        @offset: "@{size}colwidth";
+        right: @@offset;
+      }
+    }
+
+    .screen_loop(@index+1,@stop);
+  }
+
+  @num: length(@screen);
+  .screen_loop(1, @num);
+}
+
 .container {
-  max-width: @grid-container-width;
+  max-width: @desktopbreakpoint;
   .clearfix();
   .center-block();
 }
 
+/*
+   Based off of the:
+
+   Dead Simple Grid (c) 2012 Vladimir Agafonkin
+   http://mourner.github.io/dead-simple-grid/
+*/
+
 .row {
-  .grid-row();
+  .row {
+    margin: 0 -@gutter-width;
+  }
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  &.no-start-end-gutter{
+    .no-start-end-gutters();
+  }
+  &.skinny-gutter {
+    .row {
+      margin: 0 -@gutter-width-skinny;
+    }
+    & > .col{
+      padding: 0 @gutter-width-skinny;
+    }
+    &.no-start-end-gutter{
+      .no-start-end-gutters();
+    }
+  }
+  &.thick-gutter{
+    .row {
+      margin: 0 -@gutter-width-thick;
+    }
+    & > .col{
+      padding: 0 @gutter-width-thick;
+    }
+    &.no-start-end-gutter{
+      .no-start-end-gutters();
+    }
+  }
+}
+
+.col {
+  float: left;
+  width: 100%;
+  padding: 0 @gutter-width;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.col {
+  .createColumn(@onecolwidth, phone-onecol);
+  .createColumn(@twocolwidth, phone-twocol);
+  .createColumn(@threecolwidth, phone-threecol);
+  .createColumn(@fourcolwidth, phone-fourcol);
+  .createColumn(@fivecolwidth, phone-fivecol);
+  .createColumn(@sixcolwidth, phone-sixcol);
+  .createColumn(@sevencolwidth, phone-sevencol);
+  .createColumn(@eightcolwidth, phone-eightcol);
+  .createColumn(@ninecolwidth, phone-ninecol);
+  .createColumn(@tencolwidth, phone-tencol);
+  .createColumn(@elevencolwidth, phone-elevencol);
+  .createColumn(@twelvecolwidth, phone-twelvecol);
+}
+
+@media (max-width: @phone-hidden-breakpoint-max) {
+  .phone-hidden {
+    display: none;
+  }
+}
+
+
+@media (max-width: @tabletbreakpoint) {
+  .tablet-visible,
+  .tabletls-visible,
+  .desktop-visible {
+    display: none;
+  }
+  .phone-visible {
+    display: inherit;
+  }
+}
+
+
+// tablets (~portrait):
+@media (min-width: @tabletbreakpoint) {
   .col {
-    .grid-column(12);
-    &.twelvecol {
-      .grid-column(12);
-    }
-    &.elevencol {
-      .grid-column(11);
-    }
-    &.tencol {
-      .grid-column(10);
-    }
-    &.ninecol {
-      .grid-column(9);
-    }
-    &.eightcol {
-      .grid-column(8);
-    }
-    &.sevencol {
-      .grid-column(7);
-    }
-    &.sixcol {
-      .grid-column(6);
-    }
-    &.fivecol {
-      .grid-column(5);
-    }
-    &.fourcol {
-      .grid-column(4);
-    }
-    &.threecol {
-      .grid-column(3);
-    }
-    &.twocol {
-      .grid-column(2);
-    }
-    &.onecol {
-      .grid-column(1);
-    }
+    .createColumn(@onecolwidth, tablet-onecol);
+    .createColumn(@twocolwidth, tablet-twocol);
+    .createColumn(@threecolwidth, tablet-threecol);
+    .createColumn(@fourcolwidth, tablet-fourcol);
+    .createColumn(@fivecolwidth, tablet-fivecol);
+    .createColumn(@sixcolwidth, tablet-sixcol);
+    .createColumn(@sevencolwidth, tablet-sevencol);
+    .createColumn(@eightcolwidth, tablet-eightcol);
+    .createColumn(@ninecolwidth, tablet-ninecol);
+    .createColumn(@tencolwidth, tablet-tencol);
+    .createColumn(@elevencolwidth, tablet-elevencol);
+    .createColumn(@twelvecolwidth, tablet-twelvecol);
+  }
+}
+
+@media (min-width: @tablet-hidden-breakpoint-min) and (max-width: @tablet-hidden-breakpoint-max) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+@media (min-width: @tablet-visible-breakpoint) and (max-width: @tabletlsbreakpoint) {
+  .phone-visible,
+  .tabletls-visible,
+  .desktop-visible {
+    display: none;
+  }
+  .tablet-visible {
+    display: inherit;
+  }
+}
+
+// tablets (~portrait):
+@media (min-width: @tabletlsbreakpoint) {
+  .col {
+    .createColumn(@onecolwidth, tabletls-onecol);
+    .createColumn(@twocolwidth, tabletls-twocol);
+    .createColumn(@threecolwidth, tabletls-threecol);
+    .createColumn(@fourcolwidth, tabletls-fourcol);
+    .createColumn(@fivecolwidth, tabletls-fivecol);
+    .createColumn(@sixcolwidth, tabletls-sixcol);
+    .createColumn(@sevencolwidth, tabletls-sevencol);
+    .createColumn(@eightcolwidth, tabletls-eightcol);
+    .createColumn(@ninecolwidth, tabletls-ninecol);
+    .createColumn(@tencolwidth, tabletls-tencol);
+    .createColumn(@elevencolwidth, tabletls-elevencol);
+    .createColumn(@twelvecolwidth, tabletls-twelvecol);
+  }
+}
+
+@media (min-width: @tabletls-hidden-breakpoint-min) and (max-width: @tabletls-hidden-breakpoint-max) {
+  .tabletls-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: @tabletls-visible-breakpoint) and (max-width: @desktopbreakpoint) {
+  .phone-visible,
+  .tablet-visible,
+  .desktop-visible {
+    display: none;
+  }
+  .tabletls-visible {
+    display: inherit;
+  }
+}
+
+// desktop/big-enough-tablet
+@media (min-width: @desktopbreakpoint) {
+  .col {
+    .createColumn(@onecolwidth, onecol);
+    .createColumn(@twocolwidth, twocol);
+    .createColumn(@threecolwidth, threecol);
+    .createColumn(@fourcolwidth, fourcol);
+    .createColumn(@fivecolwidth, fivecol);
+    .createColumn(@sixcolwidth, sixcol);
+    .createColumn(@sevencolwidth, sevencol);
+    .createColumn(@eightcolwidth, eightcol);
+    .createColumn(@ninecolwidth, ninecol);
+    .createColumn(@tencolwidth, tencol);
+    .createColumn(@elevencolwidth, elevencol);
+    .createColumn(@twelvecolwidth, twelvecol);
+  }
+}
+
+@media (min-width: @desktop-hidden-breakpoint-min) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-visible-breakpoint) {
+  .phone-visible,
+  .tablet-visible,
+  .tabletls-visible {
+    display: none;
+  }
+  .desktop-visible {
+    display: inherit;
   }
 }
