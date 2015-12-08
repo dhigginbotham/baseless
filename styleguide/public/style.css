@@ -1102,10 +1102,13 @@ td {
   flex: 1;
 }
 .bs-btn-group .bs-btn {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+.bs-btn-group .bs-btn:last-child {
+  border-radius: 0 4px 4px 0;
 }
 .bs-form {
   margin: 0;
@@ -1144,6 +1147,10 @@ td {
 }
 .bs-form-group.inline label {
   display: inline-block;
+}
+.bs-form-descriptor {
+  color: #999;
+  font-style: italic;
 }
 .bs-form-elem {
   display: inline-block;

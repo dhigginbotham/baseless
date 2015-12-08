@@ -3,6 +3,9 @@
     <label>Text Form Example</label>
     <input type="text" class="{{cssPrefix}}form-elem" placeholder="Placeholder text.."/>
     <button class="{{cssPrefix}}btn warning" type="button">Submit</button>
+    <div class="{{cssPrefix}}form-descriptor">
+      Some sample stuff here
+    </div>
   </div>
   <div class="{{cssPrefix}}form-group">
     <label>Textarea Form Example</label>
@@ -14,5 +17,23 @@
       <option value="null">Example Option</option>
     </select>
     <button class="{{cssPrefix}}btn warning" type="button">Submit</button>
+  </div>
+  <div class="{{cssPrefix}}form-group inline">
+    <input type="radio" value="male" id="male" name="sex"/>
+    <label for="male">Male</label>
+    <input type="radio" value="female" id="female" name="sex"/>
+    <label for="female">Female</label>
+  </div>
+  <div class="{{cssPrefix}}form-group">
+    <div class="row">
+      <div class="col sixcol">
+        <label for="male2">Male</label>
+        <input type="checkbox" value="male2" id="male2" name="sex2"/>
+      </div>
+      <div class="col sixcol">
+        <label for="female2">Female</label>
+        <input type="checkbox" value="female2" id="female2" name="sex2"/>
+      </div>
+    </div>
   </div>
 </form>

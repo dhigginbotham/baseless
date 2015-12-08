@@ -126,6 +126,7 @@
   &.success {
     .btn-accent(@color-success, @color-light);
   }
+
   
   &.warning {
     .btn-accent(@color-warning, @color-light);
@@ -167,7 +168,7 @@
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-    
+
   .@{css-prefix}form-elem {
     .border-radius(@elem-border-radius-base,0,0,@elem-border-radius-base);
     -webkit-flex: 1;
@@ -176,7 +177,10 @@
   }
   
   .@{css-prefix}btn {
-    .border-radius(0,@elem-border-radius-base,@elem-border-radius-base,0);
+    .border-radius(0);
+    &:last-child {
+      .border-radius(0,@elem-border-radius-base,@elem-border-radius-base,0);
+    }
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
