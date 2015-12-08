@@ -8,8 +8,8 @@
 var path = require('path');
 
 var config = {
-  cssPrefix: 'ha-',
-  title: 'HomeAdvisor',
+  cssPrefix: 'bs-',
+  title: 'BASELESS',
   less: 'less/style.less',
   globs: {
     dist: './dist/**/*',
