@@ -45,7 +45,7 @@
       display: inline-block;
     }
   }
-  
+    
   &.nav {
     li {
       .reset-spacing(3px 2px 3px 0, 4px 10px);
@@ -64,6 +64,37 @@
       .list-accent(@color-notice, @color-light);
     }
   }
+
+  // Block lists
+  //
+  // block lists are helpful
+  //
+  // <ul class="bs-list block-list">
+  //   <li class="list-heading">
+  //     Block List Heading
+  //   </li>
+  //   <li>List Item 1</li>
+  //   <li>List Item 2</li>
+  //   <li>List Item 3</li>
+  //   <li>List Item 4</li>
+  //   <li>List Item 5</li>
+  // </ul>
+  //
+  // Styleguide components.lists.block-list
+
+  &.block-list {
+    .reset-spacing();
+    .list-heading {
+      font-weight: @typo-font-weight-bold;
+      color: @color-grey-light;
+    }
+    li {
+      .reset-spacing(0,10px 0);
+      display: block;
+      border-bottom: 1px solid @color-grey-default-accent;
+    }
+  }
+  
   &.connected {
     width: auto;
     display: inline-block;
@@ -79,4 +110,5 @@
       }
     }
   }
+  
 }
