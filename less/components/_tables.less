@@ -11,7 +11,7 @@
 //  
 // Styleguide components.tables.
 
-.table-accent(@bg: @color-light, @border: @color-grey-default-accent, @color: @color-light) {
+.table-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-grey-dark) {
   th {
     color: @color;
   }
@@ -23,7 +23,7 @@
     tr {
       th,
       td {
-        background: @border;
+        background: darken(@bg, 5%);
       }
     }
   }
@@ -32,7 +32,7 @@
       tr {
         background: @bg;
         &:nth-child(even) {
-          background: mix(@color, @bg, 10%);
+          background: lighten(@bg, 5%);
         }
       }
     }
@@ -42,8 +42,7 @@
       th,
       td {
         &:hover {
-          background: mix(@bg, @color, 90%);
-          // color: mix(@border, @bg, 12%);
+          background: darken(@bg, 7%);
         }
       }
     }
@@ -63,7 +62,7 @@
   }
   .table-accent();
   &.warm-grey {
-    .table-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-grey-dark);
+    .table-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-grey-darkest);
   }
   &.small {
     th,

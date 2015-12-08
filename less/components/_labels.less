@@ -21,17 +21,19 @@
   .card-generator(@bg, transparent, @color);
 }
 
-
 .@{css-prefix}label {
+
   .reset-spacing(0, 0 7px 2px);
   .border-radius(@elem-border-radius-label);
+  .disable-selection();
+
   display: inline-block;
   font-weight: @typo-font-weight-bold;
   vertical-align: middle;
   text-align: center;
   font-size: (@typo-font-size-base - 3px);
   cursor: default;
-  .disable-selection();
+
   &.small {
     font-size: @typo-font-size-small - 3px;
   }
@@ -41,7 +43,9 @@
   &.mini {
     font-size: @typo-font-size-mini - 3px;
   }
+
   .label-accent();
+
   &.box {
     .border-radius();
   }

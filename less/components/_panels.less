@@ -12,7 +12,7 @@
 //  
 // Styleguide components.panels.
 
-.panel-accent(@bg: #f8f7f1, @border: #e0d5c8, @color: @color-grey-darkest) {
+.panel-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-grey-darkest) {
   border: 1px solid @border;
   .panel-heading {
     color: @color;
@@ -57,10 +57,11 @@
       }
     }
   }
+
+  .panel-accent();
   
-  &.utility,
-  &.default {
-    .panel-accent();
+  &.utility {
+    .panel-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-grey-darkest);
   }
 
   &.primary {
