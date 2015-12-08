@@ -28,7 +28,12 @@
   }
 
   &:active {
-    background: darken(@bg, 8%);
+    background: darken(@bg, 10%);
+  }
+  
+  &:focus {
+    background: darken(@bg, 3%);
+    outline: thin dotted lighten(@bg, 10%);
   }
 
   &:visited {

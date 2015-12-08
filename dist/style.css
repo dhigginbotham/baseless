@@ -790,7 +790,11 @@ td {
   background: #d4d4d4;
 }
 .bs-btn:active {
-  background: #d2d2d2;
+  background: #cdcdcd;
+}
+.bs-btn:focus {
+  background: #dedede;
+  outline: thin dotted #ffffff;
 }
 .bs-btn:visited {
   color: #333;
@@ -844,7 +848,11 @@ td {
   background: #48738b;
 }
 .bs-btn.primary:active {
-  background: #467088;
+  background: #436a81;
+}
+.bs-btn.primary:focus {
+  background: #4f7e99;
+  outline: thin dotted #739eb7;
 }
 .bs-btn.primary:visited {
   color: #FFF;
@@ -878,7 +886,11 @@ td {
   background: #558b19;
 }
 .bs-btn.success:active {
-  background: #528719;
+  background: #4d7e17;
+}
+.bs-btn.success:focus {
+  background: #5f9c1d;
+  outline: thin dotted #81d427;
 }
 .bs-btn.success:visited {
   color: #FFF;
@@ -912,7 +924,11 @@ td {
   background: #e97e08;
 }
 .bs-btn.warning:active {
-  background: #e47c08;
+  background: #da7608;
+}
+.bs-btn.warning:focus {
+  background: #f6890f;
+  outline: thin dotted #f9a84f;
 }
 .bs-btn.warning:visited {
   color: #FFF;
@@ -946,7 +962,11 @@ td {
   background: #8a1313;
 }
 .bs-btn.notice:active {
-  background: #851212;
+  background: #7c1111;
+}
+.bs-btn.notice:focus {
+  background: #9c1515;
+  outline: thin dotted #d61d1d;
 }
 .bs-btn.notice:visited {
   color: #FFF;
@@ -980,7 +1000,11 @@ td {
   background: #579ea6;
 }
 .bs-btn.info:active {
-  background: #559ba3;
+  background: #52959c;
+}
+.bs-btn.info:focus {
+  background: #64a6ae;
+  outline: thin dotted #8fbfc5;
 }
 .bs-btn.info:visited {
   color: #FFF;
@@ -1016,6 +1040,10 @@ td {
 .bs-btn.text:active {
   background: rgba(0, 0, 0, 0);
 }
+.bs-btn.text:focus {
+  background: rgba(0, 0, 0, 0);
+  outline: thin dotted rgba(26, 26, 26, 0);
+}
 .bs-btn.text:visited {
   color: #5486a3;
 }
@@ -1048,7 +1076,11 @@ td {
   background: #212121;
 }
 .bs-btn.inverted:active {
-  background: #1f1f1f;
+  background: #1a1a1a;
+}
+.bs-btn.inverted:focus {
+  background: #2b2b2b;
+  outline: thin dotted #4d4d4d;
 }
 .bs-btn.inverted:visited {
   color: #FFF;
@@ -1084,6 +1116,7 @@ td {
 .bs-form-group {
   margin: 10px 5px;
   padding: 0;
+  overflow: hidden;
 }
 .bs-form-group:before,
 .bs-form-group:after {
