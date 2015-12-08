@@ -6,11 +6,6 @@
 // 
 // .flat - flattens list style
 // .inline - inline list style
-// .nav.flat.connected - combined inline nav list style
-// .nav.flat.connected.rounded.primary - primary colored nav list
-// .nav.flat.connected.rounded.light-grey - light grey colored nav list
-// .nav.flat.connected.rounded.notice - notice colored nav list
-// .nav.flat.connected.rounded - notice colored nav list
 //  
 // Styleguide components.lists.
 
@@ -45,7 +40,20 @@
       display: inline-block;
     }
   }
-    
+  
+  // Nagivation Lists
+  //
+  // nav bar style lists
+  //
+  // Markup: docs/nav-lists.hbs
+  //
+  // .rounded.primary - primary colored nav list
+  // .rounded.light-grey - light grey colored nav list
+  // .rounded.inverted - inverted colored nav list
+  // .rounded - inverted colored nav list
+  //
+  // Styleguide: components.lists.nav-lists
+  
   &.nav {
     li {
       .reset-spacing(3px 2px 3px 0, 4px 10px);
@@ -60,11 +68,26 @@
     &.light-grey {
       .list-accent(@color-card-light-grey);
     }
-    &.notice {
-      .list-accent(@color-notice, @color-light);
+    &.inverted {
+      .list-accent(@color-inverted, @color-light);
     }
   }
 
+  &.connected {
+    width: auto;
+    vertical-align: middle;
+    .reset-spacing(5px 0);
+    li {
+      .pull-left();
+      .reset-spacing(0, 7px 10px);
+      display: inline-block;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  
   // Block lists
   // 
   // block style, lists
@@ -80,25 +103,9 @@
       color: @color-grey-light;
     }
     li {
-      .reset-spacing(0,@elem-default-padding 0);
+      .reset-spacing(0,10px 0);
       display: block;
       border-bottom: 1px solid @color-grey-default-accent;
-    }
-  }
-  
-  &.connected {
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-    .reset-spacing(5px 0);
-    li {
-      .pull-left();
-      .reset-spacing(0, 7px @elem-default-padding);
-      display: inline-block;
-      border-right: 1px solid rgba(0,0,0,0.1);
-      &:last-child {
-        border-right: none;
-      }
     }
   }
   

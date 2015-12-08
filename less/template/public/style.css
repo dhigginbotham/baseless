@@ -1561,22 +1561,38 @@ td {
 .bs-list.nav.light-grey li a {
   color: #333;
 }
-.bs-list.nav.notice {
-  background: #A91717;
+.bs-list.nav.inverted {
+  background: #333;
   border: 1px solid transparent;
   color: #FFF;
 }
-.bs-list.nav.notice.no-border {
+.bs-list.nav.inverted.no-border {
   border-color: transparent;
 }
-.bs-list.nav.notice li {
+.bs-list.nav.inverted li {
   font-weight: 600;
 }
-.bs-list.nav.notice li:hover {
-  background: #971515;
+.bs-list.nav.inverted li:hover {
+  background: #292929;
 }
-.bs-list.nav.notice li a {
+.bs-list.nav.inverted li a {
   color: #FFF;
+}
+.bs-list.connected {
+  width: auto;
+  vertical-align: middle;
+  margin: 5px 0;
+  padding: 0;
+}
+.bs-list.connected li {
+  float: left;
+  margin: 0;
+  padding: 7px 10px;
+  display: inline-block;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bs-list.connected li:last-child {
+  border-right: none;
 }
 .bs-list.block-list {
   margin: 0;
@@ -1591,23 +1607,6 @@ td {
   padding: 10px 0;
   display: block;
   border-bottom: 1px solid #ccc;
-}
-.bs-list.connected {
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 5px 0;
-  padding: 0;
-}
-.bs-list.connected li {
-  float: left;
-  margin: 0;
-  padding: 7px 10px;
-  display: inline-block;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-.bs-list.connected li:last-child {
-  border-right: none;
 }
 .bs-panel {
   margin: 0;
@@ -1661,6 +1660,9 @@ td {
 .bs-panel .panel-list-item {
   border-top: 1px solid #ccc;
 }
+.bs-panel .panel-list-item.hover:hover {
+  background: #f7f7f7;
+}
 .bs-panel.utility {
   border: 1px solid #e6e6e6;
 }
@@ -1671,6 +1673,9 @@ td {
 }
 .bs-panel.utility .panel-list-item {
   border-top: 1px solid #e6e6e6;
+}
+.bs-panel.utility .panel-list-item.hover:hover {
+  background: #fcfbf8;
 }
 .bs-panel.primary {
   border: 1px solid #436a81;
@@ -1683,6 +1688,9 @@ td {
 .bs-panel.primary .panel-list-item {
   border-top: 1px solid #436a81;
 }
+.bs-panel.primary .panel-list-item.hover:hover {
+  background: #aac3d1;
+}
 .bs-panel.success {
   border: 1px solid #4d7e17;
 }
@@ -1694,6 +1702,9 @@ td {
 .bs-panel.success .panel-list-item {
   border-top: 1px solid #4d7e17;
 }
+.bs-panel.success .panel-list-item.hover:hover {
+  background: #b3d48f;
+}
 .bs-panel.warning {
   border: 1px solid #da7608;
 }
@@ -1704,6 +1715,9 @@ td {
 }
 .bs-panel.warning .panel-list-item {
   border-top: 1px solid #da7608;
+}
+.bs-panel.warning .panel-list-item.hover:hover {
+  background: #fbc88f;
 }
 .bs-shape {
   display: inline-block;
