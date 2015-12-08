@@ -23,7 +23,7 @@
   border: 2px solid transparent;
   color: @color;
 
-  &:hover {
+  &:hover, &:focus {
     background: darken(@bg, 7%);
   }
 
@@ -32,8 +32,7 @@
   }
   
   &:focus {
-    background: darken(@bg, 3%);
-    outline: thin dotted lighten(@bg, 10%);
+    // outline: thin dotted lighten(@bg, 10%);
   }
 
   &:visited {
