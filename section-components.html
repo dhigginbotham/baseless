@@ -470,7 +470,8 @@ at least was designed with that intention. <code>ie: div.bs-panel.round.info</co
 			<option value="null">example thing</option>
 			<option value="null">example thing</option>
 		</select>
-		<div class="bs-btn primary">Submit</div>
+		<div class="bs-btn primary">Submit 1</div>
+		<div class="bs-btn primary">Submit 2</div>
 	</div>
 </div>
         </div>
@@ -491,7 +492,8 @@ at least was designed with that intention. <code>ie: div.bs-panel.round.info</co
 			&lt;option value&#x3D;&quot;null&quot;&gt;example thing&lt;/option&gt;
 			&lt;option value&#x3D;&quot;null&quot;&gt;example thing&lt;/option&gt;
 		&lt;/select&gt;
-		&lt;div class&#x3D;&quot;bs-btn primary&quot;&gt;Submit&lt;/div&gt;
+		&lt;div class&#x3D;&quot;bs-btn primary&quot;&gt;Submit 1&lt;/div&gt;
+		&lt;div class&#x3D;&quot;bs-btn primary&quot;&gt;Submit 2&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
@@ -929,6 +931,9 @@ offers, as each element is basically at it&#39;s core, a card.</p>
     <label>Text Form Example</label>
     <input type="text" class="bs-form-elem" placeholder="Placeholder text.."/>
     <button class="bs-btn warning" type="button">Submit</button>
+    <div class="bs-form-descriptor">
+      Some sample stuff here
+    </div>
   </div>
   <div class="bs-form-group">
     <label>Textarea Form Example</label>
@@ -940,6 +945,24 @@ offers, as each element is basically at it&#39;s core, a card.</p>
       <option value="null">Example Option</option>
     </select>
     <button class="bs-btn warning" type="button">Submit</button>
+  </div>
+  <div class="bs-form-group inline">
+    <input type="radio" value="male" id="male" name="sex"/>
+    <label for="male">Male</label>
+    <input type="radio" value="female" id="female" name="sex"/>
+    <label for="female">Female</label>
+  </div>
+  <div class="bs-form-group">
+    <div class="row">
+      <div class="col sixcol">
+        <label for="male2">Male</label>
+        <input type="checkbox" value="male2" id="male2" name="sex2"/>
+      </div>
+      <div class="col sixcol">
+        <label for="female2">Female</label>
+        <input type="checkbox" value="female2" id="female2" name="sex2"/>
+      </div>
+    </div>
   </div>
 </form>
 
@@ -953,6 +976,9 @@ offers, as each element is basically at it&#39;s core, a card.</p>
     &lt;label&gt;Text Form Example&lt;/label&gt;
     &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;bs-form-elem&quot; placeholder&#x3D;&quot;Placeholder text..&quot;/&gt;
     &lt;button class&#x3D;&quot;bs-btn warning&quot; type&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+    &lt;div class&#x3D;&quot;bs-form-descriptor&quot;&gt;
+      Some sample stuff here
+    &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;bs-form-group&quot;&gt;
     &lt;label&gt;Textarea Form Example&lt;/label&gt;
@@ -964,6 +990,24 @@ offers, as each element is basically at it&#39;s core, a card.</p>
       &lt;option value&#x3D;&quot;null&quot;&gt;Example Option&lt;/option&gt;
     &lt;/select&gt;
     &lt;button class&#x3D;&quot;bs-btn warning&quot; type&#x3D;&quot;button&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;bs-form-group inline&quot;&gt;
+    &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;male&quot; id&#x3D;&quot;male&quot; name&#x3D;&quot;sex&quot;/&gt;
+    &lt;label for&#x3D;&quot;male&quot;&gt;Male&lt;/label&gt;
+    &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;female&quot; id&#x3D;&quot;female&quot; name&#x3D;&quot;sex&quot;/&gt;
+    &lt;label for&#x3D;&quot;female&quot;&gt;Female&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;bs-form-group&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col sixcol&quot;&gt;
+        &lt;label for&#x3D;&quot;male2&quot;&gt;Male&lt;/label&gt;
+        &lt;input type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;male2&quot; id&#x3D;&quot;male2&quot; name&#x3D;&quot;sex2&quot;/&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col sixcol&quot;&gt;
+        &lt;label for&#x3D;&quot;female2&quot;&gt;Female&lt;/label&gt;
+        &lt;input type&#x3D;&quot;checkbox&quot; value&#x3D;&quot;female2&quot; id&#x3D;&quot;female2&quot; name&#x3D;&quot;sex2&quot;/&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </code></pre>
