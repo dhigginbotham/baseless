@@ -16,7 +16,7 @@
 // 
 // `@css-prefix`
 //
-// Styleguide scaffolding.constants.prefix.
+// Styleguide scaffolding.constants.prefix
 
 // @css-prefix:                                          bs-;
 
@@ -77,7 +77,7 @@
 //    </div>
 // </div>
 // 
-// Styleguide scaffolding.constants.colors.
+// Styleguide scaffolding.constants.colors
 
 @color-primary:                                       #5486a3;//#2371B1; //#1693A7; //#428bca;
 @color-success:                                       #67A91F; //#9EBF24; //#C8CF02; //#5cb85c;
@@ -153,7 +153,7 @@
 // grid constants
 //
 
-@grid-container-width:                                1140px;
+@grid-container-width:                                @breakpoint-desktop;
 @grid-columns:                                        12;
 @grid-column-padding:                                 10px;
 @grid-float-breakpoint:                               @breakpoint-tablet-ls;
@@ -184,9 +184,18 @@
 @typo-font-size:                                      @typo-font-size-base;
 @typo-font-color:                                     @color-grey-dark;
 
+// Element Constants
 //
-// box-sizing constants
+// constants for line-height, border-radius, padding, etc
 //
+// | Title | Description
+// |--- |--- |
+// | `@elem-line-height-base` | `@typo-font-size-base * 1.05`
+// | `@elem-border-radius-base` | `4px`
+// | `@elem-border-radius-label` | `15px`
+// | `@elem-default-padding` | `10px`
+//
+// Styleguide scaffolding.constants.elements
 
 @elem-line-height-base:                               @typo-font-size-vertical-rhythm;
 @elem-border-radius-base:							  4px;

@@ -16,7 +16,7 @@
 
 .@{css-prefix}form-group {
   
-  .reset-spacing(10px 5px, 0);
+  .reset-spacing(@elem-default-padding 5px, 0);
   .clearfix();
 
   label {
@@ -34,23 +34,29 @@
 }
 
 .@{css-prefix}form-elem {
+  
+  display: inline-block;
+
   .reset-spacing(0, (@typo-font-size-base / 1.7) @typo-font-size-base);
   .border-radius();
 
-  vertical-align: middle;
+  border: 1px solid @color-grey-default-accent;
+
+  box-shadow: inset 1px 1px 0 @color-grey-default,
+              inset -1px -1px 0 @color-grey-default;
+
+  background: @color-light;
+  color: @typo-font-color;
   
   font-family: @typo-font-base;
   font-size: @typo-font-size-base;
-  color: @typo-font-color;
-  display: inline-block;
-  border: 1px solid @color-grey-default-accent;
-  box-shadow: inset 1px 1px 0 @color-grey-default,
-              inset -1px -1px 0 @color-grey-default;
-  background: @color-light;
+
+  vertical-align: middle;
   
-  &.full-width {
-    width: 100%;
+  &:active, &:focus {
+    border-color: darken(@color-grey-default-accent, 15%); 
   }
+
 }
 
 .@{css-prefix}form-control {

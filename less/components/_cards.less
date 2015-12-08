@@ -13,8 +13,8 @@
 //  
 // Styleguide components.cards.
 
-.@{css-prefix}cards {
-  .reset-spacing(0,10px);
+.@{css-prefix}cards, 
+.@{css-prefix}card {
   &,
   &.warm-grey {
     .card-generator();
@@ -31,7 +31,7 @@
   &.light-blue {
     .card-generator(@color-card-light-blue, @color-card-light-blue-border);
   }
-  &.flat {
-    .reset-spacing(0,0);
+  .card-section {
+    .reset-spacing(0,@elem-default-padding);
   }
 }

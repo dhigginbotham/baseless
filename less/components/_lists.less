@@ -66,19 +66,10 @@
   }
 
   // Block lists
+  // 
+  // block style, lists
   //
-  // block lists are helpful
-  //
-  // <ul class="bs-list block-list">
-  //   <li class="list-heading">
-  //     Block List Heading
-  //   </li>
-  //   <li>List Item 1</li>
-  //   <li>List Item 2</li>
-  //   <li>List Item 3</li>
-  //   <li>List Item 4</li>
-  //   <li>List Item 5</li>
-  // </ul>
+  // Markup: docs/block-lists.hbs
   //
   // Styleguide components.lists.block-list
 
@@ -89,7 +80,7 @@
       color: @color-grey-light;
     }
     li {
-      .reset-spacing(0,10px 0);
+      .reset-spacing(0,@elem-default-padding 0);
       display: block;
       border-bottom: 1px solid @color-grey-default-accent;
     }
@@ -102,7 +93,7 @@
     .reset-spacing(5px 0);
     li {
       .pull-left();
-      .reset-spacing(0, 7px 10px);
+      .reset-spacing(0, 7px @elem-default-padding);
       display: inline-block;
       border-right: 1px solid rgba(0,0,0,0.1);
       &:last-child {
