@@ -15,7 +15,18 @@
 }
 
 .@{css-prefix}form-group {
-  
+
+  &.@{css-prefix}form-flex {
+    display: flex;
+
+    .@{css-prefix}form-group-flex {
+      flex-grow: 1; 
+      & + .@{css-prefix}form-elem-flex-gap { 
+        margin-left: .5em 
+      }
+    }
+  }
+
   .reset-spacing(@elem-default-padding 5px, 0);
   .clearfix();
 
@@ -38,6 +49,11 @@
 .@{css-prefix}form-descriptor {
   color: @color-grey-light;
   font-style: italic;
+}
+
+input.@{css-prefix}form-elem,
+select.@{css-prefix}form-elem {
+  height: 35px;
 }
 
 .@{css-prefix}form-elem {
@@ -64,6 +80,19 @@
     border-color: darken(@color-grey-default-accent, 15%); 
   }
 
+}
+
+.@{css-prefix}form-gap-r,
+.@{css-prefix}form-gap-l {
+  margin-bottom: 0;
+}
+
+.@{css-prefix}form-gap-l {
+  margin-left: 5px;
+}
+
+.@{css-prefix}form-gap-r {
+  margin-right: 5px;
 }
 
 .@{css-prefix}form-control {

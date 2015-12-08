@@ -15,23 +15,33 @@
     <label>Select Form Example</label>
     <select class="{{cssPrefix}}form-elem">
       <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
+      <option value="null">Example Option</option>
     </select>
     <button class="{{cssPrefix}}btn warning" type="button">Submit</button>
   </div>
   <div class="{{cssPrefix}}form-group inline">
-    <input type="radio" value="male" id="male" name="sex"/>
-    <label for="male">Male</label>
-    <input type="radio" value="female" id="female" name="sex"/>
-    <label for="female">Female</label>
-  </div>
-  <div class="{{cssPrefix}}form-group">
     <div class="row">
-      <div class="col sixcol">
-        <label for="male2">Male</label>
+      <div class="col threecol">
+        <input type="radio" value="male" id="male" name="sex"/>
+        <label class="{{cssPrefix}}form-gap-l" for="male">Male</label>
+      </div>
+      <div class="col threecol">
+        <input type="radio" value="female" id="female" name="sex"/>
+        <label class="{{cssPrefix}}form-gap-l" for="female">Female</label>
+      </div>
+      <div class="col threecol">
+        <label class="{{cssPrefix}}form-gap-r" for="male2">Male</label>
         <input type="checkbox" value="male2" id="male2" name="sex2"/>
       </div>
-      <div class="col sixcol">
-        <label for="female2">Female</label>
+      <div class="col threecol">
+        <label class="{{cssPrefix}}form-gap-r" for="female2">Female</label>
         <input type="checkbox" value="female2" id="female2" name="sex2"/>
       </div>
     </div>

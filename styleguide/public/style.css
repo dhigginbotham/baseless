@@ -694,16 +694,12 @@ td {
 .bs-alert.notice .alert-subtext {
   color: #220505;
 }
-.bs-cards,
-.bs-card,
 .bs-cards.warm-grey,
 .bs-card.warm-grey {
   background: #f8f7f1;
   border: 1px solid #e6e6e6;
   color: #333;
 }
-.bs-cards.no-border,
-.bs-card.no-border,
 .bs-cards.warm-grey.no-border,
 .bs-card.warm-grey.no-border {
   border-color: transparent;
@@ -1123,6 +1119,15 @@ td {
   padding: 0;
   overflow: hidden;
 }
+.bs-form-group.bs-form-flex {
+  display: flex;
+}
+.bs-form-group.bs-form-flex .bs-form-group-flex {
+  flex-grow: 1;
+}
+.bs-form-group.bs-form-flex .bs-form-group-flex + .bs-form-elem-flex-gap {
+  margin-left: 0.5em;
+}
 .bs-form-group:before,
 .bs-form-group:after {
   content: " ";
@@ -1152,6 +1157,10 @@ td {
   color: #999;
   font-style: italic;
 }
+input.bs-form-elem,
+select.bs-form-elem {
+  height: 35px;
+}
 .bs-form-elem {
   display: inline-block;
   margin: 0;
@@ -1168,6 +1177,16 @@ td {
 .bs-form-elem:active,
 .bs-form-elem:focus {
   border-color: #a6a6a6;
+}
+.bs-form-gap-r,
+.bs-form-gap-l {
+  margin-bottom: 0;
+}
+.bs-form-gap-l {
+  margin-left: 5px;
+}
+.bs-form-gap-r {
+  margin-right: 5px;
 }
 .bs-form-control {
   margin: 10px 0 0;
