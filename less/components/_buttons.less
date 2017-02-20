@@ -65,6 +65,8 @@
   .reset-spacing(0, (@typo-font-size-base / 1.7) @typo-font-size-base);
 
   border: 0;
+  border-radius: 3px;
+
   display: inline-block;
   color: @color-inverted;
   &:visited,
@@ -91,9 +93,25 @@
   
   .disable-selection();
 
-  .border-radius();
-
   .btn-accent();
+
+  &.block {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  &.flat {
+    border-radius: 0;
+  }
+
+  &.flat-top {
+    border-radius: 0 0 3px 3px;
+  }
+
+  &.flat-bottom {
+    border-radius: 3px 3px 0 0;
+  }
 
   &.large {
     font-size: @typo-font-size-large;
@@ -119,11 +137,26 @@
     .btn-accent(@color-primary, @color-light);
   }
 
+  &.dark-primary {
+    .btn-accent(@color-dark-primary, @color-light);
+  }
+
+  &.light-primary {
+    .btn-accent(@color-light-primary, @color-inverted);
+  }
+
+  &.accent {
+    .btn-accent(@color-accent, @color-light);
+  }
+
+  &.secondary {
+    .btn-accent(@color-secondary-text, @color-light);
+  }
+
   &.success {
     .btn-accent(@color-success, @color-light);
   }
 
-  
   &.warning {
     .btn-accent(@color-warning, @color-light);
   }
@@ -166,7 +199,9 @@
   align-items: stretch;
 
   .@{css-prefix}form-elem {
-    .border-radius(@elem-border-radius-base,0,0,@elem-border-radius-base);
+    &:not([type='checkbox']):not([type='radio']) {
+      .border-radius(@elem-border-radius-base,0,0,@elem-border-radius-base);
+    }
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;

@@ -1,0 +1,58 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+.prettyprint {
+  font-size: 14px;
+}
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: @color-primary }  /* plain text */
+
+.str { color: @color-primary }  /* string content */
+.kwd { color: @color-grey-darkest }  /* a keyword */
+.com { color: @color-light-primary }  /* a comment */
+.typ { color: @color-grey-dark }  /* a type name */
+.lit { color: #066 }  /* a literal value */
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun, .opn, .clo { color: #660 }
+.tag { color: @color-grey-darkest }  /* a markup tag name */
+.atn { color: @color-grey-dark }  /* a markup attribute name */
+.atv { color: @color-warning }  /* a markup attribute value */
+.dec, .var { color: @color-grey-dark }  /* a declaration; a variable name */
+.fun { color: red }  /* a function name */
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0;
+  padding: 15px 0 10px;
+  list-style-type: none;
+
+  li {
+    min-height: @typo-font-size-vertical-rhythm;
+    padding: 0 10px;
+
+    &:first-child {
+      padding-top: 3px;
+    }
+  }
+  /* Alternate shading for lines */
+  li.L0,
+  li.L2,
+  li.L4,
+  li.L6,
+  li.L8 {
+    // background: #fcfcfc;
+  }
+}

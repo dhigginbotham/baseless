@@ -163,6 +163,7 @@
   margin-left: percentage(@columns / @grid-columns);
 }
 
+
 .grid-column-generator (@i) when (@i > 0) {
   &.@{i}-col {
     .grid-column(@i);
@@ -177,8 +178,14 @@
   background: @bg;
   border: 1px solid @border;
   color: @color;
+  // overflow: auto;
   &.no-border {
     border-color: transparent;
+  }
+  &.hollow {
+    border: 1px solid @bg;
+    background: transparent;
+    color: @bg;
   }
 }
 
@@ -191,3 +198,49 @@
   -moz-appearance: none;
   appearance: none;
 }
+
+#gradient {
+  .vertical(@startColor: #555, @endColor: #333, @colorStop: 100%) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor @colorStop); // FF 3.6+
+    background-image: -ms-linear-gradient(top, @startColor, @endColor @colorStop); // IE10
+    background-image: -webkit-gradient(linear, 0 0, 0 @colorStop, from(@startColor), to(@endColor)); // Android 2.3, Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor @colorStop); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor @colorStop); // Opera 11.10
+    background-image: linear-gradient(top, @startColor, @endColor @colorStop); // The standard
+  }
+
+  .vertical-noise(@startColor: rgba(245,245,245,1), @endColor: rgba(245,245,245,0.6), @colorStop: 100%, @noise: url('/img/noise-bg.png')) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: @noise, -moz-linear-gradient(top, @startColor, @endColor @colorStop); // FF 3.6+
+    background-image: @noise, -ms-linear-gradient(top, @startColor, @endColor @colorStop);
+    background-image: @noise, -webkit-gradient(linear, 0 0, 0 @colorStop, from(@startColor), to(@endColor)); // Android 2.3, Safari 4+, Chrome 2+
+    background-image: @noise, -webkit-linear-gradient(top, @startColor, @endColor @colorStop); // Safari 5.1+, Chrome 10+
+    background-image: @noise, -o-linear-gradient(top, @startColor, @endColor @colorStop); // Opera 11.10
+    background-image: @noise, linear-gradient(top, @startColor, @endColor @colorStop); // The standard
+  }
+
+  .radial(@innerColor: #555, @outerColor: #333, @pos: center, @colorStop: 100%) {
+    background-image: -moz-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // FF 3.6+
+    background-image: -ms-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // IE10
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
+    background-image: -webkit-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
+    background-image: -o-radial-gradient(@pos, circle, @innerColor, @outerColor @colorStop); // Opera 11.10
+  }
+}
+
+// ............................................................
+// .for
+
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+
+// ............................................................
+// .for-each
+
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}

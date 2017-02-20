@@ -17,22 +17,25 @@
 //  
 // Styleguide components.labels.
 
-.label-accent(@bg: @color-grey-default, @color: @color-inverted) {
-  .card-generator(@bg, transparent, @color);
+.label-accent(@bg: @color-grey-default, @color: @color-inverted, @border: transparent) {
+  .card-generator(@bg, @border, @color);
+}
+
+.@{css-prefix}label:not(a) {
+  cursor: default;
 }
 
 .@{css-prefix}label {
 
-  .reset-spacing(0, 0 7px 2px);
-  .border-radius(@elem-border-radius-label);
+  .reset-spacing(0, 0 3px 1px);
+  .border-radius(2px);
   .disable-selection();
 
   display: inline-block;
   font-weight: @typo-font-weight-bold;
   vertical-align: middle;
   text-align: center;
-  font-size: (@typo-font-size-base - 3px);
-  cursor: default;
+  font-size: (@typo-font-size-base - 5px);
 
   &.small {
     font-size: @typo-font-size-small - 3px;
@@ -47,24 +50,17 @@
   .label-accent();
 
   &.box {
-    .border-radius();
+    .border-radius(0);
   }
-  &.primary {
-    .label-accent(@color-primary, @color-light);
+  
+  .for(@colors); .-each(@c) {
+    &.@{c} {
+      .label-accent(@@c, @color-light);
+    }
   }
-  &.success {
-    .label-accent(@color-success, @color-light);
+  
+  &.text {
+    .label-accent(transparent, @color-primary);
   }
-  &.warning {
-    .label-accent(@color-warning, @color-light);
-  }
-  &.notice {
-    .label-accent(@color-notice, @color-light);
-  }
-  &.info {
-    .label-accent(@color-info, @color-light);
-  }
-  &.inverted {
-    .label-accent(@color-inverted, @color-light);
-  }
+
 }

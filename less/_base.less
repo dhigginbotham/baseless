@@ -123,26 +123,49 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   .clearfix();
-  .reset-spacing(@typo-font-size-vertical-rhythm 0 (@typo-font-size-vertical-rhythm / 1.5));
+  margin: @typo-font-size-vertical-rhythm 0 (@typo-font-size-vertical-rhythm / 1.5);
+  font-family: @typo-font-heading;
   color: @typo-font-color;
   font-weight: @typo-font-weight-bold;
-  &.heading-dark {
-    color: @color-grey-darkest;
-  }
-  &.heading-light {
-    color: @color-grey-light;
-  }
-  &.heading-orange {
-    color: @color-warning;
-  }
+  line-height: 1;
 }
 
-h1 { font-size: 30px; }
-h2 { font-size: 24px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
-h5 { font-size: 14px; }
-h6 { font-size: 12px; }
+h1 {
+  font-size: 30px;
+  .small {
+    font-size: (30px * .8);
+  }
+}
+h2 {
+  font-size: 24px;
+  .small {
+    font-size: (24px * .8);
+  }
+}
+h3 {
+  font-size: 18px;
+  .small {
+    font-size: (18px * .8);
+  }
+}
+h4 {
+  font-size: 16px;
+  .small {
+    font-size: (16px * .8);
+  }
+}
+h5 {
+  font-size: 14px;
+  .small {
+    font-size: (14px * .8);
+  }
+}
+h6 {
+  font-size: 12px;
+  .small {
+    font-size: (12px * .8);
+  }
+}
 
 // p {
 //   .reset-spacing(@typo-font-size-vertical-rhythm 0 0);
@@ -179,7 +202,7 @@ hr {
   height: 2px;
   border: 0;
   border-top: none;
-  border-bottom: 1px solid darken(@color-hr, 10%);
+  border-bottom: 1px solid @color-hr;
   margin: @typo-font-size-vertical-rhythm 0;
   padding: 0;
 }
@@ -202,11 +225,13 @@ hr {
 
 pre, code, kbd, samp {
   font-family: @typo-font-code;
-  color: @color-grey-dark;
+  color: @color-secondary-text;
   font-size: 1em;
+  background: #f1f1f1;
+  padding: 5px;
 }
 
-pre {
+pre, .pre {
   white-space: pre;
   overflow: auto;
 }

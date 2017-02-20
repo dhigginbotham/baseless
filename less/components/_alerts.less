@@ -11,9 +11,19 @@
 // Styleguide components.alerts.
 
 .alert-accent(@bg: @color-light, @color: @color-light) {
-  .card-generator(mix(@color-light, @bg, 70%), mix(@color-light, darken(@bg, 4%), 60%), darken(@bg, 20%));
+  .card-generator(fade(mix(@color-light, @bg, 90%), 80%), mix(@color-light, darken(@bg, 4%), 80%), darken(@bg, 10%));
   .alert-subtext {
     color: darken(@bg, 30%);
+  }
+  a, a:visited, a:active {
+    color: darken(@bg, 25%);
+  }
+  a {
+    &:hover {
+      color: darken(@bg, 40%);
+
+      
+    }
   }
 }
 
@@ -24,6 +34,7 @@
 
   .alert-text {
     .reset-spacing(0,10px);
+    font-size: @typo-font-size-mini;
   }
 
   .alert-title,
@@ -46,6 +57,10 @@
   }
 
   .alert-accent(@color-info, @color-light);
+
+  &.primary {
+    .alert-accent(@color-primary, @color-light);
+  }
 
   &.success {
     .alert-accent(@color-success, @color-light);

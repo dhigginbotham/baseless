@@ -65,6 +65,46 @@
   .text-color-accent(@color-inverted);
 }
 
+.text-grey-darkest {
+  .text-color-accent(@color-grey-darkest);
+}
+
+.text-grey-dark {
+  .text-color-accent(@color-grey-dark);
+}
+
+.text-grey-light {
+  .text-color-accent(@color-grey-light);
+}
+
+.text-dark-primary {
+  .text-color-accent(@color-dark-primary);
+}
+
+.text-light-primary {
+  .text-color-accent(@color-light-primary);
+}
+
+.text-accent {
+  .text-color-accent(@color-accent);
+}
+
+.text-primary-text {
+  .text-color-accent(@color-primary-text);
+}
+
+.text-secondary-text {
+  .text-color-accent(@color-secondary-text);
+}
+
+.text-grey-lightest {
+  .text-color-accent(@color-grey-lightest);
+}
+
+.text-grey-lightest {
+  .text-color-accent(@color-grey-lightest);
+}
+
 .text-right {
   text-align: right;
 }
@@ -91,7 +131,20 @@
 
 .inset-shadow {
   box-shadow: inset 0 2px 0 rgba(0,0,0,0.1);
-  border-bottom: none;
+  border-top: none;
+}
+
+.mono-space,
+.code {
+  font-family: @typo-font-code;
+  // color: @color-primary;
+}
+
+th, td {
+  .code,
+  &.code {
+    vertical-align: middle;
+  }
 }
 
 //

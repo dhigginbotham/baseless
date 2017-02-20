@@ -13,9 +13,13 @@
 //  
 // Styleguide components.cards.
 
-.@{css-prefix}cards, 
 .@{css-prefix}card {
-  
+  &.primary {
+    .card-generator(@color-card-white, @color-primary);
+  }
+  &.info {
+    .card-generator(@color-card-white, @color-info);
+  }
   &.warm-grey {
     .card-generator();
   }
@@ -33,5 +37,8 @@
   }
   .card-section {
     .reset-spacing(0,@elem-default-padding);
+  }
+  &.spaced {
+    margin-bottom: 15px;
   }
 }

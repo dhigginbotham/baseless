@@ -19,6 +19,8 @@
 .@{css-prefix}well {
   .card-generator(@color-grey-default, darken(@color-grey-default, 10%), @color-inverted);
   .reset-spacing(0, 15px);
+  overflow-x: auto;
+  overflow-y: auto;
   &.small {
     .reset-spacing(0, 10px);
   }
@@ -27,6 +29,9 @@
   }
   &.yellow {
     .card-generator(@color-card-yellow, @color-card-yellow-border, darken(desaturate(@color-card-yellow, 40%), 45%));
+  }
+  &.grey {
+    .card-generator(transparent, @color-grey-lightest, @color-inverted);
   }
 }
 

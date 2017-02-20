@@ -6,28 +6,25 @@
 //  
 // Styleguide components.forms.
 
-
 .@{css-prefix}form {
-  &, * {
-    vertical-align: middle;
-  }
-  .reset-spacing(0,0);
+  margin: 0;
+  padding: 0;
 }
 
 .@{css-prefix}form-group {
-
   &.@{css-prefix}form-flex {
     display: flex;
-
     .@{css-prefix}form-group-flex {
       flex-grow: 1; 
       & + .@{css-prefix}form-elem-flex-gap { 
-        margin-left: .5em 
+        margin-left: .5em;
       }
     }
   }
 
-  .reset-spacing(@elem-default-padding 5px, 0);
+  margin: @elem-default-padding 5px;
+  padding: 0;
+
   .clearfix();
 
   label {
@@ -53,21 +50,14 @@
 
 input.@{css-prefix}form-elem,
 select.@{css-prefix}form-elem {
-  height: 35px;
+  height: 40px;
 }
 
 .@{css-prefix}form-elem {
-
   display: inline-block;
 
-  .reset-spacing(0, (@typo-font-size-base / 1.7) @typo-font-size-base);
-  .border-radius();
-
-  border: 1px solid @color-grey-default-accent;
-
-  box-shadow: inset 1px 1px 0 @color-grey-default,
-              inset -1px -1px 0 @color-grey-default;
-
+  margin: 0;
+  padding: (@typo-font-size-base / 2.7) (@typo-font-size-base / 2.5);
   background: @color-light;
   color: @typo-font-color;
   
@@ -75,11 +65,22 @@ select.@{css-prefix}form-elem {
   font-size: @typo-font-size-base;
 
   vertical-align: middle;
-  
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+    background: #f1f1f1;
+  }
+  &:not([type='checkbox']):not([type='radio']) {
+    .border-radius();
+    border: 1px solid @color-grey-default-accent;
+    // box-shadow: inset 1px 1px 0 @color-grey-default,
+    //             inset -1px -1px 0 @color-grey-default;
+  }
+  &.full-width {
+    width: 100%;
+  }
   &:active, &:focus {
     border-color: darken(@color-grey-default-accent, 15%); 
   }
-
 }
 
 .@{css-prefix}form-gap-r,
@@ -96,6 +97,7 @@ select.@{css-prefix}form-elem {
 }
 
 .@{css-prefix}form-control {
-  .reset-spacing(10px 0 0,10px 0 0);
+  margin: 10px 0 0;
+  padding: 10px 0 0;
   border-top: 1px solid @color-grey-default-accent;
 }

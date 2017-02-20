@@ -12,7 +12,7 @@
 //  
 // Styleguide components.panels.
 
-.panel-accent(@bg: @color-grey-default, @border: @color-grey-default-accent, @color: @color-grey-darkest) {
+.panel-accent(@bg: @color-grey-default-accent, @border: @color-grey-default-accent, @color: @color-light) {
   border: 1px solid @border;
   .panel-heading {
     color: @color;
@@ -50,6 +50,8 @@
     background: @color-light;
   }
 
+
+
   .panel-foot {
     .reset-spacing(0, 5px @elem-default-padding);
     font-size: 75%;
@@ -66,31 +68,13 @@
   .panel-accent();
   
   &.utility {
-    .panel-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-grey-darkest);
+    .panel-accent(@color-card-warm-grey, @color-card-warm-grey-border, @color-primary-text);
   }
 
-  &.primary {
-    .panel-accent(@color-primary, darken(@color-primary, 10%), @color-light);
+  .for(@colors); .-each(@c) {
+    &.@{c} {
+      .panel-accent(@@c, darken(@@c, 10%), @color-light);
+    }
   }
-
-  &.success {
-    .panel-accent(@color-success, darken(@color-success, 10%), @color-light);
-  }
-
-  &.warning {
-    .panel-accent(@color-warning, darken(@color-warning, 10%), @color-light);
-  }
-  
-  // &.notice {
-  //   .panel-accent(@color-notice, darken(@color-notice, 10%), @color-light);
-  // }
-
-  // &.info {
-  //   .panel-accent(@color-info, darken(@color-info, 10%), @color-light);
-  // }
-
-  // &.inverted {
-  //   .panel-accent(@color-inverted, darken(@color-inverted, 10%), @color-light);
-  // }
 
 }
